@@ -684,13 +684,18 @@
       transform:translateY(-2px);
     }
     .city-stat-icon {
-      width:36px; height:36px;
+      width:38px; height:38px;
       border-radius:var(--radius-sm);
-      background:var(--gold-soft);
+      background:var(--navy);
       color:var(--gold);
       display:inline-flex; align-items:center; justify-content:center;
-      margin-bottom:0.85rem;
-      font-size:0.95rem;
+      margin-bottom:0.95rem;
+      box-shadow:0 4px 12px rgba(11,24,40,0.18);
+      transition:transform .3s, box-shadow .3s;
+    }
+    .city-stat:hover .city-stat-icon {
+      transform:translateY(-1px);
+      box-shadow:0 6px 16px rgba(201,165,83,0.25);
     }
     .city-stat-num {
       display:block;
@@ -1646,28 +1651,28 @@
           <div class="city-stats">
             <div class="city-stat">
               <div class="city-stat-icon">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
               </div>
               <strong class="city-stat-num" id="statProps">100</strong>
               <span class="city-stat-lbl">Biens gérés</span>
             </div>
             <div class="city-stat">
               <div class="city-stat-icon">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 17l6-6 4 4 8-8" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 7h7v7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 17l6-6 4 4 8-8" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 7h7v7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
               <strong class="city-stat-num" id="statRev">3.400€</strong>
               <span class="city-stat-lbl">Revenu moyen</span>
             </div>
             <div class="city-stat">
               <div class="city-stat-icon">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l4 4L19 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l4 4L19 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
               <strong class="city-stat-num" id="statOcc">88%</strong>
               <span class="city-stat-lbl">Taux d'occupation</span>
             </div>
             <div class="city-stat">
               <div class="city-stat-icon">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l5-5 5 5M7 7h10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l5-5 5 5M7 7h10" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
               <strong class="city-stat-num" id="statGrowth">+32%</strong>
               <span class="city-stat-lbl">Croissance 2024</span>
