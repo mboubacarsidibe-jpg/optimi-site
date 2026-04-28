@@ -130,16 +130,24 @@ nav{
 .hero-micro{font-size:.75rem;color:rgba(255,255,255,.32);}
 
 /* ── OPERATOR PROOF ── */
-.op-proof{background:var(--navy-mid);padding:48px 5%;border-top:1px solid rgba(201,165,83,.12);}
-.op-inner{max-width:1000px;margin:0 auto;}
-.op-label{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem;text-align:center;}
-.op-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;}
+.op-proof{background:#0f2438;padding:48px 5%;border-top:1px solid rgba(201,165,83,.12);}
+.op-inner{max-width:1100px;margin:0 auto;}
+.op-label{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;text-align:center;}
+.op-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:1rem;}
 .op-item{
   background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);
-  border-radius:12px;padding:1.5rem 1.25rem;text-align:center;
+  border-radius:12px;padding:1.5rem 1.1rem;text-align:center;
+  transition:border-color .2s;
 }
-.op-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--gold);}
-.op-txt{font-size:.78rem;color:rgba(255,255,255,.55);margin-top:.35rem;line-height:1.5;}
+.op-item:hover{border-color:rgba(201,165,83,.4);}
+.op-num{font-family:'Playfair Display',serif;font-size:1.85rem;font-weight:700;color:var(--gold);line-height:1;}
+.op-txt{font-size:.74rem;color:rgba(255,255,255,.55);margin-top:.45rem;line-height:1.5;}
+.op-hero-metric{
+  background:linear-gradient(135deg,rgba(201,165,83,.16) 0%,rgba(201,165,83,.06) 100%);
+  border-color:rgba(201,165,83,.4);
+}
+.op-hero-metric .op-num{font-size:2.4rem;}
+.op-hero-metric .op-txt{color:rgba(255,255,255,.75);font-weight:500;}
 
 /* ── DIFFERENTIATOR SECTION ── */
 .diff{padding:80px 5%;background:var(--warm);}
@@ -395,6 +403,19 @@ footer p{font-size:.78rem;color:rgba(255,255,255,.3);}
 .footer-links a{color:rgba(255,255,255,.4);font-size:.78rem;transition:color .2s;}
 .footer-links a:hover{color:var(--gold);}
 
+/* ── TOAST SOCIAL PROOF ── */
+.toast{
+  position:fixed;bottom:110px;left:24px;z-index:997;
+  background:#fff;border-radius:12px;padding:.9rem 1.1rem;
+  box-shadow:0 8px 32px rgba(0,0,0,.18);border-left:4px solid var(--gold);
+  display:flex;align-items:center;gap:.75rem;max-width:320px;
+  transform:translateX(-130%);transition:transform .45s cubic-bezier(.4,0,.2,1);pointer-events:none;
+}
+.toast.show{transform:translateX(0);}
+.toast-icon{font-size:1.4rem;flex-shrink:0;}
+.toast-body strong{display:block;font-size:.82rem;color:var(--navy);font-family:'Inter',sans-serif;}
+.toast-body span{font-size:.74rem;color:var(--muted);line-height:1.4;}
+
 /* ── MOBILE STICKY CTA ── */
 .mobile-cta-bar{
   display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;
@@ -411,6 +432,7 @@ footer p{font-size:.78rem;color:rgba(255,255,255,.3);}
 /* ── RESPONSIVE ── */
 @media(max-width:900px){
   .op-grid{grid-template-columns:repeat(2,1fr);}
+  .op-hero-metric{grid-column:span 2;}
   .diff-grid,.compare-grid,.r-grid,.b-grid{grid-template-columns:1fr;}
   .incl-grid{grid-template-columns:1fr 1fr;}
   .pain-grid{grid-template-columns:1fr 1fr;}
@@ -459,6 +481,10 @@ footer p{font-size:.78rem;color:rgba(255,255,255,.3);}
   .apply-form{padding:1.5rem 1.25rem;}
   .form-row{grid-template-columns:1fr;}
   .radio-group label{font-size:.8rem;padding:.5rem .85rem;}
+
+  .toast{bottom:160px;left:14px;right:14px;max-width:none;padding:.75rem .9rem;}
+  .toast-body strong{font-size:.78rem;}
+  .toast-body span{font-size:.7rem;}
 }
 </style>
 </head>
@@ -508,21 +534,25 @@ footer p{font-size:.78rem;color:rgba(255,255,255,.3);}
   <div class="op-inner">
     <div class="op-label">Notre terrain · Nos chiffres · En temps réel</div>
     <div class="op-grid">
+      <div class="op-item op-hero-metric">
+        <div class="op-num">15M€+</div>
+        <div class="op-txt">générés pour nos clients</div>
+      </div>
       <div class="op-item">
         <div class="op-num">200+</div>
-        <div class="op-txt">Biens en gestion active à Paris & IDF en ce moment</div>
+        <div class="op-txt">Biens gérés activement à Paris &amp; IDF</div>
       </div>
       <div class="op-item">
         <div class="op-num">85%</div>
-        <div class="op-txt">Taux d'occupation moyen sur notre portefeuille (annuel)</div>
+        <div class="op-txt">Taux d'occupation moyen annuel</div>
       </div>
       <div class="op-item">
         <div class="op-num">4.9★</div>
-        <div class="op-txt">Note hôte moyenne — sur des centaines d'évaluations réelles</div>
+        <div class="op-txt">Note hôte moyenne sur le portefeuille</div>
       </div>
       <div class="op-item">
         <div class="op-num">72h</div>
-        <div class="op-txt">Délai de mise en ligne d'un nouveau bien dans notre portefeuille</div>
+        <div class="op-txt">Délai pour mettre un bien en ligne</div>
       </div>
     </div>
   </div>
@@ -1039,6 +1069,15 @@ footer p{font-size:.78rem;color:rgba(255,255,255,.3);}
   </div>
 </section>
 
+<!-- Toast social proof -->
+<div class="toast" id="toast">
+  <span class="toast-icon">🎯</span>
+  <div class="toast-body">
+    <strong id="toast-name">Marie-Laure · Paris 11e</strong>
+    <span id="toast-msg">vient de candidater à la cohorte mai 2026</span>
+  </div>
+</div>
+
 <!-- Mobile sticky CTA -->
 <div class="mobile-cta-bar">
   <a href="#audit">Réserver mon audit gratuit →</a>
@@ -1072,12 +1111,42 @@ function toggleFaq(btn){
     if(form&&success){
       form.style.display='none';
       success.style.display='block';
-      // Scroll to the success message
       setTimeout(function(){
         success.scrollIntoView({behavior:'smooth',block:'center'});
       },150);
     }
   }
+})();
+
+// Social proof toasts — coaching context
+(function(){
+  var toasts=[
+    {icon:'🎯',name:'Marie-Laure · Paris 11e',msg:'vient de candidater à la cohorte mai 2026'},
+    {icon:'📞',name:'Thomas · Neuilly-sur-Seine',msg:'a réservé son audit diagnostic gratuit'},
+    {icon:'✓',name:'Sophie · Paris 7e',msg:'a démarré sa session 1 — Audit complet'},
+    {icon:'📈',name:'Julien · Boulogne-Billancourt',msg:'a atteint +35% de revenus en 6 semaines'},
+    {icon:'🎯',name:'Camille · Paris 16e',msg:'vient de candidater au programme'},
+    {icon:'📞',name:'Alexandre · Paris 8e',msg:'a réservé son audit diagnostic'},
+    {icon:'✓',name:'Nathalie · Levallois-Perret',msg:'a finalisé sa transformation — +42% de revenus'},
+    {icon:'📈',name:'Pierre · Paris 4e',msg:'a passé le cap des 90% d\'occupation'},
+  ];
+  var idx=0;
+  var nameEl=document.getElementById('toast-name');
+  var msgEl=document.getElementById('toast-msg');
+  var iconEl=document.querySelector('.toast-icon');
+  var el=document.getElementById('toast');
+  if(!el||!nameEl||!msgEl)return;
+  function showToast(){
+    var t=toasts[idx%toasts.length];
+    nameEl.textContent=t.name;
+    msgEl.textContent=t.msg;
+    if(iconEl)iconEl.textContent=t.icon;
+    el.classList.add('show');
+    setTimeout(function(){el.classList.remove('show');},4500);
+    idx++;
+  }
+  // First after 9s, then every 22s
+  setTimeout(function(){showToast();setInterval(showToast,22000);},9000);
 })();
 </script>
 </body>

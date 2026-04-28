@@ -525,7 +525,7 @@
 
     /* ── TOAST ── */
     .toast {
-      position:fixed; bottom:80px; left:20px; z-index:999;
+      position:fixed; bottom:110px; left:100px; z-index:997;
       background:var(--white); border-radius:12px; padding:0.9rem 1.1rem;
       box-shadow:0 8px 32px rgba(0,0,0,0.15); border-left:4px solid var(--gold);
       display:flex; align-items:center; gap:0.75rem; max-width:300px;
@@ -580,6 +580,10 @@
       .seg-kpi-row { grid-template-columns:1fr; }
       .mobile-cta { display:block; }
       body { padding-bottom:70px; }
+      /* Chatbot above mobile sticky CTA, toast above chatbot */
+      .chat-bubble { bottom:90px; left:18px; width:50px; height:50px; font-size:1.3rem; }
+      .chat-window { bottom:160px; left:18px; right:18px; width:auto; max-height:60vh; }
+      .toast { bottom:160px; left:18px; right:auto; max-width:calc(100% - 90px); }
     }
   </style>
 </head>
@@ -619,12 +623,16 @@
       </div>
       <div class="hero-stats">
         <div class="hero-stat">
-          <strong>4.9★</strong>
-          <span>Note moyenne Airbnb</span>
+          <strong>15M€+</strong>
+          <span>générés pour nos clients</span>
         </div>
         <div class="hero-stat">
           <strong>+38%</strong>
           <span>de revenus vs gestion solo</span>
+        </div>
+        <div class="hero-stat">
+          <strong>4.9★</strong>
+          <span>Note moyenne Airbnb</span>
         </div>
         <div class="hero-stat">
           <strong>72h</strong>
@@ -1623,7 +1631,7 @@
 <!-- ── CHATBOT ── -->
 <style>
 .chat-bubble {
-  position:fixed; bottom:28px; right:28px; z-index:999;
+  position:fixed; bottom:28px; left:28px; z-index:999;
   width:58px; height:58px; border-radius:50%;
   background:var(--gold); color:var(--navy);
   border:none; cursor:pointer; font-size:1.5rem;
@@ -1633,7 +1641,7 @@
 }
 .chat-bubble:hover { transform:scale(1.1); }
 .chat-window {
-  position:fixed; bottom:100px; right:28px; z-index:998;
+  position:fixed; bottom:100px; left:28px; z-index:998;
   width:340px; background:var(--white); border-radius:16px;
   box-shadow:0 12px 50px rgba(0,0,0,0.18);
   display:flex; flex-direction:column; overflow:hidden;
