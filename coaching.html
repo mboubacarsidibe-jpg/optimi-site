@@ -90,9 +90,10 @@ nav{
   margin-bottom:1.75rem;text-transform:uppercase;
 }
 .hero-h1 .hl-box{
-  display:inline-block;
+  display:inline;
   background:var(--gold);color:var(--navy);
   padding:.04em .3em;line-height:1.05;
+  box-decoration-break:clone;-webkit-box-decoration-break:clone;
   box-shadow:0 6px 28px rgba(201,165,83,.25);
 }
 
@@ -327,18 +328,64 @@ footer p{font-size:.78rem;color:rgba(255,255,255,.3);}
 .footer-links a{color:rgba(255,255,255,.4);font-size:.78rem;transition:color .2s;}
 .footer-links a:hover{color:var(--gold);}
 
+/* ── MOBILE STICKY CTA ── */
+.mobile-cta-bar{
+  display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;
+  background:var(--navy);padding:.85rem 1rem;
+  border-top:2px solid var(--gold);
+  box-shadow:0 -4px 24px rgba(0,0,0,.25);
+}
+.mobile-cta-bar a{
+  display:block;background:var(--gold);color:var(--navy);
+  text-align:center;padding:.85rem;border-radius:8px;
+  font-weight:800;font-size:.95rem;font-family:'Inter',sans-serif;
+}
+
 /* ── RESPONSIVE ── */
 @media(max-width:900px){
   .op-grid{grid-template-columns:repeat(2,1fr);}
   .diff-grid,.compare-grid,.r-grid,.b-grid{grid-template-columns:1fr;}
   .incl-grid{grid-template-columns:1fr 1fr;}
   .pain-grid{grid-template-columns:1fr 1fr;}
+  .nav-pill{display:none;}
 }
 @media(max-width:600px){
+  nav{padding:0 4%;height:58px;}
+  .nav-btn{padding:.45rem 1rem;font-size:.78rem;}
+  .alert-bar{font-size:.75rem;padding:.55rem 4%;line-height:1.4;}
+
+  .hero{padding:64px 5% 56px;min-height:auto;}
+  .hero-brand{margin-bottom:1.5rem;gap:.6rem;}
+  .hero-brand-line{width:24px;}
+  .hero-brand-text{font-size:.66rem;letter-spacing:.18em;}
+  .hero-brand-text em{display:block;margin-left:0;margin-top:.2rem;letter-spacing:.1em;}
+  .hero-h1{font-size:clamp(1.95rem,8.5vw,2.6rem);line-height:1.05;margin-bottom:1.25rem;letter-spacing:-.01em;}
+  .hero-sub{font-size:.95rem;margin-bottom:1.5rem;line-height:1.55;padding:0 .25rem;}
+  .hero-actions{flex-direction:column;width:100%;gap:.65rem;}
+  .hero-actions .btn-cta,.hero-actions .btn-ghost{width:100%;text-align:center;padding:.95rem 1rem;font-size:.92rem;}
+  .hero-micro{font-size:.7rem;line-height:1.55;}
+
+  .op-proof{padding:32px 5%;}
+  .op-grid{gap:.75rem;}
+  .op-item{padding:1rem .75rem;}
+  .op-num{font-size:1.55rem;}
+  .op-txt{font-size:.7rem;}
+
   .pain-grid,.incl-grid{grid-template-columns:1fr;}
   .proof-strip{flex-wrap:wrap;}
   .proof-cell{min-width:45%;}
-  .sess{grid-template-columns:1fr;}
+  .sess{grid-template-columns:1fr;padding:1.5rem;gap:1rem;}
+  .sess-num{width:48px;height:48px;font-size:1.3rem;}
+
+  section{padding-left:5%;padding-right:5%;}
+  .pain,.method,.compare,.results,.incl,.bonuses,.pricing,.faq,.final{padding-top:60px;padding-bottom:60px;}
+  .price-card{padding:1.75rem 1.25rem;}
+  .p-main{font-size:2.6rem;}
+  .guarantee{flex-direction:column;align-items:flex-start;gap:.6rem;padding:1rem 1.1rem;}
+
+  .mobile-cta-bar{display:block;}
+  body{padding-bottom:78px;}
+  footer{flex-direction:column;text-align:center;gap:.75rem;padding:24px 5% 90px;}
 }
 </style>
 </head>
@@ -818,6 +865,11 @@ footer p{font-size:.78rem;color:rgba(255,255,255,.3);}
     <p class="final-note">Entretien gratuit · Réponse sous 48h · Aucun paiement à ce stade</p>
   </div>
 </section>
+
+<!-- Mobile sticky CTA -->
+<div class="mobile-cta-bar">
+  <a href="#audit">Réserver mon audit gratuit →</a>
+</div>
 
 <footer>
   <p>© 2026 OPTIMI GROUP — Méthode Rentabilité 360</p>

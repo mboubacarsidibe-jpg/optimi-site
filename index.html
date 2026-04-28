@@ -565,7 +565,9 @@
       .nav-links { display:none; }
       .lm-form { flex-direction:column; }
       .calc-inputs { grid-template-columns:1fr; }
-      .compare { overflow-x:auto; }
+      .compare .section-inner { overflow-x:auto; -webkit-overflow-scrolling:touch; padding-bottom:8px; }
+      .compare-table { min-width:540px; }
+      .compare-table th, .compare-table td { padding:0.7rem 0.85rem; font-size:0.78rem; }
       .guarantee-inner { grid-template-columns:1fr; text-align:center; }
       .guarantee-badge { margin:0 auto; }
       .calc-result.show { grid-template-columns:1fr; }
