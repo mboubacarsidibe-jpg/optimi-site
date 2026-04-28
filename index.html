@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>OPTIMI — Conciergerie Airbnb Paris & Île-de-France | +38% de revenus garantis</title>
+<meta name="description" content="OPTIMI gère votre bien Airbnb à Paris et en Île-de-France : tarification dynamique, ménage, voyageurs 24/7. +38% de revenus vs gestion solo. Commission 20% tout inclus. Devis gratuit."/>
+<meta name="keywords" content="conciergerie airbnb paris, gestion locative courte durée, airbnb paris, conciergerie île-de-france, gestion airbnb, location courte durée paris, LMNP, tarification dynamique"/>
+<meta property="og:title" content="OPTIMI — Conciergerie Airbnb Paris & Île-de-France"/>
+<meta property="og:description" content="+38% de revenus vs gestion solo. Commission 20% tout inclus. Lancement en 72h."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://optimi-group.com"/>
+<link rel="canonical" href="https://optimi-group.com"/>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --navy: #0D2B4E;
+  --gold: #C9A02C;
+  --gold-light: #FEF3CD;
+  --gray: #F7F8FA;
+  --text: #1a1a2e;
+  --muted: #6b7280;
+  --white: #ffffff;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: var(--text); background: var(--white); line-height: 1.6; }
+
+/* NAV */
+nav {
+  position: sticky; top:0; z-index:100;
+  background: rgba(13,43,78,0.97);
+  backdrop-filter: blur(8px);
+  padding: 0 5%;
+  display: flex; align-items:center; justify-content:space-between;
+  height: 64px;
+  border-bottom: 2px solid var(--gold);
+}
+.nav-logo { color: var(--white); font-size: 1.4rem; font-weight: 800; letter-spacing: 2px; }
+.nav-logo span { color: var(--gold); }
+.nav-links { display:flex; gap:28px; list-style:none; }
+.nav-links a { color: rgba(255,255,255,0.85); text-decoration:none; font-size:0.88rem; font-weight:500; letter-spacing:0.5px; transition:color 0.2s; }
+.nav-links a:hover { color: var(--gold); }
+.nav-cta {
+  background: var(--gold); color: var(--navy);
+  padding: 9px 22px; border-radius: 6px;
+  font-weight: 700; font-size: 0.85rem; text-decoration:none;
+  transition: opacity 0.2s;
+}
+.nav-cta:hover { opacity:0.9; }
+.nav-mobile-toggle { display:none; background:none; border:none; cursor:pointer; }
+.nav-mobile-toggle span { display:block; width:22px; height:2px; background:white; margin:5px 0; }
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #0D2B4E 0%, #1a4070 60%, #0f3a65 100%);
+  color: white;
+  padding: 100px 5% 80px;
+  text-align: center;
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content:''; position:absolute; inset:0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9A02C' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+.hero-badge {
+  display: inline-block; background: var(--gold-light); color: var(--navy);
+  padding: 6px 16px; border-radius: 20px; font-size: 0.82rem; font-weight: 700;
+  letter-spacing: 1px; text-transform: uppercase; margin-bottom: 24px;
+}
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800; line-height: 1.2;
+  margin-bottom: 20px;
+  max-width: 800px; margin-left:auto; margin-right:auto;
+}
+.hero h1 span { color: var(--gold); }
+.hero p {
+  font-size: 1.1rem; color: rgba(255,255,255,0.85);
+  max-width: 600px; margin: 0 auto 40px;
+}
+.hero-actions { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+.btn-primary {
+  background: var(--gold); color: var(--navy);
+  padding: 14px 32px; border-radius: 8px;
+  font-weight: 700; font-size: 1rem; text-decoration:none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 14px rgba(201,160,44,0.4);
+}
+.btn-primary:hover { transform:translateY(-2px); box-shadow: 0 8px 20px rgba(201,160,44,0.5); }
+.btn-secondary {
+  border: 2px solid rgba(255,255,255,0.4); color: white;
+  padding: 14px 32px; border-radius: 8px;
+  font-weight: 600; font-size: 1rem; text-decoration:none;
+  transition: background 0.2s;
+}
+.btn-secondary:hover { background: rgba(255,255,255,0.1); }
+
+/* KPI BAR */
+.kpi-bar {
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  padding: 32px 5%;
+}
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  max-width: 1100px; margin: 0 auto;
+}
+.kpi-item {
+  text-align: center;
+  padding: 20px 16px;
+  border-right: 1px solid #e5e7eb;
+}
+.kpi-item:last-child { border-right: none; }
+.kpi-val { font-size: 2rem; font-weight: 800; color: var(--navy); line-height:1; }
+.kpi-val span { color: var(--gold); }
+.kpi-lbl { font-size: 0.78rem; color: var(--muted); margin-top: 6px; text-transform: uppercase; letter-spacing: 0.8px; }
+
+/* SECTIONS */
+section { padding: 80px 5%; }
+.section-tag { font-size: 0.78rem; color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
+.section-title { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; color: var(--navy); margin-bottom: 16px; }
+.section-sub { font-size: 1rem; color: var(--muted); max-width: 600px; }
+.section-header { margin-bottom: 48px; }
+section.bg-gray { background: var(--gray); }
+
+/* SERVICES */
+.services-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:24px; }
+.service-card {
+  background: white; border-radius: 16px;
+  padding: 36px 32px;
+  border: 1px solid #e5e7eb;
+  transition: box-shadow 0.3s, transform 0.3s;
+  position:relative; overflow:hidden;
+}
+.service-card::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:4px;
+  background: var(--gold);
+}
+.service-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.12); transform:translateY(-4px); }
+.service-icon { font-size: 2.5rem; margin-bottom: 20px; }
+.service-card h3 { font-size: 1.2rem; color: var(--navy); font-weight: 700; margin-bottom: 12px; }
+.service-card p { color: var(--muted); font-size: 0.92rem; line-height: 1.7; margin-bottom: 20px; }
+.service-features { list-style: none; }
+.service-features li { font-size: 0.88rem; color: var(--text); padding: 6px 0; display:flex; align-items:center; gap:10px; border-bottom: 1px solid #f3f4f6; }
+.service-features li:last-child { border-bottom: none; }
+.service-features li::before { content: '✓'; color: var(--gold); font-weight: 700; flex-shrink:0; }
+.service-card.featured { background: var(--navy); color: white; border-color: var(--navy); }
+.service-card.featured::before { background: var(--gold); }
+.service-card.featured h3 { color: white; }
+.service-card.featured p { color: rgba(255,255,255,0.75); }
+.service-card.featured .service-features li { color: white; border-color: rgba(255,255,255,0.1); }
+.service-card.featured .service-features li::before { color: var(--gold); }
+.service-badge { display:inline-block; background: var(--gold); color: var(--navy); padding:4px 12px; border-radius:4px; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:16px; }
+
+/* STATS */
+.stats-section { background: var(--navy); color: white; padding: 60px 5%; }
+.stats-grid { display:grid; grid-template-columns: repeat(4, 1fr); gap:0; max-width:1000px; margin:0 auto; }
+.stat-item { text-align:center; padding:24px; border-right:1px solid rgba(255,255,255,0.1); }
+.stat-item:last-child { border-right:none; }
+.stat-num { font-size:2.5rem; font-weight:800; color:var(--gold); }
+.stat-label { font-size:0.85rem; color:rgba(255,255,255,0.7); margin-top:8px; }
+
+/* CITIES */
+.cities-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px; margin-top: 32px;
+}
+.city-tag {
+  background: white; border: 1px solid #e5e7eb;
+  padding: 12px 16px; border-radius: 8px;
+  font-size: 0.88rem; color: var(--navy); font-weight: 500;
+  text-align:center; transition: border-color 0.2s, background 0.2s;
+}
+.city-tag:hover { border-color: var(--gold); background: var(--gold-light); }
+.city-paris { background: var(--navy); color: white; border-color: var(--navy); font-weight:700; }
+.cities-intro { background: white; border-radius: 12px; padding: 24px; border-left: 4px solid var(--gold); margin-bottom: 24px; }
+.cities-intro p { font-size: 0.95rem; color: var(--muted); }
+
+/* TESTIMONIALS */
+.testimonials-grid { display:grid; grid-template-columns: repeat(3,1fr); gap:24px; }
+.testimonial-card {
+  background: white; border-radius: 14px; padding: 32px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+.stars { color: var(--gold); font-size:1.1rem; margin-bottom:16px; letter-spacing:2px; }
+.testimonial-text { color: var(--muted); font-size:0.95rem; line-height:1.7; margin-bottom:20px; font-style:italic; }
+.testimonial-author { display:flex; align-items:center; gap:12px; }
+.author-avatar {
+  width:42px; height:42px; border-radius:50%;
+  background: var(--navy); color: white;
+  display:flex; align-items:center; justify-content:center;
+  font-weight:700; font-size:0.9rem; flex-shrink:0;
+}
+.author-name { font-weight:700; font-size:0.9rem; color:var(--navy); }
+.author-sub { font-size:0.8rem; color:var(--muted); }
+
+/* REFERRAL */
+.referral-section { background: var(--gray); }
+.referral-card { background: white; border-radius: 16px; padding: 48px; max-width: 900px; margin: 0 auto; box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
+.referral-tiers { display:grid; grid-template-columns: repeat(3,1fr); gap:20px; margin: 32px 0; }
+.tier {
+  text-align:center; padding:28px 20px; border-radius:12px;
+  border: 2px solid #e5e7eb; transition: border-color 0.2s;
+}
+.tier:hover { border-color: var(--gold); }
+.tier.best { border-color: var(--gold); background: var(--gold-light); }
+.tier-pct { font-size:3rem; font-weight:900; color:var(--navy); line-height:1; }
+.tier-pct span { color:var(--gold); }
+.tier-label { font-size:0.85rem; color:var(--muted); margin-top:8px; }
+.tier-desc { font-size:0.95rem; font-weight:600; color:var(--navy); margin-top:6px; }
+.tier-badge { display:inline-block; background:var(--gold); color:var(--navy); padding:3px 10px; border-radius:4px; font-size:0.72rem; font-weight:700; margin-top:10px; }
+
+/* GUIDE */
+.guide-section {}
+.guide-card {
+  background: linear-gradient(135deg, var(--navy) 0%, #1a4070 100%);
+  border-radius: 20px; padding: 60px;
+  display:grid; grid-template-columns: 1fr 320px; gap:60px;
+  align-items:center; color:white;
+}
+.guide-badge { display:inline-block; background:var(--gold); color:var(--navy); padding:5px 14px; border-radius:4px; font-size:0.78rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:20px; }
+.guide-card h2 { font-size:1.8rem; font-weight:800; margin-bottom:16px; }
+.guide-card p { color:rgba(255,255,255,0.8); margin-bottom:24px; line-height:1.7; }
+.guide-features { list-style:none; margin-bottom:32px; }
+.guide-features li { padding:6px 0; font-size:0.92rem; display:flex; gap:10px; align-items:center; }
+.guide-features li::before { content:'✓'; color:var(--gold); font-weight:700; }
+.guide-preview {
+  background: white; border-radius: 12px; padding: 28px;
+  color: var(--navy);
+}
+.guide-preview-title { font-size:0.75rem; text-transform:uppercase; letter-spacing:1.5px; color:var(--muted); margin-bottom:12px; }
+.guide-preview-item { padding:10px 0; border-bottom:1px solid #f3f4f6; font-size:0.87rem; color:var(--text); display:flex; align-items:center; gap:8px; }
+.guide-preview-item:last-child { border-bottom:none; }
+.guide-preview-item::before { content:'→'; color:var(--gold); font-weight:700; }
+
+/* ARTICLE / SEO BLOG */
+.article-section { background: var(--gray); }
+.article-card {
+  background: white; border-radius: 16px; overflow:hidden;
+  max-width: 900px; margin: 0 auto;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+}
+.article-header { background: var(--navy); padding: 40px 48px; color:white; }
+.article-header .article-meta { display:flex; gap:16px; margin-bottom:16px; }
+.article-meta span { font-size:0.8rem; background:rgba(255,255,255,0.15); padding:4px 12px; border-radius:4px; }
+.article-header h2 { font-size:1.6rem; font-weight:800; }
+.article-body { padding: 48px; }
+.article-body h3 { font-size:1.15rem; font-weight:700; color:var(--navy); margin:28px 0 12px; }
+.article-body p { color:var(--muted); font-size:0.95rem; line-height:1.8; margin-bottom:16px; }
+.article-body ul { padding-left:20px; margin-bottom:16px; }
+.article-body ul li { color:var(--muted); font-size:0.93rem; padding:4px 0; line-height:1.7; }
+.data-table { width:100%; border-collapse:collapse; margin:20px 0; font-size:0.88rem; }
+.data-table th { background:var(--navy); color:white; padding:12px 16px; text-align:left; }
+.data-table td { padding:10px 16px; border-bottom:1px solid #f3f4f6; }
+.data-table tr:nth-child(even) td { background:#f9fafb; }
+.highlight-box { background:var(--gold-light); border-left:4px solid var(--gold); padding:16px 20px; border-radius:0 8px 8px 0; margin:20px 0; }
+.highlight-box p { color:var(--navy); font-weight:600; margin:0; }
+
+/* CONTACT / CTA */
+.cta-section { background: var(--navy); color:white; text-align:center; padding:80px 5%; }
+.cta-section h2 { font-size:2rem; font-weight:800; margin-bottom:16px; }
+.cta-section p { color:rgba(255,255,255,0.75); max-width:500px; margin:0 auto 40px; }
+.contact-form-wrapper {
+  background:white; border-radius:16px; padding:40px;
+  max-width:560px; margin:0 auto;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.2);
+}
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px; }
+.form-group { display:flex; flex-direction:column; gap:6px; margin-bottom:16px; }
+.form-group label { font-size:0.82rem; font-weight:600; color:var(--navy); }
+.form-group input, .form-group select, .form-group textarea {
+  padding:12px 14px; border:1.5px solid #e5e7eb;
+  border-radius:8px; font-size:0.92rem; color:var(--text);
+  outline:none; transition:border-color 0.2s; font-family:inherit;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold); }
+.form-submit {
+  width:100%; padding:14px; background:var(--gold); color:var(--navy);
+  border:none; border-radius:8px; font-weight:700; font-size:1rem;
+  cursor:pointer; transition:opacity 0.2s;
+}
+.form-submit:hover { opacity:0.9; }
+.form-note { font-size:0.78rem; color:var(--muted); text-align:center; margin-top:12px; }
+
+/* FOOTER */
+footer { background: #091e38; color:white; padding: 48px 5% 28px; }
+.footer-grid { display:grid; grid-template-columns: 2fr 1fr 1fr; gap:40px; margin-bottom:40px; }
+.footer-brand h3 { font-size:1.4rem; font-weight:800; letter-spacing:2px; color:var(--gold); margin-bottom:12px; }
+.footer-brand p { color:rgba(255,255,255,0.6); font-size:0.88rem; line-height:1.7; }
+.footer-col h4 { font-size:0.85rem; text-transform:uppercase; letter-spacing:1.5px; color:var(--gold); margin-bottom:16px; font-weight:700; }
+.footer-col ul { list-style:none; }
+.footer-col ul li { margin-bottom:10px; }
+.footer-col ul li a { color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.88rem; transition:color 0.2s; }
+.footer-col ul li a:hover { color:var(--gold); }
+.footer-bottom { border-top:1px solid rgba(255,255,255,0.1); padding-top:24px; display:flex; justify-content:space-between; align-items:center; }
+.footer-bottom p { color:rgba(255,255,255,0.4); font-size:0.8rem; }
+
+/* CHATBOT */
+.chat-bubble {
+  position: fixed; bottom: 28px; right: 28px; z-index: 999;
+  width: 58px; height: 58px; border-radius: 50%;
+  background: var(--gold); color: var(--navy);
+  border: none; cursor: pointer; font-size: 1.6rem;
+  box-shadow: 0 4px 20px rgba(201,160,44,0.5);
+  display: flex; align-items:center; justify-content:center;
+  transition: transform 0.2s;
+}
+.chat-bubble:hover { transform: scale(1.1); }
+.chat-window {
+  position: fixed; bottom: 100px; right: 28px; z-index: 998;
+  width: 340px; height: 480px;
+  background: white; border-radius: 16px;
+  box-shadow: 0 12px 50px rgba(0,0,0,0.18);
+  display: flex; flex-direction: column; overflow: hidden;
+  transition: opacity 0.3s, transform 0.3s;
+  opacity: 0; transform: translateY(20px); pointer-events: none;
+}
+.chat-window.open { opacity: 1; transform: translateY(0); pointer-events: all; }
+.chat-header {
+  background: var(--navy); color: white;
+  padding: 16px 20px; display: flex; align-items:center; gap:12px;
+}
+.chat-avatar { width:38px; height:38px; border-radius:50%; background:var(--gold); color:var(--navy); display:flex; align-items:center; justify-content:center; font-weight:800; font-size:0.9rem; }
+.chat-header-info h4 { font-size:0.92rem; font-weight:700; }
+.chat-header-info p { font-size:0.75rem; color:rgba(255,255,255,0.7); }
+.chat-online { width:8px; height:8px; border-radius:50%; background:#22c55e; display:inline-block; margin-right:4px; }
+.chat-messages { flex:1; padding:16px; overflow-y:auto; display:flex; flex-direction:column; gap:12px; }
+.msg { max-width:80%; }
+.msg.bot { align-self:flex-start; }
+.msg.user { align-self:flex-end; }
+.msg-bubble {
+  padding: 10px 14px; border-radius: 12px; font-size:0.88rem; line-height:1.5;
+}
+.msg.bot .msg-bubble { background: #f3f4f6; color:var(--text); border-bottom-left-radius:4px; }
+.msg.user .msg-bubble { background: var(--navy); color:white; border-bottom-right-radius:4px; }
+.msg-time { font-size:0.72rem; color:var(--muted); margin-top:4px; }
+.chat-quick-btns { padding:8px 16px; display:flex; flex-wrap:wrap; gap:6px; }
+.quick-btn {
+  padding:6px 12px; border:1.5px solid var(--navy); border-radius:20px;
+  background:white; color:var(--navy); font-size:0.78rem; cursor:pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.quick-btn:hover { background:var(--navy); color:white; }
+.chat-input-row {
+  padding: 12px 16px; border-top:1px solid #e5e7eb;
+  display:flex; gap:8px;
+}
+.chat-input {
+  flex:1; padding:10px 14px; border:1.5px solid #e5e7eb; border-radius:8px;
+  font-size:0.88rem; outline:none; font-family:inherit;
+}
+.chat-input:focus { border-color:var(--gold); }
+.chat-send {
+  padding:10px 16px; background:var(--gold); color:var(--navy);
+  border:none; border-radius:8px; font-weight:700; cursor:pointer;
+  transition:opacity 0.2s;
+}
+.chat-send:hover { opacity:0.9; }
+
+/* RESPONSIVE */
+@media(max-width:900px) {
+  .kpi-grid { grid-template-columns: repeat(3,1fr); }
+  .kpi-item:nth-child(4) { border-right:none; }
+  .services-grid { grid-template-columns: 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .guide-card { grid-template-columns:1fr; gap:32px; }
+  .guide-preview { display:none; }
+  .referral-tiers { grid-template-columns:1fr; }
+  .footer-grid { grid-template-columns:1fr 1fr; }
+  .stats-grid { grid-template-columns: repeat(2,1fr); }
+  .form-row { grid-template-columns:1fr; }
+}
+@media(max-width:680px) {
+  .nav-links, .nav-cta { display:none; }
+  .nav-mobile-toggle { display:block; }
+  .kpi-grid { grid-template-columns: repeat(2,1fr); }
+  .kpi-item { border-right: 1px solid #e5e7eb; }
+  .kpi-item:nth-child(2n) { border-right:none; }
+  .footer-grid { grid-template-columns:1fr; }
+  .guide-card { padding:32px 24px; }
+  .article-header, .article-body { padding:28px 24px; }
+  .chat-window { width: calc(100vw - 48px); right:24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">OPTI<span>MI</span></div>
+  <ul class="nav-links">
+    <li><a href="#services">Nos formules</a></li>
+    <li><a href="#cities">Zones</a></li>
+    <li><a href="#guide">Guide 2026</a></li>
+    <li><a href="#apporteurs">Apporteurs</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Devis gratuit</a>
+  <button class="nav-mobile-toggle" onclick="toggleMobileMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">Conciergerie Airbnb — Paris & Île-de-France</div>
+  <h1>Votre Airbnb géré<br/>comme un <span>hôtel 5 étoiles</span></h1>
+  <p>OPTIMI prend en charge l'intégralité de votre location courte durée — de la publication à l'accueil des voyageurs. Résultat moyen : <strong>+38% de revenus</strong> vs gestion solo.</p>
+  <div class="hero-actions">
+    <a href="#contact" class="btn-primary">Obtenir une simulation gratuite</a>
+    <a href="#services" class="btn-secondary">Découvrir nos formules</a>
+  </div>
+</section>
+
+<!-- KPI BAR -->
+<div class="kpi-bar">
+  <div class="kpi-grid">
+    <div class="kpi-item">
+      <div class="kpi-val">4.9<span>★</span></div>
+      <div class="kpi-lbl">Note moyenne hôte Airbnb</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-val">+38<span>%</span></div>
+      <div class="kpi-lbl">Revenus vs gestion solo</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-val">72<span>h</span></div>
+      <div class="kpi-lbl">Mise en ligne de votre annonce</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-val">85<span>%</span></div>
+      <div class="kpi-lbl">Taux d'occupation moyen</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-val">200<span>+</span></div>
+      <div class="kpi-lbl">Biens gérés à Paris</div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-section">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <div class="stat-num">+42%</div>
+      <div class="stat-label">vs location longue durée non meublée</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">120€</div>
+      <div class="stat-label">Prix moyen / nuit optimisé</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">5+</div>
+      <div class="stat-label">Plateformes de distribution (Airbnb, Booking, VRBO…)</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">24/7</div>
+      <div class="stat-label">Communication voyageurs (FR + EN)</div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-header">
+    <div class="section-tag">Nos formules</div>
+    <h2 class="section-title">Une offre adaptée à votre profil</h2>
+    <p class="section-sub">Que vous soyez propriétaire occupant, investisseur ou gestionnaire de portefeuille, OPTIMI a la formule qui correspond à votre situation.</p>
+  </div>
+  <div class="services-grid">
+
+    <div class="service-card">
+      <div class="service-icon">🏠</div>
+      <h3>Propriétaire Occupant</h3>
+      <p>Vous habitez votre bien et souhaitez le rentabiliser pendant vos absences dans la limite réglementaire des 120 nuits.</p>
+      <ul class="service-features">
+        <li>Gestion du calendrier des 120 nuits</li>
+        <li>Publication et optimisation de l'annonce</li>
+        <li>Ménage, linge et accueil voyageurs</li>
+        <li>Tarification dynamique saisonnière</li>
+        <li>Fiscalité micro-BIC simplifiée</li>
+        <li>Rapport mensuel de performance</li>
+      </ul>
+    </div>
+
+    <div class="service-card featured">
+      <div class="service-badge">Le plus populaire</div>
+      <div class="service-icon">📈</div>
+      <h3>Investisseur Locatif</h3>
+      <p>Votre bien est dédié à la location. OPTIMI maximise sa rentabilité via la multi-distribution et la tarification algorithmique.</p>
+      <ul class="service-features">
+        <li>Distribution multi-plateformes (Airbnb, Booking, VRBO, Abritel, Expedia)</li>
+        <li>Algorithme de pricing — ajustement toutes les 4h</li>
+        <li>LMNP et optimisation fiscale — réseau comptable partenaire</li>
+        <li>Bail mobilité (alternative légale aux 120 jours)</li>
+        <li>Gestionnaire de compte dédié</li>
+        <li>+23% de revenus vs prix fixe grâce à notre technologie</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🏢</div>
+      <h3>Portefeuille Multi-Biens</h3>
+      <p>Vous gérez 3 biens ou plus. Bénéficiez de commissions dégressives, d'une gestion centralisée et d'un accompagnement patrimonial complet.</p>
+      <ul class="service-features">
+        <li>Commissions dégressives dès 3 biens (12%)</li>
+        <li>Dashboard de reporting consolidé</li>
+        <li>Accompagnement LMNP → LMP</li>
+        <li>Structuration juridique (SCI, SARL de famille)</li>
+        <li>Audit de transformation de locaux commerciaux</li>
+        <li>Conseil financement et effet de levier</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Commission clarification -->
+  <div style="margin-top:32px; background:var(--gray); border-radius:12px; padding:28px 32px; display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
+    <div style="flex:1; min-width:200px;">
+      <p style="font-size:0.78rem; text-transform:uppercase; letter-spacing:1.5px; color:var(--gold); font-weight:700; margin-bottom:6px;">Commission tout inclus</p>
+      <p style="font-size:1rem; color:var(--navy); font-weight:600;">20% — ménage, linge, communication voyageurs, reporting mensuel. Aucun frais caché.</p>
+    </div>
+    <div style="flex:1; min-width:200px;">
+      <p style="font-size:0.78rem; text-transform:uppercase; letter-spacing:1.5px; color:var(--gold); font-weight:700; margin-bottom:6px;">Portefeuille 3+ biens</p>
+      <p style="font-size:1rem; color:var(--navy); font-weight:600;">12% dégressive — tarif négocié selon volume et configuration du portefeuille.</p>
+    </div>
+    <a href="#contact" class="btn-primary" style="white-space:nowrap;">Obtenir ma simulation</a>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="bg-gray">
+  <div class="section-header">
+    <div class="section-tag">Témoignages</div>
+    <h2 class="section-title">Ce que disent nos propriétaires</h2>
+    <p class="section-sub">200+ biens gérés à Paris et en Île-de-France. Une note hôte moyenne de 4.9/5.</p>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"Mes revenus ont augmenté de 35% dès le premier mois. Plus de stress, plus de nuits à répondre aux voyageurs. OPTIMI gère tout, je n'ai plus qu'à encaisser."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">ML</div>
+        <div>
+          <div class="author-name">Marie-Laure D.</div>
+          <div class="author-sub">Studio, Paris 11e — Propriétaire occupante</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"Trois appartements — Paris et Neuilly — et un seul interlocuteur pour tout : la fiscalité, la gestion quotidienne, les comptes. Un vrai gain de temps et de sérénité."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">TC</div>
+        <div>
+          <div class="author-name">Thomas C.</div>
+          <div class="author-sub">Portefeuille 3 biens — Paris + Neuilly-sur-Seine</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"Je gérais seule depuis 2 ans. En confiant mon appartement à OPTIMI, j'ai gagné +28% de revenus cette année. Je regrette de ne pas l'avoir fait plus tôt."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">SB</div>
+        <div>
+          <div class="author-name">Sophie B.</div>
+          <div class="author-sub">T2, Paris 7e — Investisseuse locative</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CITIES -->
+<section id="cities">
+  <div class="section-header">
+    <div class="section-tag">Zone d'intervention</div>
+    <h2 class="section-title">Paris et toute l'Île-de-France</h2>
+    <p class="section-sub">OPTIMI intervient dans l'ensemble des arrondissements parisiens et les communes les plus demandées d'Île-de-France.</p>
+  </div>
+  <div class="cities-intro">
+    <p>🗺️ <strong>Paris (20 arrondissements)</strong> — Du 1er au 20e arrondissement, toutes les adresses parisiennes sont couvertes, avec une expertise particulière sur les quartiers à forte attractivité touristique.</p>
+  </div>
+  <div class="cities-grid">
+    <div class="city-tag city-paris">Paris 1er – 20e</div>
+    <div class="city-tag">Neuilly-sur-Seine</div>
+    <div class="city-tag">Boulogne-Billancourt</div>
+    <div class="city-tag">Levallois-Perret</div>
+    <div class="city-tag">Vincennes</div>
+    <div class="city-tag">Saint-Mandé</div>
+    <div class="city-tag">Issy-les-Moulineaux</div>
+    <div class="city-tag">Courbevoie</div>
+    <div class="city-tag">Puteaux</div>
+    <div class="city-tag">Saint-Cloud</div>
+    <div class="city-tag">Montrouge</div>
+    <div class="city-tag">Vanves</div>
+    <div class="city-tag">Malakoff</div>
+  </div>
+  <p style="margin-top:20px; font-size:0.85rem; color:var(--muted);">Votre commune n'est pas listée ? <a href="#contact" style="color:var(--gold); font-weight:600;">Contactez-nous</a> — nous étudions toutes les demandes en Île-de-France.</p>
+</section>
+
+<!-- REFERRAL -->
+<section id="apporteurs" class="referral-section">
+  <div class="section-header" style="text-align:center;">
+    <div class="section-tag">Programme apporteurs d'affaires</div>
+    <h2 class="section-title">Gagnez en recommandant OPTIMI</h2>
+    <p class="section-sub" style="margin:0 auto;">Agences immobilières, notaires, coachs immo, gestionnaires de patrimoine — recommandez OPTIMI et percevez une commission récurrente sur chaque bien apporté.</p>
+  </div>
+  <div class="referral-card">
+    <div style="text-align:center; margin-bottom:8px;">
+      <p style="font-size:0.9rem; color:var(--muted);">Commission versée mensuellement sur les revenus locatifs des biens que vous nous apportez.</p>
+    </div>
+    <div class="referral-tiers">
+      <div class="tier">
+        <div class="tier-pct">3<span>%</span></div>
+        <div class="tier-desc">1 à 2 biens</div>
+        <div class="tier-label">apportés</div>
+      </div>
+      <div class="tier best">
+        <div class="tier-badge">⭐ Populaire</div>
+        <div class="tier-pct">5<span>%</span></div>
+        <div class="tier-desc">3 à 9 biens</div>
+        <div class="tier-label">apportés</div>
+      </div>
+      <div class="tier">
+        <div class="tier-pct">7<span>%</span></div>
+        <div class="tier-desc">10 biens et plus</div>
+        <div class="tier-label">apportés</div>
+      </div>
+    </div>
+    <div style="background:#f9fafb; border-radius:10px; padding:20px 24px; margin-top:8px;">
+      <p style="font-size:0.88rem; color:var(--muted); text-align:center;">💡 <strong>Exemple :</strong> Vous apportez 4 biens générant chacun 2 000€/mois de loyers bruts → vous percevez <strong>400€/mois</strong> soit <strong>4 800€/an</strong> de commissions récurrentes.</p>
+    </div>
+    <div style="text-align:center; margin-top:28px;">
+      <a href="#contact" class="btn-primary">Devenir apporteur d'affaires</a>
+    </div>
+  </div>
+</section>
+
+<!-- GUIDE -->
+<section id="guide" class="guide-section">
+  <div class="section-header">
+    <div class="section-tag">Ressource gratuite</div>
+    <h2 class="section-title">Guide Expert Airbnb Paris 2026</h2>
+    <p class="section-sub">42 pages de stratégies concrètes pour maximiser vos revenus selon votre profil.</p>
+  </div>
+  <div class="guide-card">
+    <div>
+      <div class="guide-badge">Édition 2026 — Mis à jour</div>
+      <h2>Réglementation, Fiscalité LMNP & Stratégies de rentabilité</h2>
+      <p>Paris accueille 44 millions de visiteurs en 2026. Ce guide vous donne toutes les clés pour tirer parti du marché — selon que vous soyez propriétaire occupant, investisseur ou gestionnaire de portefeuille.</p>
+      <ul class="guide-features">
+        <li>La règle des 120 jours et les alternatives légales</li>
+        <li>LMNP vs LMP : seuils, amortissements, optimisation fiscale</li>
+        <li>Tarification dynamique et multi-plateformes</li>
+        <li>Simulation de rentabilité par profil (studio, T2, portefeuille)</li>
+        <li>Calendrier des événements 2026 à fort rendement</li>
+        <li>Check-lists actionnables par profil</li>
+      </ul>
+      <a href="#contact" class="btn-primary">Télécharger gratuitement</a>
+    </div>
+    <div class="guide-preview">
+      <div class="guide-preview-title">Sommaire du guide</div>
+      <div class="guide-preview-item">Les 120 jours expliqués</div>
+      <div class="guide-preview-item">Micro-BIC vs Régime réel</div>
+      <div class="guide-preview-item">L'amortissement LMNP</div>
+      <div class="guide-preview-item">Bail mobilité (alternative)</div>
+      <div class="guide-preview-item">Tarification dynamique</div>
+      <div class="guide-preview-item">Multi-plateformes</div>
+      <div class="guide-preview-item">LMP vs LMNP — simulation</div>
+      <div class="guide-preview-item">Structuration juridique</div>
+    </div>
+  </div>
+</section>
+
+<!-- SEO ARTICLE -->
+<section class="article-section">
+  <div class="section-header">
+    <div class="section-tag">Article expert</div>
+    <h2 class="section-title">Airbnb Paris 2026 : Réglementation, Fiscalité & Rendement</h2>
+  </div>
+  <div class="article-card">
+    <div class="article-header">
+      <div class="article-meta">
+        <span>📅 Mis à jour avril 2026</span>
+        <span>⏱ 8 min de lecture</span>
+        <span>👁 Expert OPTIMI</span>
+      </div>
+      <h2>Location Airbnb à Paris en 2026 : tout ce que vous devez savoir</h2>
+    </div>
+    <div class="article-body">
+      <p>Paris reste la <strong>première destination touristique mondiale</strong> avec 44 millions de visiteurs attendus en 2026. Pour les propriétaires parisiens, la location courte durée représente un potentiel de revenus considérable — à condition de maîtriser un cadre réglementaire et fiscal qui s'est significativement renforcé ces dernières années.</p>
+
+      <h3>1. La règle des 120 nuits : ce que dit vraiment la loi</h3>
+      <p>Depuis 2017, la location de votre <strong>résidence principale</strong> sur Airbnb est limitée à <strong>120 nuits par an</strong> (du 1er janvier au 31 décembre). Cette limite ne s'applique pas aux résidences secondaires ni aux investissements locatifs dédiés.</p>
+      <div class="highlight-box"><p>⚠️ Sanction en cas de dépassement : jusqu'à 50 000€ d'amende par logement. Les plateformes bloquent automatiquement les réservations au-delà du seuil.</p></div>
+      <p>Les propriétaires investisseurs souhaitant louer toute l'année à Paris doivent obtenir une <strong>autorisation de changement d'usage</strong>. Alternative : le bail mobilité (1 à 10 mois, non soumis aux 120 jours) permet de couvrir les périodes creuses avec des locataires en mobilité professionnelle ou étudiante.</p>
+
+      <h3>2. Fiscalité : LMNP, micro-BIC ou régime réel ?</h3>
+      <p>Les revenus Airbnb sont imposés dans la catégorie des <strong>Bénéfices Industriels et Commerciaux (BIC)</strong>. Deux régimes s'appliquent :</p>
+      <table class="data-table">
+        <thead><tr><th>Critère</th><th>Micro-BIC</th><th>Régime Réel</th></tr></thead>
+        <tbody>
+          <tr><td>Plafond de revenus</td><td>&lt; 77 700€/an</td><td>Sans plafond</td></tr>
+          <tr><td>Avantage fiscal</td><td>Abattement 50%</td><td>Déduction charges réelles + amortissements</td></tr>
+          <tr><td>Déclaration</td><td>Simplifiée</td><td>Liasse fiscale (expert-comptable conseillé)</td></tr>
+          <tr><td>Optimal pour</td><td>Petits revenus, propriétaire occupant</td><td>Dès 15 000€/an de revenus locatifs</td></tr>
+        </tbody>
+      </table>
+      <p>En régime réel, <strong>l'amortissement du bien</strong> est votre meilleur allié : sur un appartement acheté 300 000€, l'amortissement génère ~8 000€ de déduction annuelle, soit 2 400€ d'économies fiscales par an pour un contribuable à 30% de TMI.</p>
+
+      <h3>3. Le marché parisien en 2026 : chiffres clés</h3>
+      <p>Le marché parisien de la location courte durée reste porteur malgré le renforcement réglementaire :</p>
+      <table class="data-table">
+        <thead><tr><th>Indicateur</th><th>Valeur 2026</th></tr></thead>
+        <tbody>
+          <tr><td>Annonces actives sur Airbnb à Paris</td><td>65 000+</td></tr>
+          <tr><td>Taux d'occupation moyen haute saison</td><td>89%</td></tr>
+          <tr><td>Prix moyen/nuit (appartement entier)</td><td>142€</td></tr>
+          <tr><td>Revenus supplémentaires vs location traditionnelle</td><td>+35% en moyenne</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Événements à fort rendement 2026 :</strong> Roland-Garros (+45%), Fashion Weeks mars et septembre (+60%), salons professionnels Porte de Versailles, événements sportifs et culturels continus.</p>
+
+      <h3>4. La tarification dynamique : pourquoi c'est essentiel</h3>
+      <p>Un prix fixe laisse en moyenne <strong>23% de revenus sur la table</strong>. La tarification dynamique ajuste vos prix toutes les 4 heures en analysant la demande en temps réel, les événements locaux, la concurrence directe et les délais de réservation. C'est ce qu'OPTIMI déploie pour chaque bien géré.</p>
+
+      <h3>5. Simulation de rentabilité : studio Paris 8e (propriétaire occupant)</h3>
+      <p>Sur 120 nuits maximum, avec une tarification optimisée par saison :</p>
+      <table class="data-table">
+        <thead><tr><th>Période</th><th>Nuits</th><th>Tarif/nuit</th><th>Revenus</th></tr></thead>
+        <tbody>
+          <tr><td>Haute saison (Fashion Weeks, Roland-Garros, été)</td><td>40</td><td>180€</td><td>7 200€</td></tr>
+          <tr><td>Moyenne saison</td><td>50</td><td>140€</td><td>7 000€</td></tr>
+          <tr><td>Basse saison</td><td>30</td><td>100€</td><td>3 000€</td></tr>
+          <tr><td><strong>Total brut</strong></td><td><strong>120</strong></td><td>—</td><td><strong>17 200€</strong></td></tr>
+          <tr><td>Commission OPTIMI (20% tout inclus)</td><td>—</td><td>—</td><td>-3 440€</td></tr>
+          <tr><td><strong>Revenu net avant impôts</strong></td><td>—</td><td>—</td><td><strong>13 460€</strong></td></tr>
+        </tbody>
+      </table>
+      <div class="highlight-box"><p>💡 Revenu net estimé après impôts (TMI 30%) : ~9 500€/an pour 120 nuits seulement — sans aucune gestion de votre part.</p></div>
+
+      <h3>Confier votre bien à OPTIMI</h3>
+      <p>OPTIMI gère l'intégralité du process — création et optimisation de l'annonce, photos professionnelles, tarification dynamique, ménage et linge, communication voyageurs 24/7, reporting mensuel et accompagnement fiscal. Commission 20% tout inclus, aucun frais caché. Lancement garanti en 72h.</p>
+      <a href="#contact" class="btn-primary" style="display:inline-block; margin-top:8px;">Obtenir une simulation pour mon bien</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="cta-section">
+  <h2>Obtenez votre simulation gratuite</h2>
+  <p>Réponse sous 24h — sans engagement. Nous estimons le potentiel de revenus de votre bien et vous proposons la formule adaptée.</p>
+  <div class="contact-form-wrapper">
+    <div class="form-row">
+      <div class="form-group">
+        <label>Prénom</label>
+        <input type="text" placeholder="Thomas" id="f-prenom"/>
+      </div>
+      <div class="form-group">
+        <label>Nom</label>
+        <input type="text" placeholder="Martin" id="f-nom"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" placeholder="thomas@exemple.fr" id="f-email"/>
+    </div>
+    <div class="form-group">
+      <label>Téléphone</label>
+      <input type="tel" placeholder="+33 6 00 00 00 00" id="f-tel"/>
+    </div>
+    <div class="form-group">
+      <label>Localisation du bien</label>
+      <input type="text" placeholder="Paris 11e, Neuilly-sur-Seine…" id="f-ville"/>
+    </div>
+    <div class="form-group">
+      <label>Votre profil</label>
+      <select id="f-profil">
+        <option value="">Sélectionnez votre profil</option>
+        <option>Propriétaire occupant</option>
+        <option>Investisseur locatif</option>
+        <option>Portefeuille multi-biens</option>
+        <option>Apporteur d'affaires</option>
+      </select>
+    </div>
+    <button class="form-submit" onclick="submitForm()">Recevoir ma simulation gratuite →</button>
+    <p class="form-note">🔒 Vos données sont confidentielles. Aucun démarchage commercial.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h3>OPTIMI</h3>
+      <p>Conciergerie Airbnb professionnelle à Paris et en Île-de-France. Nous gérons votre bien comme un hôtel pour maximiser vos revenus.</p>
+      <p style="margin-top:12px; font-size:0.82rem; color:rgba(255,255,255,0.4);">Note hôte : 4.9★ · 200+ biens gérés · Depuis 2022</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Propriétaire occupant</a></li>
+        <li><a href="#services">Investisseur locatif</a></li>
+        <li><a href="#services">Portefeuille multi-biens</a></li>
+        <li><a href="#apporteurs">Programme apporteurs</a></li>
+        <li><a href="#guide">Guide expert 2026</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="#contact">Devis gratuit</a></li>
+        <li><a href="mailto:contact@optimi-group.com">contact@optimi-group.com</a></li>
+        <li><a href="#cities">Zones couvertes</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 OPTIMI GROUP — Tous droits réservés</p>
+    <p>Paris & Île-de-France</p>
+  </div>
+</footer>
+
+<!-- CHATBOT -->
+<button class="chat-bubble" onclick="toggleChat()" id="chatBtn" aria-label="Ouvrir le chat">💬</button>
+
+<div class="chat-window" id="chatWindow">
+  <div class="chat-header">
+    <div class="chat-avatar">O</div>
+    <div class="chat-header-info">
+      <h4>OPTIMI — Assistant</h4>
+      <p><span class="chat-online"></span>En ligne — répond en quelques minutes</p>
+    </div>
+  </div>
+  <div class="chat-messages" id="chatMessages">
+    <div class="msg bot">
+      <div class="msg-bubble">Bonjour 👋 Je suis l'assistant OPTIMI. Comment puis-je vous aider ?</div>
+      <div class="msg-time">Maintenant</div>
+    </div>
+  </div>
+  <div class="chat-quick-btns" id="quickBtns">
+    <button class="quick-btn" onclick="quickMsg('Estimer mes revenus')">Estimer mes revenus</button>
+    <button class="quick-btn" onclick="quickMsg('Vos formules et tarifs')">Formules & tarifs</button>
+    <button class="quick-btn" onclick="quickMsg('Programme apporteurs')">Apporteurs d\'affaires</button>
+    <button class="quick-btn" onclick="quickMsg('Télécharger le guide')">Guide gratuit 2026</button>
+  </div>
+  <div class="chat-input-row">
+    <input class="chat-input" id="chatInput" type="text" placeholder="Écrivez votre message…" onkeydown="if(event.key==='Enter')sendMsg()"/>
+    <button class="chat-send" onclick="sendMsg()">→</button>
+  </div>
+</div>
+
+<script>
+/* ===== MOBILE MENU ===== */
+function toggleMobileMenu() {
+  const links = document.querySelector('.nav-links');
+  const cta = document.querySelector('.nav-cta');
+  if (links) links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+}
+
+/* ===== FORM ===== */
+function submitForm() {
+  const prenom = document.getElementById('f-prenom').value;
+  const email = document.getElementById('f-email').value;
+  const profil = document.getElementById('f-profil').value;
+  if (!prenom || !email) { alert('Merci de renseigner au moins votre prénom et votre email.'); return; }
+  const btn = document.querySelector('.form-submit');
+  btn.textContent = '✅ Demande envoyée ! Nous revenons vers vous sous 24h.';
+  btn.style.background = '#22c55e';
+  btn.style.color = 'white';
+  btn.disabled = true;
+}
+
+/* ===== CHATBOT ===== */
+const chatResponses = {
+  'estimer mes revenus': "Pour estimer vos revenus, j'ai besoin de quelques infos : \n1. Type de bien (studio, T2, T3…)\n2. Arrondissement ou commune\n3. Votre profil (occupant ou investisseur)\n\nEn général, nos propriétaires gagnent +38% vs gestion solo. Pour une simulation précise, remplissez le formulaire ci-dessus et nous revenons sous 24h.",
+  'vos formules et tarifs': "Nous proposons 3 formules :\n\n🏠 Propriétaire Occupant — 20% tout inclus (dans la limite des 120 nuits)\n📈 Investisseur Locatif — 20% tout inclus (multi-plateformes, LMNP)\n🏢 Portefeuille 3+ biens — à partir de 12% dégressive\n\nDans tous les cas : ménage, linge, voyageurs 24/7, reporting. Aucun frais caché.",
+  'programme apporteurs': "Notre programme apporteurs d'affaires :\n\n• 1-2 biens apportés → 3% de commission\n• 3-9 biens → 5% de commission\n• 10 biens et plus → 7% de commission\n\nCommission versée mensuellement sur les revenus locatifs. Idéal pour les agents immo, notaires, coachs patrimoniaux.",
+  'télécharger le guide': "Notre Guide Expert Airbnb Paris 2026 (42 pages) est gratuit ! \n\nIl couvre : réglementation 120 jours, LMNP/LMP, tarification dynamique, simulations de rentabilité.\n\nRemplissez le formulaire contact et cochez \"Guide gratuit\" dans votre message — nous vous l'envoyons immédiatement.",
+  'default': "Bonne question ! Pour une réponse personnalisée, je vous invite à :\n• Remplir notre formulaire de contact (réponse sous 24h)\n• Ou appeler directement notre équipe\n\nNous pouvons aussi vous faire une simulation de revenus gratuite pour votre bien."
+};
+
+let chatOpen = false;
+
+function toggleChat() {
+  chatOpen = !chatOpen;
+  document.getElementById('chatWindow').classList.toggle('open', chatOpen);
+  document.getElementById('chatBtn').textContent = chatOpen ? '✕' : '💬';
+}
+
+function addMsg(text, type) {
+  const msgs = document.getElementById('chatMessages');
+  const div = document.createElement('div');
+  div.className = `msg ${type}`;
+  div.innerHTML = `<div class="msg-bubble">${text.replace(/\n/g,'<br/>')}</div><div class="msg-time">Maintenant</div>`;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+function quickMsg(text) {
+  document.getElementById('quickBtns').style.display = 'none';
+  addMsg(text, 'user');
+  setTimeout(() => {
+    const key = text.toLowerCase();
+    const resp = Object.entries(chatResponses).find(([k]) => key.includes(k));
+    addMsg(resp ? resp[1] : chatResponses['default'], 'bot');
+  }, 600);
+}
+
+function sendMsg() {
+  const input = document.getElementById('chatInput');
+  const text = input.value.trim();
+  if (!text) return;
+  document.getElementById('quickBtns').style.display = 'none';
+  addMsg(text, 'user');
+  input.value = '';
+  setTimeout(() => {
+    const lower = text.toLowerCase();
+    const resp = Object.entries(chatResponses).find(([k]) => lower.includes(k.split(' ')[0]));
+    addMsg(resp ? resp[1] : chatResponses['default'], 'bot');
+  }, 700);
+}
+
+/* ===== SMOOTH SCROLL NAV ===== */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior:'smooth', block:'start' }); }
+  });
+});
+</script>
+
+</body>
+</html>
