@@ -6,9 +6,19 @@
   <title>OPTIMI — Conciergerie Airbnb Paris | Gestion locative clé en main</title>
   <meta name="description" content="OPTIMI gère votre bien Airbnb à Paris et en Île-de-France. Estimation gratuite et immédiate. Rendement maximal, zéro contrainte. Spécialiste LMNP, bail mobilité, réglementation 2026." />
   <meta name="robots" content="index, follow" />
+  <meta name="author" content="OPTIMI GROUP" />
   <meta name="keywords" content="conciergerie airbnb paris, gestion locative airbnb paris, gestion airbnb paris, location courte durée paris, gestion meublé tourisme, LMNP paris, bail mobilité paris, conciergerie airbnb neuilly, gestion airbnb boulogne" />
+  <meta name="msvalidate.01" content="C464E4CC8C43866E36C93B7BC23B68F4" />
   <link rel="canonical" href="https://optimi-group.com/" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+
+  <!-- Preconnect & DNS prefetch -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.pexels.com" />
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="//images.pexels.com" />
+  <link rel="dns-prefetch" href="//client.crisp.chat" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -585,7 +595,137 @@
       .chat-window { bottom:160px; left:18px; right:18px; width:auto; max-height:60vh; }
       .toast { bottom:160px; left:18px; right:auto; max-width:calc(100% - 90px); }
     }
+
+    /* ── PRESENCE / CITIES INTERACTIVE ── */
+    .presence { background: linear-gradient(180deg, var(--white) 0%, var(--card-bg) 100%); }
+    .presence-grid { display:grid; grid-template-columns:280px 1fr; gap:2rem; align-items:start; margin-top:2rem; }
+    .city-side { background:var(--white); border:1.5px solid var(--border); border-radius:16px; overflow:hidden; position:sticky; top:90px; }
+    .city-side-head { padding:1rem 1.25rem; border-bottom:1.5px solid var(--border); }
+    .city-side-head h3 { font-family:'Inter',sans-serif; font-size:0.95rem; font-weight:700; color:var(--navy); }
+    .city-list { max-height:560px; overflow-y:auto; }
+    .city-btn { display:flex; align-items:center; gap:0.75rem; width:100%; text-align:left; padding:0.85rem 1.25rem; background:transparent; border:none; border-bottom:1px solid var(--border); cursor:pointer; transition:background .2s; font-family:'Inter',sans-serif; }
+    .city-btn:last-child { border-bottom:none; }
+    .city-btn:hover { background:rgba(11,24,40,0.04); }
+    .city-btn.active { background:var(--navy); color:var(--white); }
+    .city-btn .city-pin { width:18px; height:18px; flex-shrink:0; color:var(--gold); }
+    .city-btn.active .city-pin { color:var(--gold); }
+    .city-btn-info strong { display:block; font-size:0.92rem; font-weight:700; color:var(--navy); }
+    .city-btn.active .city-btn-info strong { color:var(--white); }
+    .city-btn-info span { font-size:0.78rem; color:var(--muted); }
+    .city-btn.active .city-btn-info span { color:rgba(255,255,255,0.65); }
+
+    .city-detail { display:flex; flex-direction:column; gap:1.5rem; }
+    .city-hero { position:relative; border-radius:16px; overflow:hidden; box-shadow:0 8px 28px rgba(0,0,0,0.08); }
+    .city-hero img { width:100%; height:280px; object-fit:cover; display:block; transition:transform .5s; }
+    .city-hero:hover img { transform:scale(1.03); }
+    .city-hero-overlay { position:absolute; bottom:0; left:0; right:0; padding:1.5rem; background:linear-gradient(to top, rgba(0,0,0,0.85), transparent); }
+    .city-hero-overlay h3 { font-size:2rem; color:var(--white); margin-bottom:0.25rem; }
+    .city-hero-overlay p { font-size:0.95rem; color:rgba(255,255,255,0.85); }
+
+    .city-info-card { background:var(--white); border:1.5px solid var(--border); border-radius:16px; padding:1.75rem; }
+    .city-desc { font-size:0.95rem; color:var(--muted); line-height:1.7; margin-bottom:1.5rem; }
+    .city-stats { display:grid; grid-template-columns:repeat(4, 1fr); gap:0.85rem; }
+    .city-stat { text-align:center; border-radius:12px; padding:1.1rem 0.5rem; }
+    .city-stat.s1 { background:#EBF2FF; }
+    .city-stat.s2 { background:#E8F8EE; }
+    .city-stat.s3 { background:#FFF1E0; }
+    .city-stat.s4 { background:#F3E8FF; }
+    .city-stat-icon { width:38px; height:38px; border-radius:9px; display:inline-flex; align-items:center; justify-content:center; margin-bottom:0.4rem; color:var(--white); font-size:1rem; }
+    .city-stat.s1 .city-stat-icon { background:#3B82F6; }
+    .city-stat.s2 .city-stat-icon { background:#10B981; }
+    .city-stat.s3 .city-stat-icon { background:#F59E0B; }
+    .city-stat.s4 .city-stat-icon { background:#8B5CF6; }
+    .city-stat-num { display:block; font-family:'Playfair Display',serif; font-size:1.65rem; font-weight:700; line-height:1.1; }
+    .city-stat.s1 .city-stat-num { color:#1E40AF; }
+    .city-stat.s2 .city-stat-num { color:#047857; }
+    .city-stat.s3 .city-stat-num { color:#B45309; }
+    .city-stat.s4 .city-stat-num { color:#6D28D9; }
+    .city-stat-lbl { display:block; font-size:0.7rem; color:var(--muted); margin-top:0.2rem; }
+
+    /* ── CAS D'USAGE ── */
+    .cases { padding:80px 5%; background:linear-gradient(135deg, #1e3a8a 0%, #2D4B9F 50%, #1e3a8a 100%); }
+    .cases-inner { max-width:1100px; margin:0 auto; }
+    .cases-head { text-align:center; margin-bottom:3rem; }
+    .cases-head h2 { color:var(--white); font-size:clamp(1.8rem, 3.2vw, 2.4rem); margin-bottom:0.85rem; }
+    .cases-head p { color:rgba(255,255,255,0.78); font-size:1rem; max-width:580px; margin:0 auto; line-height:1.7; }
+    .cases-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:1.5rem; }
+    .case-card { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:16px; padding:1.75rem; transition:transform .3s, box-shadow .3s; backdrop-filter:blur(8px); }
+    .case-card:hover { transform:translateY(-4px); box-shadow:0 12px 40px rgba(0,0,0,0.25); }
+    .case-card h4 { font-family:'Inter',sans-serif; font-size:1rem; font-weight:700; color:var(--white); margin-bottom:1rem; line-height:1.35; }
+    .case-meta { display:flex; flex-direction:column; gap:0.55rem; padding-bottom:1.2rem; border-bottom:1px solid rgba(255,255,255,0.12); margin-bottom:1.2rem; }
+    .case-meta-row { display:flex; justify-content:space-between; font-size:0.85rem; }
+    .case-meta-row span:first-child { color:rgba(255,255,255,0.55); }
+    .case-meta-row span:last-child { color:rgba(255,255,255,0.95); font-weight:600; }
+    .case-meta-row.highlight span:last-child { color:var(--gold); }
+    .case-result { background:linear-gradient(135deg, #F59E0B 0%, #EA580C 100%); border-radius:10px; padding:0.85rem; text-align:center; }
+    .case-result strong { display:block; font-family:'Playfair Display',serif; font-size:1.85rem; color:var(--white); line-height:1.1; }
+    .case-result span { font-size:0.75rem; color:rgba(255,255,255,0.92); }
+
+    @media (max-width:900px) {
+      .presence-grid { grid-template-columns:1fr; }
+      .city-side { position:static; }
+      .city-list { max-height:300px; }
+      .city-stats { grid-template-columns:repeat(2, 1fr); }
+      .cases-grid { grid-template-columns:1fr; }
+    }
+    @media (max-width:600px) {
+      .city-hero img { height:220px; }
+      .city-hero-overlay h3 { font-size:1.5rem; }
+    }
   </style>
+
+  <!-- Schema.org Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "OPTIMI GROUP",
+    "url": "https://optimi-group.com",
+    "logo": "https://optimi-group.com/og-image.jpg",
+    "description": "OPTIMI GROUP — Conciergerie Airbnb premium et gestion locative clé en main à Paris, en Île-de-France et à l'international. Spécialiste de l'optimisation de revenus locatifs, transformation bureaux/logements, bail mobilité.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "50 avenue des Champs-Élysées",
+      "addressLocality": "Paris",
+      "postalCode": "75008",
+      "addressCountry": "FR"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+33612784932",
+      "contactType": "customer service",
+      "email": "contactoptgroup@gmail.com",
+      "availableLanguage": ["French", "English"]
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Paris" },
+      { "@type": "City", "name": "Nice" },
+      { "@type": "City", "name": "Cannes" },
+      { "@type": "City", "name": "Monaco" },
+      { "@type": "City", "name": "Marseille" },
+      { "@type": "City", "name": "Bordeaux" },
+      { "@type": "City", "name": "Dakar" },
+      { "@type": "City", "name": "Saly" },
+      { "@type": "City", "name": "Abidjan" },
+      { "@type": "City", "name": "Assinie" },
+      { "@type": "City", "name": "New York" },
+      { "@type": "City", "name": "Los Angeles" }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/optimigroup",
+      "https://www.linkedin.com/company/optimigroup"
+    ]
+  }
+  </script>
+
+  <!-- Google Ads -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17544027457"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17544027457');
+  </script>
 </head>
 <body>
 
@@ -1362,6 +1502,125 @@
 <!-- ══════════════════════════════════════════
      LOCAL COVERAGE
 ══════════════════════════════════════════ -->
+<!-- ══════════════════════════════════════════
+     PRÉSENCE INTERNATIONALE — Cities interactive
+══════════════════════════════════════════ -->
+<section class="presence" id="presence">
+  <div class="section-inner">
+    <div class="section-head text-center" style="max-width:680px;margin-left:auto;margin-right:auto;">
+      <p class="section-label">Notre présence</p>
+      <h2 class="section-title">Présents dans 12 villes, 4 pays</h2>
+      <p class="section-sub" style="margin:0 auto;">Plus de 337 biens en gestion active. Une expertise hyper-locale, déployée à l'international. Cliquez sur une ville pour découvrir les performances locales.</p>
+    </div>
+
+    <div class="presence-grid">
+      <div class="city-side">
+        <div class="city-side-head">
+          <h3>Sélectionnez une ville</h3>
+        </div>
+        <div class="city-list" id="cityList">
+          <!-- City buttons injected by JS -->
+        </div>
+      </div>
+
+      <div class="city-detail">
+        <div class="city-hero">
+          <img id="cityImg" src="https://images.pexels.com/photos/739407/pexels-photo-739407.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Paris" loading="lazy"/>
+          <div class="city-hero-overlay">
+            <h3 id="cityName">Paris</h3>
+            <p id="cityRegion">Île-de-France</p>
+          </div>
+        </div>
+
+        <div class="city-info-card">
+          <p class="city-desc" id="cityDesc">Capitale touristique mondiale avec une demande constante en location courte durée toute l'année.</p>
+          <div class="city-stats">
+            <div class="city-stat s1">
+              <div class="city-stat-icon">📍</div>
+              <strong class="city-stat-num" id="statProps">100</strong>
+              <span class="city-stat-lbl">Biens gérés</span>
+            </div>
+            <div class="city-stat s2">
+              <div class="city-stat-icon">📈</div>
+              <strong class="city-stat-num" id="statRev">3.400€</strong>
+              <span class="city-stat-lbl">Revenu moyen</span>
+            </div>
+            <div class="city-stat s3">
+              <div class="city-stat-icon">✓</div>
+              <strong class="city-stat-num" id="statOcc">88%</strong>
+              <span class="city-stat-lbl">Taux d'occupation</span>
+            </div>
+            <div class="city-stat s4">
+              <div class="city-stat-icon">⤴</div>
+              <strong class="city-stat-num" id="statGrowth">+32%</strong>
+              <span class="city-stat-lbl">Croissance 2024</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     CAS D'USAGE — Performance par zone
+══════════════════════════════════════════ -->
+<section class="cases" id="cas-usage">
+  <div class="cases-inner">
+    <div class="cases-head">
+      <p class="section-label" style="color:var(--gold);">Cas d'usage concrets</p>
+      <h2>Résultats réels obtenus pour nos clients</h2>
+      <p>Des transformations mesurables — pas de théorie, des chiffres vérifiables sur des biens que nous gérons.</p>
+    </div>
+    <div class="cases-grid">
+      <div class="case-card">
+        <h4>Transformation Bureau → Hôtel</h4>
+        <div class="case-meta">
+          <div class="case-meta-row"><span>Localisation</span><span>Monaco</span></div>
+          <div class="case-meta-row"><span>Surface</span><span>70 m²</span></div>
+          <div class="case-meta-row"><span>Avant</span><span>2 800 €/mois</span></div>
+          <div class="case-meta-row highlight"><span>Après</span><span>8 500 €/mois</span></div>
+          <div class="case-meta-row"><span>Délai</span><span>6 mois</span></div>
+        </div>
+        <div class="case-result">
+          <strong>+203%</strong>
+          <span>d'amélioration</span>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <h4>Optimisation Airbnb</h4>
+        <div class="case-meta">
+          <div class="case-meta-row"><span>Localisation</span><span>Paris Marais</span></div>
+          <div class="case-meta-row"><span>Surface</span><span>45 m²</span></div>
+          <div class="case-meta-row"><span>Avant</span><span>1 400 €/mois</span></div>
+          <div class="case-meta-row highlight"><span>Après</span><span>2 800 €/mois</span></div>
+          <div class="case-meta-row"><span>Délai</span><span>2 mois</span></div>
+        </div>
+        <div class="case-result">
+          <strong>+107%</strong>
+          <span>d'amélioration</span>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <h4>Bail Mobilité Premium</h4>
+        <div class="case-meta">
+          <div class="case-meta-row"><span>Localisation</span><span>Cannes</span></div>
+          <div class="case-meta-row"><span>Surface</span><span>70 m²</span></div>
+          <div class="case-meta-row"><span>Avant</span><span>1 600 €/mois</span></div>
+          <div class="case-meta-row highlight"><span>Après</span><span>2 400 €/mois</span></div>
+          <div class="case-meta-row"><span>Délai</span><span>1 mois</span></div>
+        </div>
+        <div class="case-result">
+          <strong>+50%</strong>
+          <span>d'amélioration</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="local" id="local">
   <div class="section-inner">
     <div class="section-head">
@@ -1611,6 +1870,57 @@
   }
   // Show first toast after 8s, then every 18s
   setTimeout(() => { showToast(); setInterval(showToast, 18000); }, 8000);
+
+  /* ── CITIES INTERACTIVE ── */
+  const CITIES = [
+    { key:'paris', name:'Paris', region:'Île-de-France', properties:'100', revenue:'3.400€', occupancy:'88%', growth:'+32%', desc:'Capitale touristique mondiale avec une demande constante en location courte durée toute l\'année.', img:'https://images.pexels.com/photos/739407/pexels-photo-739407.jpeg?auto=compress&cs=tinysrgb&w=1200' },
+    { key:'nice', name:'Nice', region:'Côte d\'Azur', properties:'45', revenue:'2.800€', occupancy:'85%', growth:'+28%', desc:'Riviera française. Forte demande sur la Promenade des Anglais et le Vieux-Nice — touristes internationaux toute l\'année.', img:'https://images.pexels.com/photos/1486222/pexels-photo-1486222.jpeg?auto=compress&cs=tinysrgb&w=1200' },
+    { key:'cannes', name:'Cannes', region:'Côte d\'Azur', properties:'38', revenue:'3.200€', occupancy:'90%', growth:'+35%', desc:'Marché premium event-driven : Festival de Cannes, MIPIM, MIDEM. Tarifs ultra-élevés en haute saison.', img:'https://images.pexels.com/photos/2870167/pexels-photo-2870167.jpeg?auto=compress&cs=tinysrgb&w=1200' },
+    { key:'monaco', name:'Monaco', region:'Principauté', properties:'25', revenue:'5.500€', occupancy:'92%', growth:'+40%', desc:'Marché ultra-premium. Clientèle internationale UHNW toute l\'année — Grand Prix, Yacht Show, festivals.', img:'https://images.pexels.com/photos/2869741/pexels-photo-2869741.jpeg?auto=compress&cs=tinysrgb&w=1200' },
+    { key:'marseille', name:'Marseille', region:'PACA', properties:'32', revenue:'2.200€', occupancy:'82%', growth:'+25%', desc:'Port méditerranéen en pleine renaissance. Croissance soutenue depuis Capitale Européenne 2013, demande tourisme et business.', img:'https://images.pexels.com/photos/2916820/pexels-photo-2916820.jpeg?auto=compress&cs=tinysrgb&w=1200' },
+    { key:'bordeaux', name:'Bordeaux', region:'Nouvelle-Aquitaine', properties:'28', revenue:'2.400€', occupancy:'84%', growth:'+30%', desc:'Capitale du vin. Mix attractif business + tourisme œnologique, demande premium soutenue toute l\'année.', img:'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1200' },
+    { key:'dakar', name:'Dakar', region:'Sénégal', properties:'15', revenue:'1.800€', occupancy:'80%', growth:'+35%', desc:'Hub d\'affaires Afrique de l\'Ouest. Demande expat & événementielle, tickets premium pour clientèle business.', img:'https://images.pexels.com/photos/5503184/pexels-photo-5503184.jpeg?auto=compress&cs=tinysrgb&w=1200' },
+    { key:'saly', name:'Saly', region:'Sénégal', properties:'12', revenue:'1.600€', occupancy:'78%', growth:'+28%', desc:'Première station balnéaire du Sénégal. Marché vacances haut de gamme, clientèle européenne en saison.', img:'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg?auto=compress&cs=tinysrgb&w=1200' },
+    { key:'abidjan', name:'Abidjan', region:'Côte d\'Ivoire', properties:'18', revenue:'1.900€', occupancy:'81%', growth:'+30%', desc:'Capitale économique de Côte d\'Ivoire. Marché business soutenu, demande forte sur Plateau et Cocody.', img:'https://images.pexels.com/photos/6469823/pexels-photo-6469823.jpeg?auto=compress&cs=tinysrgb&w=1200' },
+    { key:'assinie', name:'Assinie', region:'Côte d\'Ivoire', properties:'10', revenue:'1.500€', occupancy:'75%', growth:'+25%', desc:'Riviera ivoirienne. Marché vacances premium pour expatriés et clientèle ouest-africaine aisée.', img:'https://images.pexels.com/photos/3601425/pexels-photo-3601425.jpeg?auto=compress&cs=tinysrgb&w=1200' },
+    { key:'newyork', name:'New York', region:'États-Unis', properties:'8', revenue:'4.500€', occupancy:'86%', growth:'+38%', desc:'Marché global premium. Demande corporate (Manhattan) et touristique soutenue, ticket moyen élevé.', img:'https://images.pexels.com/photos/290595/pexels-photo-290595.jpeg?auto=compress&cs=tinysrgb&w=1200' },
+    { key:'losangeles', name:'Los Angeles', region:'États-Unis', properties:'6', revenue:'4.200€', occupancy:'84%', growth:'+35%', desc:'West Coast lifestyle. Mix tourisme et business, forte demande sur Beverly Hills, Santa Monica, West Hollywood.', img:'https://images.pexels.com/photos/1634278/pexels-photo-1634278.jpeg?auto=compress&cs=tinysrgb&w=1200' }
+  ];
+
+  function renderCityList() {
+    const list = document.getElementById('cityList');
+    if (!list) return;
+    list.innerHTML = CITIES.map((c, i) => `
+      <button class="city-btn ${i===0?'active':''}" data-key="${c.key}">
+        <svg class="city-pin" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <div class="city-btn-info">
+          <strong>${c.name}</strong>
+          <span>${c.region}</span>
+        </div>
+      </button>
+    `).join('');
+    list.querySelectorAll('.city-btn').forEach(b => {
+      b.addEventListener('click', () => selectCity(b.dataset.key, b));
+    });
+  }
+
+  function selectCity(key, btn) {
+    const c = CITIES.find(x => x.key === key);
+    if (!c) return;
+    document.getElementById('cityImg').src = c.img;
+    document.getElementById('cityImg').alt = c.name;
+    document.getElementById('cityName').textContent = c.name;
+    document.getElementById('cityRegion').textContent = c.region;
+    document.getElementById('cityDesc').textContent = c.desc;
+    document.getElementById('statProps').textContent = c.properties;
+    document.getElementById('statRev').textContent = c.revenue;
+    document.getElementById('statOcc').textContent = c.occupancy;
+    document.getElementById('statGrowth').textContent = c.growth;
+    document.querySelectorAll('.city-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+  }
+
+  renderCityList();
 
   /* ── SMOOTH SCROLL ── */
   document.querySelectorAll('a[href^="#"]').forEach(a => {
