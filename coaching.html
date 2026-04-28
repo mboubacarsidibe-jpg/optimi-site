@@ -51,12 +51,12 @@ nav{
 /* ── HERO ── */
 .hero{
   background:
-    linear-gradient(135deg,rgba(6,15,26,.93) 0%,rgba(11,24,40,.74) 50%,rgba(11,24,40,.96) 100%),
-    url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1920&q=85&auto=format&fit=crop') center/cover no-repeat,
+    linear-gradient(135deg,rgba(6,15,26,.86) 0%,rgba(11,24,40,.58) 50%,rgba(11,24,40,.9) 100%),
+    url('https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1920&q=85&auto=format&fit=crop') center/cover no-repeat,
     #0B1828;
-  padding:120px 5% 110px;
+  padding:90px 5% 80px;
   position:relative;overflow:hidden;
-  min-height:88vh;
+  min-height:82vh;
   display:flex;align-items:center;justify-content:center;
 }
 .hero::before{
@@ -84,17 +84,21 @@ nav{
 
 .hero-h1{
   font-family:'Playfair Display',serif;
-  font-size:clamp(2.4rem,7.5vw,5.8rem);
+  font-size:clamp(2.2rem,6vw,4.6rem);
   font-weight:800;color:#fff;
-  line-height:1;letter-spacing:-.02em;
-  margin-bottom:1.75rem;text-transform:uppercase;
+  line-height:1.05;letter-spacing:-.015em;
+  margin-bottom:1.5rem;text-transform:uppercase;
 }
 .hero-h1 .hl-box{
   display:inline;
   background:var(--gold);color:var(--navy);
-  padding:.04em .3em;line-height:1.05;
+  padding:.05em .25em;line-height:1;
   box-decoration-break:clone;-webkit-box-decoration-break:clone;
-  box-shadow:0 6px 28px rgba(201,165,83,.25);
+}
+.hero-h1 .accent-light{
+  display:block;font-size:.55em;font-weight:600;
+  letter-spacing:.08em;color:rgba(255,255,255,.7);
+  margin-top:.6rem;text-transform:uppercase;
 }
 
 .hero-sub{
@@ -359,7 +363,8 @@ footer p{font-size:.78rem;color:rgba(255,255,255,.3);}
   .hero-brand-line{width:24px;}
   .hero-brand-text{font-size:.66rem;letter-spacing:.18em;}
   .hero-brand-text em{display:block;margin-left:0;margin-top:.2rem;letter-spacing:.1em;}
-  .hero-h1{font-size:clamp(1.95rem,8.5vw,2.6rem);line-height:1.05;margin-bottom:1.25rem;letter-spacing:-.01em;}
+  .hero-h1{font-size:clamp(1.85rem,7.5vw,2.4rem);line-height:1.08;margin-bottom:1.25rem;letter-spacing:-.01em;}
+  .hero-h1 .accent-light{font-size:.62em;margin-top:.5rem;}
   .hero-sub{font-size:.95rem;margin-bottom:1.5rem;line-height:1.55;padding:0 .25rem;}
   .hero-actions{flex-direction:column;width:100%;gap:.65rem;}
   .hero-actions .btn-cta,.hero-actions .btn-ghost{width:100%;text-align:center;padding:.95rem 1rem;font-size:.92rem;}
@@ -414,8 +419,8 @@ footer p{font-size:.78rem;color:rgba(255,255,255,.3);}
 
     <h1 class="hero-h1">
       60 jours pour<br/>
-      <span class="hl-box">+40% de revenus</span><br/>
-      en plus, garantis.
+      <span class="hl-box">+40% de revenus</span>
+      <span class="accent-light">— ou on continue gratuitement</span>
     </h1>
 
     <p class="hero-sub">
