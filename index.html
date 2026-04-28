@@ -618,16 +618,33 @@
     @media (max-width:600px) {
       :root { --section-py: 64px; }
       section { padding:64px 5%; }
-      .hero { padding:50px 5% 40px; }
-      .hero-inner { gap:1.5rem; }
+      /* Hero full-screen mobile (Apple-style) */
+      .hero {
+        min-height: 100vh;
+        min-height: 100svh;
+        padding: 32px 5% 90px;
+        display: flex; flex-direction: column;
+      }
+      .hero-inner {
+        gap: 2rem;
+        flex: 1;
+      }
+      .hero-left {
+        display: flex; flex-direction: column;
+        min-height: calc(100vh - 64px - 80px - 96px);
+        min-height: calc(100svh - 64px - 80px - 96px);
+      }
+      .hero h1 { font-size: clamp(2rem, 8vw, 2.8rem); line-height: 1.08; letter-spacing: -0.02em; }
+      .hero-sub { font-size: 1rem; line-height: 1.65; }
+      .hero-ctarow { margin-bottom: 0; }
       .footer-top { grid-template-columns:1fr; }
-      /* Stats horizontaux sur mobile — 4 colonnes en 1 ligne */
+      /* Stats horizontaux sur mobile — 4 colonnes en 1 ligne, poussés en bas */
       .hero-stats {
         flex-direction: row;
         gap: 0.55rem;
         justify-content: space-between;
-        margin-top: 1.5rem;
-        padding-top: 1.25rem;
+        margin-top: auto;
+        padding-top: 1.5rem;
         border-top: 1px solid rgba(255,255,255,0.08);
       }
       .hero-stat {
