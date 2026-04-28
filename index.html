@@ -195,7 +195,7 @@
     }
 
     html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--warm-bg); line-height: 1.6; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--warm-bg); line-height: 1.6; overflow-x: hidden; }
 
     h1,h2,h3,h4 { font-family: 'Playfair Display', serif; line-height: 1.25; }
 
@@ -606,6 +606,7 @@
       .footer-top { grid-template-columns:1fr 1fr; }
       .nav-links { display:none; }
       .lm-form { flex-direction:column; }
+      .lm-book { box-shadow: 4px 4px 0 var(--gold); margin-right: 4px; }
       .calc-inputs { grid-template-columns:1fr; }
       .compare .section-inner { overflow-x:auto; -webkit-overflow-scrolling:touch; padding-bottom:8px; }
       .compare-table { min-width:540px; }
@@ -617,9 +618,36 @@
     @media (max-width:600px) {
       :root { --section-py: 64px; }
       section { padding:64px 5%; }
-      .hero { padding:60px 5% 50px; }
+      .hero { padding:50px 5% 40px; }
+      .hero-inner { gap:1.5rem; }
       .footer-top { grid-template-columns:1fr; }
-      .hero-stats { flex-direction:column; gap:1rem; }
+      /* Stats horizontaux sur mobile — 4 colonnes en 1 ligne */
+      .hero-stats {
+        flex-direction: row;
+        gap: 0.55rem;
+        justify-content: space-between;
+        margin-top: 1.5rem;
+        padding-top: 1.25rem;
+        border-top: 1px solid rgba(255,255,255,0.08);
+      }
+      .hero-stat {
+        flex: 1;
+        text-align: center;
+        min-width: 0;
+      }
+      .hero-stat strong {
+        display: block;
+        font-size: clamp(0.95rem, 4.6vw, 1.3rem);
+        white-space: nowrap;
+        line-height: 1.1;
+      }
+      .hero-stat span {
+        font-size: clamp(0.55rem, 2.1vw, 0.68rem);
+        line-height: 1.3;
+        display: block;
+        margin-top: 0.3rem;
+        opacity: 0.7;
+      }
       .process-grid { grid-template-columns:1fr; }
       .seg-kpi-row { grid-template-columns:1fr; }
       .mobile-cta { display:block; }
