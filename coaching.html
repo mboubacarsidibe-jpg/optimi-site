@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Méthode Rentabilité 360 — +40% de revenus en 60 jours | OPTIMI Coaching</title>
+<meta name="description" content="Coaching individuel intensif : optimisez votre Airbnb et augmentez vos revenus de +40% en 60 jours. Méthode Rentabilité 360 par les experts OPTIMI — 200+ propriétés gérées."/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#0B1828;
+  --navy-mid:#162236;
+  --gold:#C9A553;
+  --gold-light:#EAD9A8;
+  --gold-pale:#F7F0E0;
+  --warm-bg:#FAFAF8;
+  --card-bg:#F3F1EC;
+  --text:#1C1C2E;
+  --muted:#6B6B80;
+  --border:#E2DDD4;
+  --white:#FFFFFF;
+  --green:#16a34a;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;color:var(--text);background:var(--white);line-height:1.6;overflow-x:hidden;}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;line-height:1.2;}
+
+/* NAV */
+nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(11,24,40,0.97);
+  backdrop-filter:blur(12px);
+  padding:0 5%;
+  display:flex;align-items:center;justify-content:space-between;
+  height:64px;border-bottom:1px solid rgba(201,165,83,0.2);
+}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--white);letter-spacing:0.04em;}
+.nav-logo span{color:var(--gold);}
+.nav-badge{background:rgba(201,165,83,0.15);border:1px solid rgba(201,165,83,0.3);color:var(--gold);font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.3rem 0.9rem;border-radius:100px;}
+.nav-cta{background:var(--gold);color:var(--navy);padding:0.5rem 1.4rem;border-radius:6px;font-weight:700;font-size:0.85rem;text-decoration:none;transition:all .2s;}
+.nav-cta:hover{background:#d4b060;transform:translateY(-1px);}
+
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,#0B1828 0%,#0f2235 50%,#1a3350 100%);
+  padding:80px 5% 70px;
+  position:relative;overflow:hidden;
+  text-align:center;
+}
+.hero::before{
+  content:'';position:absolute;top:-20%;left:50%;transform:translateX(-50%);
+  width:800px;height:800px;border-radius:50%;
+  background:radial-gradient(circle,rgba(201,165,83,0.07) 0%,transparent 65%);
+  pointer-events:none;
+}
+.hero-inner{max-width:860px;margin:0 auto;position:relative;}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  background:rgba(201,165,83,0.12);border:1px solid rgba(201,165,83,0.3);
+  color:var(--gold);font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;
+  padding:0.4rem 1.1rem;border-radius:100px;margin-bottom:1.75rem;
+}
+.hero h1{font-size:clamp(2.2rem,5vw,3.6rem);color:var(--white);margin-bottom:1.25rem;line-height:1.1;}
+.hero h1 em{color:var(--gold);font-style:normal;}
+.hero-sub{font-size:1.1rem;color:rgba(255,255,255,0.72);max-width:640px;margin:0 auto 2rem;line-height:1.7;}
+.hero-proof{
+  display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;
+  margin-bottom:2.5rem;padding:1.5rem;
+  background:rgba(255,255,255,0.05);border-radius:12px;
+  border:1px solid rgba(255,255,255,0.08);
+}
+.proof-item{}
+.proof-item strong{display:block;font-size:1.8rem;color:var(--gold);font-family:'Playfair Display',serif;line-height:1;}
+.proof-item span{font-size:0.75rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.06em;}
+.hero-ctas{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.5rem;}
+.btn-gold{
+  background:var(--gold);color:var(--navy);
+  padding:1rem 2.5rem;border-radius:8px;
+  font-weight:800;font-size:1rem;text-decoration:none;
+  transition:all .2s;display:inline-block;border:none;cursor:pointer;
+  font-family:'Inter',sans-serif;
+}
+.btn-gold:hover{background:#d4b060;transform:translateY(-2px);box-shadow:0 8px 28px rgba(201,165,83,0.35);}
+.btn-outline{
+  border:1.5px solid rgba(255,255,255,0.3);color:var(--white);
+  padding:1rem 2rem;border-radius:8px;
+  font-weight:600;font-size:1rem;text-decoration:none;
+  transition:all .2s;display:inline-block;
+}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);}
+.hero-note{font-size:0.78rem;color:rgba(255,255,255,0.4);}
+
+/* URGENCY BAR */
+.urgency-bar{
+  background:var(--gold);padding:0.75rem 5%;
+  text-align:center;font-weight:700;color:var(--navy);font-size:0.88rem;
+}
+.urgency-bar span{font-weight:800;}
+
+/* PAIN */
+.pain{background:var(--warm-bg);padding:80px 5%;}
+.pain-inner{max-width:1000px;margin:0 auto;}
+.section-label{font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem;}
+.section-title{font-size:clamp(1.6rem,3vw,2.2rem);color:var(--navy);margin-bottom:1rem;}
+.section-sub{font-size:0.97rem;color:var(--muted);max-width:560px;line-height:1.7;}
+.section-head{margin-bottom:3rem;}
+.pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
+.pain-card{
+  background:var(--white);border:1.5px solid var(--border);border-radius:12px;
+  padding:1.5rem;display:flex;gap:1rem;align-items:flex-start;
+}
+.pain-icon{font-size:1.6rem;flex-shrink:0;}
+.pain-card h4{font-family:'Inter',sans-serif;font-size:0.92rem;font-weight:700;color:var(--navy);margin-bottom:0.3rem;}
+.pain-card p{font-size:0.83rem;color:var(--muted);line-height:1.6;}
+
+/* TRANSFORMATION */
+.transform{background:var(--navy);padding:60px 5%;text-align:center;}
+.transform-inner{max-width:800px;margin:0 auto;}
+.transform h2{color:var(--white);margin-bottom:1rem;}
+.transform p{color:rgba(255,255,255,0.7);margin-bottom:2.5rem;}
+.transform-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:1.5rem;align-items:center;}
+.tf-before,.tf-after{background:rgba(255,255,255,0.05);border-radius:12px;padding:1.75rem;}
+.tf-before{border:1px solid rgba(255,255,255,0.1);}
+.tf-after{border:1px solid rgba(201,165,83,0.4);background:rgba(201,165,83,0.06);}
+.tf-label{font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1rem;}
+.tf-before .tf-label{color:var(--muted);}
+.tf-after .tf-label{color:var(--gold);}
+.tf-item{font-size:0.85rem;padding:0.5rem 0;border-bottom:1px solid rgba(255,255,255,0.07);color:rgba(255,255,255,0.65);display:flex;align-items:center;gap:0.5rem;}
+.tf-item:last-child{border-bottom:none;}
+.tf-after .tf-item{color:rgba(255,255,255,0.85);}
+.tf-arrow{font-size:2rem;color:var(--gold);}
+
+/* METHOD */
+.method{padding:80px 5%;background:var(--warm-bg);}
+.method-inner{max-width:1000px;margin:0 auto;}
+.sessions{display:flex;flex-direction:column;gap:1.5rem;margin-top:3rem;}
+.session-card{
+  background:var(--white);border:1.5px solid var(--border);border-radius:16px;
+  padding:2rem 2rem 2rem 1.5rem;
+  display:grid;grid-template-columns:64px 1fr;gap:1.5rem;align-items:start;
+}
+.session-num{
+  width:56px;height:56px;border-radius:12px;
+  background:var(--navy);color:var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;
+  flex-shrink:0;
+}
+.session-meta{font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem;}
+.session-card h3{font-size:1.15rem;color:var(--navy);margin-bottom:0.5rem;}
+.session-card p{font-size:0.88rem;color:var(--muted);margin-bottom:1rem;line-height:1.6;}
+.session-items{display:flex;flex-wrap:wrap;gap:0.5rem;}
+.session-tag{background:var(--gold-pale);color:var(--navy);font-size:0.75rem;font-weight:600;padding:0.3rem 0.8rem;border-radius:20px;}
+
+/* INCLUDED */
+.included{padding:80px 5%;background:var(--white);}
+.included-inner{max-width:1000px;margin:0 auto;}
+.included-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:3rem;}
+.inc-card{
+  background:var(--warm-bg);border:1.5px solid var(--border);border-radius:14px;
+  padding:1.75rem;
+}
+.inc-icon{font-size:2rem;margin-bottom:1rem;}
+.inc-card h4{font-size:1rem;color:var(--navy);font-family:'Inter',sans-serif;font-weight:700;margin-bottom:0.5rem;}
+.inc-card p{font-size:0.85rem;color:var(--muted);line-height:1.6;}
+
+/* BONUSES */
+.bonuses{padding:60px 5%;background:linear-gradient(135deg,#0B1828,#162236);}
+.bonuses-inner{max-width:1000px;margin:0 auto;}
+.bonuses h2{color:var(--white);text-align:center;margin-bottom:0.75rem;}
+.bonuses-sub{text-align:center;color:rgba(255,255,255,0.6);margin-bottom:2.5rem;font-size:0.95rem;}
+.bonus-list{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
+.bonus-item{
+  background:rgba(255,255,255,0.05);border:1px solid rgba(201,165,83,0.2);
+  border-radius:12px;padding:1.5rem;text-align:center;
+}
+.bonus-emoji{font-size:2rem;margin-bottom:0.75rem;}
+.bonus-item h4{font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:700;color:var(--white);margin-bottom:0.4rem;}
+.bonus-item p{font-size:0.78rem;color:rgba(255,255,255,0.55);margin-bottom:0.75rem;}
+.bonus-val{font-size:0.8rem;font-weight:700;color:var(--gold);}
+
+/* RESULTS */
+.results{padding:80px 5%;background:var(--warm-bg);}
+.results-inner{max-width:1100px;margin:0 auto;}
+.results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
+.result-card{
+  background:var(--white);border:1.5px solid var(--border);border-radius:14px;
+  padding:1.75rem;
+}
+.stars{color:var(--gold);font-size:1rem;letter-spacing:2px;margin-bottom:1rem;}
+.result-quote{font-size:0.9rem;color:var(--text);line-height:1.7;font-style:italic;margin-bottom:1.25rem;}
+.result-author{display:flex;align-items:center;gap:0.75rem;}
+.author-av{
+  width:40px;height:40px;border-radius:50%;
+  background:var(--navy);color:var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:0.85rem;flex-shrink:0;
+}
+.author-name{font-weight:700;font-size:0.88rem;color:var(--navy);}
+.author-sub{font-size:0.75rem;color:var(--muted);}
+.result-stat{
+  margin-top:1rem;padding-top:1rem;
+  border-top:1px solid var(--border);
+  display:flex;align-items:center;gap:0.5rem;
+}
+.result-stat strong{font-size:1.3rem;color:var(--green);font-family:'Playfair Display',serif;}
+.result-stat span{font-size:0.75rem;color:var(--muted);}
+
+/* COACH */
+.coach{padding:80px 5%;background:var(--white);}
+.coach-inner{max-width:900px;margin:0 auto;}
+.coach-card{
+  background:var(--navy);border-radius:20px;padding:3rem;
+  display:grid;grid-template-columns:160px 1fr;gap:2.5rem;align-items:start;
+}
+.coach-av{
+  width:140px;height:140px;border-radius:16px;
+  background:linear-gradient(135deg,var(--gold) 0%,#a07a30 100%);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Playfair Display',serif;font-size:3.5rem;font-weight:700;color:var(--navy);
+  flex-shrink:0;
+}
+.coach-badge{display:inline-block;background:rgba(201,165,83,0.15);border:1px solid rgba(201,165,83,0.3);color:var(--gold);font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.3rem 0.9rem;border-radius:100px;margin-bottom:1rem;}
+.coach-card h3{color:var(--white);font-size:1.4rem;margin-bottom:0.5rem;}
+.coach-card p{color:rgba(255,255,255,0.7);font-size:0.9rem;line-height:1.7;margin-bottom:1.25rem;}
+.coach-stats{display:flex;gap:2rem;flex-wrap:wrap;}
+.coach-stat strong{display:block;font-size:1.5rem;color:var(--gold);font-family:'Playfair Display',serif;}
+.coach-stat span{font-size:0.75rem;color:rgba(255,255,255,0.5);}
+
+/* PRICING */
+.pricing{padding:80px 5%;background:var(--warm-bg);}
+.pricing-inner{max-width:700px;margin:0 auto;text-align:center;}
+.price-card{
+  background:var(--white);border:2px solid var(--gold);border-radius:20px;
+  padding:3rem;margin-top:2.5rem;
+  box-shadow:0 12px 50px rgba(201,165,83,0.12);
+}
+.price-tag{display:inline-block;background:var(--gold);color:var(--navy);font-size:0.75rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;padding:0.35rem 1rem;border-radius:100px;margin-bottom:1.5rem;}
+.price-main{font-size:3.5rem;font-weight:800;color:var(--navy);font-family:'Playfair Display',serif;line-height:1;}
+.price-main span{font-size:1.5rem;}
+.price-sub{font-size:0.9rem;color:var(--muted);margin:0.5rem 0 1.5rem;}
+.price-includes{list-style:none;text-align:left;margin-bottom:2rem;}
+.price-includes li{padding:0.6rem 0;border-bottom:1px solid var(--border);font-size:0.9rem;display:flex;align-items:center;gap:0.6rem;}
+.price-includes li:last-child{border-bottom:none;}
+.price-includes li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0;}
+.price-payment{font-size:0.8rem;color:var(--muted);margin-top:1rem;}
+.guarantee-box{
+  background:var(--gold-pale);border:1.5px solid var(--gold-light);
+  border-radius:12px;padding:1.25rem 1.5rem;
+  display:flex;align-items:center;gap:1rem;margin-top:1.5rem;
+  text-align:left;
+}
+.guarantee-box .g-icon{font-size:2rem;flex-shrink:0;}
+.guarantee-box p{font-size:0.83rem;color:var(--navy);line-height:1.6;}
+.guarantee-box strong{display:block;font-weight:700;margin-bottom:0.2rem;}
+
+/* FAQ */
+.faq{padding:80px 5%;background:var(--white);}
+.faq-inner{max-width:760px;margin:0 auto;}
+.faq-list{margin-top:2.5rem;display:flex;flex-direction:column;gap:1px;}
+.faq-item{border:1.5px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:0.5rem;}
+.faq-q{
+  width:100%;text-align:left;padding:1.1rem 1.5rem;
+  background:var(--white);border:none;cursor:pointer;
+  font-family:'Inter',sans-serif;font-size:0.95rem;font-weight:600;color:var(--navy);
+  display:flex;justify-content:space-between;align-items:center;
+  transition:background .2s;
+}
+.faq-q:hover{background:var(--warm-bg);}
+.faq-q .faq-arrow{color:var(--gold);font-size:1.1rem;transition:transform .3s;flex-shrink:0;}
+.faq-q.open .faq-arrow{transform:rotate(180deg);}
+.faq-a{padding:0 1.5rem;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;}
+.faq-a.open{padding:0 1.5rem 1.25rem;max-height:300px;}
+.faq-a p{font-size:0.88rem;color:var(--muted);line-height:1.7;}
+
+/* FINAL CTA */
+.final-cta{
+  background:linear-gradient(135deg,#0B1828 0%,#1a3350 100%);
+  padding:80px 5%;text-align:center;
+}
+.final-cta h2{color:var(--white);font-size:clamp(1.8rem,3.5vw,2.5rem);margin-bottom:1rem;}
+.final-cta p{color:rgba(255,255,255,0.7);max-width:560px;margin:0 auto 2.5rem;line-height:1.7;}
+.spots-left{
+  display:inline-block;background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.15);
+  color:rgba(255,255,255,0.7);font-size:0.82rem;
+  padding:0.5rem 1.25rem;border-radius:100px;margin-bottom:1.5rem;
+}
+.spots-left strong{color:var(--gold);}
+
+/* FOOTER */
+footer{background:#091e38;color:var(--white);padding:32px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+footer p{font-size:0.82rem;color:rgba(255,255,255,0.4);}
+footer a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.82rem;}
+footer a:hover{color:var(--gold);}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .pain-grid{grid-template-columns:1fr 1fr;}
+  .transform-grid{grid-template-columns:1fr;gap:1rem;}
+  .tf-arrow{transform:rotate(90deg);}
+  .bonus-list{grid-template-columns:1fr 1fr;}
+  .results-grid{grid-template-columns:1fr;}
+  .coach-card{grid-template-columns:1fr;}
+  .coach-av{width:80px;height:80px;font-size:2rem;}
+  .included-grid{grid-template-columns:1fr;}
+}
+@media(max-width:600px){
+  .pain-grid{grid-template-columns:1fr;}
+  .bonus-list{grid-template-columns:1fr;}
+  .session-card{grid-template-columns:1fr;}
+  .hero-proof{gap:1.5rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">OPTI<span>MI</span></a>
+  <div class="nav-badge">Méthode Rentabilité 360</div>
+  <a href="#candidater" class="nav-cta">Candidater →</a>
+</nav>
+
+<!-- URGENCY -->
+<div class="urgency-bar">
+  🔥 <span>3 places disponibles</span> sur 8 pour la prochaine cohorte — Démarrage le 15 mai
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">⭐ Coaching individuel — Places limitées</div>
+    <h1>+40% de revenus sur votre<br/><em>Airbnb en 60 jours</em><br/>ou on recommence gratuitement</h1>
+    <p class="hero-sub">La Méthode Rentabilité 360 — 4 sessions de coaching individuel intensif pour transformer votre annonce, automatiser vos opérations et scaler vos revenus. Par les experts qui gèrent 200+ propriétés à Paris.</p>
+
+    <div class="hero-proof">
+      <div class="proof-item">
+        <strong>+40%</strong>
+        <span>Revenus moyens en 60 jours</span>
+      </div>
+      <div class="proof-item">
+        <strong>200+</strong>
+        <span>Propriétés gérées par OPTIMI</span>
+      </div>
+      <div class="proof-item">
+        <strong>4.9★</strong>
+        <span>Note moyenne de nos clients</span>
+      </div>
+      <div class="proof-item">
+        <strong>92%</strong>
+        <span>Taux d'occupation atteint</span>
+      </div>
+    </div>
+
+    <div class="hero-ctas">
+      <a href="#candidater" class="btn-gold">Candidater maintenant — Gratuit</a>
+      <a href="#methode" class="btn-outline">Voir le programme</a>
+    </div>
+    <p class="hero-note">🔒 Candidature gratuite et sans engagement · Réponse sous 48h</p>
+  </div>
+</section>
+
+<!-- PAIN -->
+<section class="pain">
+  <div class="pain-inner">
+    <div class="section-head">
+      <p class="section-label">Vous reconnaissez-vous ?</p>
+      <h2 class="section-title">La majorité des propriétaires Airbnb<br/>laissent des milliers d'euros sur la table</h2>
+      <p class="section-sub">Ces problèmes sont évitables. Ils ont tous une solution précise — et c'est exactement ce qu'on règle ensemble.</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <div class="pain-icon">😴</div>
+        <div>
+          <h4>Taux d'occupation décevant</h4>
+          <p>Votre calendrier est à moitié vide alors que la concurrence affiche complet tous les week-ends.</p>
+        </div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">📸</div>
+        <div>
+          <h4>Annonce sous-optimisée</h4>
+          <p>Titre générique, photos amateurs, description plate — votre bien ne se démarque pas dans les résultats.</p>
+        </div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">💸</div>
+        <div>
+          <h4>Prix figés, revenus stagnants</h4>
+          <p>Vous avez un prix fixe toute l'année alors que Fashion Week et Roland-Garros permettent de tripler vos tarifs.</p>
+        </div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">⏰</div>
+        <div>
+          <h4>Gestion chronophage</h4>
+          <p>Messages voyageurs, coordination ménage, check-in… vous êtes esclave de votre bien au lieu d'en profiter.</p>
+        </div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">🧾</div>
+        <div>
+          <h4>Fiscalité mal maîtrisée</h4>
+          <p>LMNP, micro-BIC, amortissements — vous payez trop d'impôts par manque de stratégie fiscale adaptée.</p>
+        </div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">🧭</div>
+        <div>
+          <h4>Seul face aux décisions</h4>
+          <p>Pas d'expert à qui demander. Vous avancez à tâtons, vous faites des erreurs qui vous coûtent cher.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSFORMATION -->
+<section class="transform">
+  <div class="transform-inner">
+    <p class="section-label" style="color:var(--gold)">Ce que le coaching change</p>
+    <h2 class="section-title" style="color:var(--white);margin-bottom:0.75rem;">Avant → Après la Méthode Rentabilité 360</h2>
+    <p style="color:rgba(255,255,255,0.6);margin-bottom:2.5rem;font-size:0.95rem;">En 60 jours, votre location courte durée devient une machine à revenus optimisée.</p>
+    <div class="transform-grid">
+      <div class="tf-before">
+        <div class="tf-label">Avant le coaching</div>
+        <div class="tf-item">❌ Annonce invisible dans les résultats</div>
+        <div class="tf-item">❌ Prix fixe toute l'année</div>
+        <div class="tf-item">❌ 60-65% de taux d'occupation</div>
+        <div class="tf-item">❌ 3h/jour de gestion manuelle</div>
+        <div class="tf-item">❌ Zéro upsells ni revenus additionnels</div>
+        <div class="tf-item">❌ Imposition non optimisée</div>
+      </div>
+      <div class="tf-arrow">→</div>
+      <div class="tf-after">
+        <div class="tf-label">Après la Méthode 360</div>
+        <div class="tf-item">✅ Top 5% des annonces dans votre ville</div>
+        <div class="tf-item">✅ Tarification dynamique automatique</div>
+        <div class="tf-item">✅ 85-92% d'occupation en saison</div>
+        <div class="tf-item">✅ 30 min/semaine de gestion</div>
+        <div class="tf-item">✅ Upsells actifs — +20% de revenus</div>
+        <div class="tf-item">✅ Statut LMNP optimisé + comptable partenaire</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD -->
+<section class="method" id="methode">
+  <div class="method-inner">
+    <div class="section-head">
+      <p class="section-label">Le programme</p>
+      <h2 class="section-title">4 sessions. 60 jours.<br/>Une transformation complète.</h2>
+      <p class="section-sub">Chaque session a un objectif précis, un livrable concret et un plan d'action immédiatement applicable.</p>
+    </div>
+    <div class="sessions">
+
+      <div class="session-card">
+        <div class="session-num">1</div>
+        <div>
+          <div class="session-meta">Session 1 — Semaine 1</div>
+          <h3>Diagnostic complet & Plan d'action</h3>
+          <p>Audit chirurgical de votre annonce Airbnb et Booking.com : titre, photos, description, profil hôte, expérience voyageur. Vous repartez avec un plan d'action priorisé sur 7 et 14 jours.</p>
+          <div class="session-items">
+            <span class="session-tag">Audit annonce Airbnb</span>
+            <span class="session-tag">Audit Booking.com</span>
+            <span class="session-tag">Expérience voyageur</span>
+            <span class="session-tag">Plan d'action 14 jours</span>
+            <span class="session-tag">Script d'accueil optimisé</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="session-card">
+        <div class="session-num">2</div>
+        <div>
+          <div class="session-meta">Session 2 — Semaine 2-3</div>
+          <h3>Optimisation & Stratégie de prix</h3>
+          <p>Réécriture complète de votre annonce avec la méthode AIDA, organisation de votre galerie photo, et mise en place de votre stratégie de tarification à 3 niveaux : prix plancher, standard et plafond.</p>
+          <div class="session-items">
+            <span class="session-tag">Rewriting AIDA</span>
+            <span class="session-tag">Prix plancher / standard / plafond</span>
+            <span class="session-tag">Calendrier événements Paris 2026</span>
+            <span class="session-tag">Réductions stratégiques</span>
+            <span class="session-tag">Analyse concurrence</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="session-card">
+        <div class="session-num">3</div>
+        <div>
+          <div class="session-meta">Session 3 — Semaine 4-6</div>
+          <h3>Automatisation totale des opérations</h3>
+          <p>Configuration de votre channel manager, tarification dynamique PriceLabs, 7 messages automatiques, check-in autonome et coordination prestataire ménage. Votre bien tourne seul.</p>
+          <div class="session-items">
+            <span class="session-tag">Channel manager</span>
+            <span class="session-tag">PriceLabs setup</span>
+            <span class="session-tag">7 messages automatiques</span>
+            <span class="session-tag">Check-in autonome</span>
+            <span class="session-tag">Coordination ménage</span>
+            <span class="session-tag">Paiements & cautions</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="session-card">
+        <div class="session-num">4</div>
+        <div>
+          <div class="session-meta">Session 4 — Semaine 8</div>
+          <h3>Scaling & Revenus additionnels</h3>
+          <p>Activation de vos upsells (early check-in, late check-out, packs expérience), création de votre site de réservation direct à 0% de commission, stratégie de fidélisation et plan de croissance.</p>
+          <div class="session-items">
+            <span class="session-tag">Upsells rentables</span>
+            <span class="session-tag">Site réservation direct</span>
+            <span class="session-tag">Codes promo fidélisation</span>
+            <span class="session-tag">Partenariats B2B</span>
+            <span class="session-tag">Plan de scaling</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- INCLUDED -->
+<section class="included">
+  <div class="included-inner">
+    <div class="section-head" style="text-align:center;">
+      <p class="section-label">Ce qui est inclus</p>
+      <h2 class="section-title">Tout ce dont vous avez besoin<br/>pour réussir</h2>
+    </div>
+    <div class="included-grid">
+      <div class="inc-card">
+        <div class="inc-icon">🎯</div>
+        <h4>4 sessions de coaching individuel</h4>
+        <p>1h par session en visioconférence, 100% personnalisée à votre situation. Pas de groupe, pas de replay — un expert dédié, pour vous.</p>
+      </div>
+      <div class="inc-card">
+        <div class="inc-icon">📋</div>
+        <h4>Plans d'action et livrables à chaque session</h4>
+        <p>Scripts, checklists, templates de messages, analyse de marché — vous repartez avec des outils immédiatement opérationnels.</p>
+      </div>
+      <div class="inc-card">
+        <div class="inc-icon">💬</div>
+        <h4>Support email illimité 60 jours</h4>
+        <p>Questions, blocages, situations inattendues — votre coach répond sous 24h pendant toute la durée du programme.</p>
+      </div>
+      <div class="inc-card">
+        <div class="inc-icon">📊</div>
+        <h4>Tableau de bord de suivi des résultats</h4>
+        <p>Revenus, taux d'occupation, note moyenne — vous mesurez votre progression semaine par semaine avec des KPIs concrets.</p>
+      </div>
+      <div class="inc-card">
+        <div class="inc-icon">🧾</div>
+        <h4>Accompagnement fiscal LMNP</h4>
+        <p>Accès à notre réseau de comptables partenaires spécialisés LMNP. Tarif préférentiel négocié pour nos clients coaching.</p>
+      </div>
+      <div class="inc-card">
+        <div class="inc-icon">🔑</div>
+        <h4>Accès à vie aux ressources OPTIMI</h4>
+        <p>Guide Expert 2026, templates, scripts, outils de tarification — mis à jour à chaque évolution réglementaire.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BONUSES -->
+<section class="bonuses">
+  <div class="bonuses-inner">
+    <p class="section-label" style="color:var(--gold);text-align:center;">Bonus exclusifs</p>
+    <h2>Inclus gratuitement avec votre coaching</h2>
+    <p class="bonuses-sub">Valeur totale des bonus : <strong style="color:var(--gold)">plus de 1 200€</strong> — offerts à chaque participant.</p>
+    <div class="bonus-list">
+      <div class="bonus-item">
+        <div class="bonus-emoji">📷</div>
+        <h4>Shooting photo professionnel</h4>
+        <p>Séance photo de votre bien par un photographe immobilier partenaire OPTIMI.</p>
+        <div class="bonus-val">Valeur : 497€</div>
+      </div>
+      <div class="bonus-item">
+        <div class="bonus-emoji">🌐</div>
+        <h4>Guide Expert Airbnb Paris 2026</h4>
+        <p>42 pages de stratégies, simulations et check-lists par nos experts.</p>
+        <div class="bonus-val">Valeur : 97€</div>
+      </div>
+      <div class="bonus-item">
+        <div class="bonus-emoji">💼</div>
+        <h4>Kit complet hôte professionnel</h4>
+        <p>Templates livret d'accueil, messages automatiques, règlement voyageur, checklist ménage.</p>
+        <div class="bonus-val">Valeur : 197€</div>
+      </div>
+      <div class="bonus-item">
+        <div class="bonus-emoji">📈</div>
+        <h4>Analyse de marché personnalisée</h4>
+        <p>Rapport de positionnement de votre bien dans votre quartier — prix, concurrence, opportunités.</p>
+        <div class="bonus-val">Valeur : 297€</div>
+      </div>
+      <div class="bonus-item">
+        <div class="bonus-emoji">⚖️</div>
+        <h4>Audit conformité réglementaire</h4>
+        <p>Vérification enregistrement mairie, changement d'usage, assurances — conformité 2026 garantie.</p>
+        <div class="bonus-val">Valeur : 197€</div>
+      </div>
+      <div class="bonus-item">
+        <div class="bonus-emoji">🔗</div>
+        <h4>Accès réseau partenaires OPTIMI</h4>
+        <p>Prestataires ménage, serrures connectées, comptables, photographes — tarifs négociés.</p>
+        <div class="bonus-val">Valeur : Inestimable</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section class="results">
+  <div class="results-inner">
+    <div class="section-head" style="text-align:center;">
+      <p class="section-label">Résultats clients</p>
+      <h2 class="section-title">Ils ont appliqué la Méthode Rentabilité 360</h2>
+      <p class="section-sub" style="margin:0 auto;">Des propriétaires comme vous — qui ont décidé d'arrêter de laisser de l'argent sur la table.</p>
+    </div>
+    <div class="results-grid">
+      <div class="result-card">
+        <div class="stars">★★★★★</div>
+        <p class="result-quote">"En 6 semaines, j'ai complètement refondu mon annonce, activé la tarification dynamique et mis en place les messages automatiques. Je ne gère plus rien manuellement et mes revenus ont explosé."</p>
+        <div class="result-author">
+          <div class="author-av">ML</div>
+          <div>
+            <div class="author-name">Marie-Laure D.</div>
+            <div class="author-sub">Studio, Paris 11e</div>
+          </div>
+        </div>
+        <div class="result-stat">
+          <strong>+35%</strong>
+          <span>de revenus dès le 2e mois</span>
+        </div>
+      </div>
+      <div class="result-card">
+        <div class="stars">★★★★★</div>
+        <p class="result-quote">"J'avais 3 appartements que je gérais seul, j'étais épuisé. Après le coaching, tout est automatisé. Je passe 30 minutes par semaine max et j'ai ajouté un 4e bien sereinement."</p>
+        <div class="result-author">
+          <div class="author-av">TC</div>
+          <div>
+            <div class="author-name">Thomas C.</div>
+            <div class="author-sub">Portefeuille 4 biens — Paris & Neuilly</div>
+          </div>
+        </div>
+        <div class="result-stat">
+          <strong>+42%</strong>
+          <span>de revenus consolidés</span>
+        </div>
+      </div>
+      <div class="result-card">
+        <div class="stars">★★★★★</div>
+        <p class="result-quote">"Je gérais seule depuis 2 ans avec un taux d'occupation de 62%. Après la session 2, j'avais déjà repris +28%. La session sur l'automatisation m'a libéré 15h par semaine."</p>
+        <div class="result-author">
+          <div class="author-av">SB</div>
+          <div>
+            <div class="author-name">Sophie B.</div>
+            <div class="author-sub">T2, Paris 7e</div>
+          </div>
+        </div>
+        <div class="result-stat">
+          <strong>+28%</strong>
+          <span>en 45 jours seulement</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COACH -->
+<section class="coach">
+  <div class="coach-inner">
+    <div class="section-head" style="text-align:center;">
+      <p class="section-label">Votre expert</p>
+      <h2 class="section-title">Coaché par les experts<br/>qui gèrent votre marché</h2>
+    </div>
+    <div class="coach-card">
+      <div class="coach-av">O</div>
+      <div>
+        <div class="coach-badge">Expert Conciergerie & Location Courte Durée</div>
+        <h3>L'équipe OPTIMI</h3>
+        <p>OPTIMI gère 200+ propriétés à Paris et en Île-de-France. Nous ne théorisons pas — nous appliquons quotidiennement les stratégies que nous vous enseignons. Chaque optimisation que nous vous recommandons est testée sur notre propre portefeuille avant d'être transmise.</p>
+        <p>Notre note hôte moyenne : 4.9/5. Notre taux d'occupation moyen : 85%. Notre méthode : éprouvée sur des centaines de biens, affinée sur 3 ans de gestion active du marché parisien.</p>
+        <div class="coach-stats">
+          <div class="coach-stat"><strong>200+</strong><span>Propriétés gérées</span></div>
+          <div class="coach-stat"><strong>4.9★</strong><span>Note moyenne</span></div>
+          <div class="coach-stat"><strong>3 ans</strong><span>D'expertise terrain</span></div>
+          <div class="coach-stat"><strong>Paris & IDF</strong><span>Marché maîtrisé</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="candidater">
+  <div class="pricing-inner">
+    <div class="section-head">
+      <p class="section-label">Investissement</p>
+      <h2 class="section-title">Un investissement qui se rembourse<br/>dès le premier mois</h2>
+    </div>
+    <div class="price-card">
+      <div class="price-tag">Programme complet — 60 jours</div>
+      <div class="price-main"><span>4 ×</span> 597€</div>
+      <p class="price-sub">ou 2 197€ en paiement unique (économisez 191€)</p>
+      <ul class="price-includes">
+        <li>4 sessions de coaching individuel (1h chacune)</li>
+        <li>Support email illimité pendant 60 jours</li>
+        <li>Plans d'action et livrables à chaque session</li>
+        <li>Tableau de bord de suivi des résultats</li>
+        <li>Accès à vie aux ressources et templates OPTIMI</li>
+        <li>Shooting photo professionnel offert (valeur 497€)</li>
+        <li>Analyse de marché personnalisée (valeur 297€)</li>
+        <li>Kit complet hôte professionnel (valeur 197€)</li>
+        <li>Audit conformité réglementaire 2026</li>
+        <li>Accès réseau partenaires OPTIMI</li>
+      </ul>
+      <a href="mailto:coaching@optimi-group.com?subject=Candidature Coaching Rentabilité 360" class="btn-gold" style="display:block;text-align:center;font-size:1.05rem;padding:1.1rem;">Candidater maintenant — Gratuit & Sans engagement</a>
+      <p class="price-payment">💳 Paiement par carte, virement ou prélèvement · 4x sans frais disponible</p>
+      <div class="guarantee-box">
+        <div class="g-icon">🛡️</div>
+        <p><strong>Garantie résultats 60 jours</strong>Si vous n'avez pas atteint +20% de revenus supplémentaires au terme du programme en appliquant nos recommandations, nous recommençons gratuitement jusqu'à l'obtention du résultat.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="faq-inner">
+    <div class="section-head" style="text-align:center;">
+      <p class="section-label">Questions fréquentes</p>
+      <h2 class="section-title">Tout ce que vous voulez savoir</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">À qui s'adresse ce coaching ? <span class="faq-arrow">▼</span></button>
+        <div class="faq-a"><p>À tout propriétaire d'un bien en location courte durée à Paris ou en Île-de-France — que vous soyez débutant ou que vous gériez déjà votre bien depuis plusieurs années. Si vous sentez que votre bien pourrait rapporter plus et que vous voulez être guidé par des experts qui connaissent votre marché, ce coaching est fait pour vous.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Comment se déroulent les sessions ? <span class="faq-arrow">▼</span></button>
+        <div class="faq-a"><p>Chaque session dure 1 heure en visioconférence (Zoom ou Google Meet). Avant chaque session, vous recevez un questionnaire pour préparer au mieux l'échange. Après chaque session, vous recevez un plan d'action écrit avec des priorités claires sur 7 et 14 jours.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Quelle est la garantie résultats ? <span class="faq-arrow">▼</span></button>
+        <div class="faq-a"><p>Si vous appliquez toutes nos recommandations et n'atteignez pas +20% de revenus supplémentaires en 60 jours, nous recommençons gratuitement. Nous sommes confiants car nous connaissons le marché parisien et les leviers qui fonctionnent — et nous les utilisons chaque jour sur nos 200+ biens gérés.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Faut-il déjà être sur Airbnb pour candidater ? <span class="faq-arrow">▼</span></button>
+        <div class="faq-a"><p>Idéalement oui — le coaching est le plus efficace si vous avez déjà une annonce active, même peu optimisée. Si vous débutez, contactez-nous quand même : nous évaluons votre situation et pouvons adapter le programme à votre contexte.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Quels modes de paiement sont acceptés ? <span class="faq-arrow">▼</span></button>
+        <div class="faq-a"><p>Carte bancaire (4x sans frais disponible), virement bancaire (paiement unique avec réduction de 191€) ou prélèvement automatique. Tous les détails de paiement sont communiqués lors de l'appel de découverte, après votre candidature.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Puis-je candidater si je suis hors Paris ? <span class="faq-arrow">▼</span></button>
+        <div class="faq-a"><p>Le programme est conçu pour le marché parisien et d'Île-de-France, que nous connaissons profondément. Si vous êtes dans une autre ville, contactez-nous — certains modules (optimisation d'annonce, automatisation, upsells) s'appliquent partout en France.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="spots-left">🔴 <strong>3 places restantes</strong> — Cohorte mai 2026</div>
+  <h2>Prêt à transformer votre Airbnb<br/>en machine à revenus ?</h2>
+  <p>La candidature est gratuite et sans engagement. Un expert OPTIMI vous rappelle sous 48h pour un appel de découverte de 20 minutes — on évalue ensemble si le programme vous correspond.</p>
+  <a href="mailto:coaching@optimi-group.com?subject=Candidature Coaching Rentabilité 360" class="btn-gold" style="font-size:1.05rem;padding:1.1rem 2.5rem;">Candidater maintenant — Réponse sous 48h →</a>
+  <p style="color:rgba(255,255,255,0.4);font-size:0.78rem;margin-top:1.25rem;">🔒 Aucun paiement à la candidature · Appel de découverte gratuit · Sans engagement</p>
+</section>
+
+<footer>
+  <p>© 2026 OPTIMI GROUP — Méthode Rentabilité 360</p>
+  <div style="display:flex;gap:1.5rem;">
+    <a href="index.html">Retour au site OPTIMI</a>
+    <a href="mailto:coaching@optimi-group.com">coaching@optimi-group.com</a>
+  </div>
+</footer>
+
+<!-- CRISP -->
+<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="2bce32af-5870-4951-96c5-53397fa759e9";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+
+<script>
+function toggleFaq(btn){
+  const ans=btn.nextElementSibling;
+  const isOpen=ans.classList.contains('open');
+  document.querySelectorAll('.faq-a').forEach(a=>a.classList.remove('open'));
+  document.querySelectorAll('.faq-q').forEach(b=>b.classList.remove('open'));
+  if(!isOpen){ans.classList.add('open');btn.classList.add('open');}
+}
+</script>
+</body>
+</html>
