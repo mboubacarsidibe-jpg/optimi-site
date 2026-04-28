@@ -325,6 +325,69 @@ nav{
 .final p{color:rgba(255,255,255,.62);max-width:520px;margin:0 auto 2.5rem;line-height:1.75;font-size:.95rem;}
 .final-note{color:rgba(255,255,255,.28);font-size:.72rem;margin-top:1.25rem;}
 
+/* ── APPLY FORM ── */
+.apply{padding:80px 5%;background:linear-gradient(160deg,#0B1828 0%,#0f2438 100%);position:relative;}
+.apply::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,165,83,.4),transparent);}
+.apply-inner{max-width:680px;margin:0 auto;}
+.apply-head{text-align:center;margin-bottom:2.5rem;}
+.apply-head .s-label{color:var(--gold);}
+.apply-head h2{color:#fff;font-size:clamp(1.7rem,3.2vw,2.4rem);margin-bottom:.85rem;font-family:'Playfair Display',serif;line-height:1.15;}
+.apply-head p{color:rgba(255,255,255,.65);max-width:520px;margin:0 auto;line-height:1.65;font-size:.95rem;}
+.apply-form{
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);
+  border-radius:16px;padding:2rem 1.75rem;
+  display:flex;flex-direction:column;gap:1.1rem;
+  backdrop-filter:blur(8px);
+}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.form-field{display:flex;flex-direction:column;gap:.4rem;}
+.form-field>label{font-size:.78rem;font-weight:600;color:rgba(255,255,255,.85);letter-spacing:.02em;}
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field input[type="tel"],
+.form-field select,
+.form-field textarea{
+  background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.12);
+  border-radius:8px;padding:.78rem .9rem;
+  color:#fff;font-size:.92rem;font-family:'Inter',sans-serif;
+  outline:none;transition:border-color .2s,background .2s;width:100%;
+}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{border-color:var(--gold);background:rgba(255,255,255,.09);}
+.form-field input::placeholder,.form-field textarea::placeholder{color:rgba(255,255,255,.32);}
+.form-field select{cursor:pointer;appearance:none;-webkit-appearance:none;
+  background-image:url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='%23C9A553' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 14px center;padding-right:2.5rem;
+}
+.form-field select option{background:var(--navy);color:#fff;}
+.form-field textarea{resize:vertical;min-height:90px;font-family:'Inter',sans-serif;}
+.radio-group{display:flex;flex-wrap:wrap;gap:.5rem;}
+.radio-group label{
+  display:inline-flex;align-items:center;gap:.45rem;
+  background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);
+  border-radius:100px;padding:.55rem 1rem;cursor:pointer;
+  font-size:.83rem;color:rgba(255,255,255,.82);font-weight:500;
+  transition:all .2s;
+}
+.radio-group label:hover{border-color:rgba(201,165,83,.5);}
+.radio-group input[type="radio"]{appearance:none;-webkit-appearance:none;
+  width:15px;height:15px;border:2px solid rgba(255,255,255,.3);border-radius:50%;
+  cursor:pointer;position:relative;flex-shrink:0;margin:0;
+}
+.radio-group input[type="radio"]:checked{border-color:var(--gold);}
+.radio-group input[type="radio"]:checked::after{
+  content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:7px;height:7px;border-radius:50%;background:var(--gold);
+}
+.radio-group label:has(input:checked){border-color:var(--gold);background:rgba(201,165,83,.12);color:#fff;}
+.apply-submit{margin-top:.5rem;padding:1.1rem;font-size:1rem;font-weight:800;text-align:center;width:100%;cursor:pointer;}
+.apply-note{font-size:.76rem;color:rgba(255,255,255,.42);text-align:center;margin-top:.75rem;line-height:1.55;}
+.apply-success{
+  background:rgba(34,197,94,.08);border:1.5px solid rgba(34,197,94,.3);
+  border-radius:14px;padding:2.5rem 2rem;text-align:center;display:none;
+}
+.apply-success h3{color:#22c55e;font-size:1.4rem;margin-bottom:.6rem;font-family:'Playfair Display',serif;}
+.apply-success p{color:rgba(255,255,255,.78);font-size:.95rem;line-height:1.65;}
+
 /* ── FOOTER ── */
 footer{background:#060f1a;color:var(--white);padding:28px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;border-top:1px solid rgba(255,255,255,.06);}
 footer p{font-size:.78rem;color:rgba(255,255,255,.3);}
@@ -391,6 +454,11 @@ footer p{font-size:.78rem;color:rgba(255,255,255,.3);}
   .mobile-cta-bar{display:block;}
   body{padding-bottom:78px;}
   footer{flex-direction:column;text-align:center;gap:.75rem;padding:24px 5% 90px;}
+
+  .apply{padding:60px 5%;}
+  .apply-form{padding:1.5rem 1.25rem;}
+  .form-row{grid-template-columns:1fr;}
+  .radio-group label{font-size:.8rem;padding:.5rem .85rem;}
 }
 </style>
 </head>
@@ -789,7 +857,7 @@ footer p{font-size:.78rem;color:rgba(255,255,255,.3);}
 </section>
 
 <!-- PRICING -->
-<section class="pricing" id="audit">
+<section class="pricing" id="tarif">
   <div class="pricing-inner">
     <div class="s-head">
       <div class="s-label">Investissement</div>
@@ -811,7 +879,7 @@ footer p{font-size:.78rem;color:rgba(255,255,255,.3);}
         <li>Audit conformité réglementaire 2026 (197€)</li>
         <li>Mise en relation comptable LMNP partenaire</li>
       </ul>
-      <a href="mailto:coaching@optimi-group.com?subject=Demande audit diagnostic — Méthode Rentabilité 360" class="btn-cta" style="display:block;text-align:center;width:100%;font-size:1rem;">Réserver mon audit diagnostic gratuit →</a>
+      <a href="#audit" class="btn-cta" style="display:block;text-align:center;width:100%;font-size:1rem;">Candidater pour un audit gratuit →</a>
       <p class="p-methods">💳 Carte bancaire · Virement · 4× sans frais · Prélèvement mensuel</p>
       <div class="guarantee">
         <div class="g-icon">🛡️</div>
@@ -860,13 +928,113 @@ footer p{font-size:.78rem;color:rgba(255,255,255,.3);}
   </div>
 </section>
 
+<!-- APPLY FORM -->
+<section class="apply" id="audit">
+  <div class="apply-inner">
+    <div class="apply-head">
+      <div class="s-label">Candidature · Cohorte mai 2026</div>
+      <h2>Réservez votre audit diagnostic gratuit</h2>
+      <p>Remplissez ce formulaire — un expert OPTIMI analyse votre situation et vous rappelle sous 48h. 20 minutes, sans engagement, vous repartez avec 2-3 pistes concrètes.</p>
+    </div>
+
+    <div class="apply-success" id="applySuccess">
+      <h3>✓ Candidature reçue</h3>
+      <p>Merci ! Un expert OPTIMI examine votre dossier et vous rappelle sous 48h ouvrées sur le numéro indiqué. À très vite.</p>
+    </div>
+
+    <form class="apply-form" name="audit-coaching" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="applyForm" action="/coaching.html?success=1">
+      <input type="hidden" name="form-name" value="audit-coaching"/>
+      <p style="display:none"><label>Don't fill this out: <input name="bot-field"/></label></p>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="prenom">Prénom *</label>
+          <input type="text" name="prenom" id="prenom" required autocomplete="given-name"/>
+        </div>
+        <div class="form-field">
+          <label for="nom">Nom *</label>
+          <input type="text" name="nom" id="nom" required autocomplete="family-name"/>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="email">Email *</label>
+          <input type="email" name="email" id="email" required autocomplete="email" placeholder="vous@exemple.com"/>
+        </div>
+        <div class="form-field">
+          <label for="telephone">Téléphone *</label>
+          <input type="tel" name="telephone" id="telephone" required autocomplete="tel" placeholder="06 12 34 56 78"/>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label>Combien de biens en location courte durée gérez-vous aujourd'hui ? *</label>
+        <div class="radio-group">
+          <label><input type="radio" name="nb-biens" value="0" required/> Pas encore</label>
+          <label><input type="radio" name="nb-biens" value="1"/> 1 bien</label>
+          <label><input type="radio" name="nb-biens" value="2"/> 2 biens</label>
+          <label><input type="radio" name="nb-biens" value="3-5"/> 3 à 5 biens</label>
+          <label><input type="radio" name="nb-biens" value="6+"/> 6 biens et +</label>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label>Localisation principale *</label>
+        <div class="radio-group">
+          <label><input type="radio" name="zone" value="Paris" required/> Paris</label>
+          <label><input type="radio" name="zone" value="IDF"/> Île-de-France</label>
+          <label><input type="radio" name="zone" value="Autre"/> Autre région</label>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="blocage">Votre plus gros blocage actuel ?</label>
+        <select name="blocage" id="blocage">
+          <option value="">— Choisir —</option>
+          <option value="visibilite">Annonce peu visible / réservations faibles</option>
+          <option value="prix">Tarification statique / prix qui ne suit pas le marché</option>
+          <option value="temps">Gestion qui me prend trop de temps</option>
+          <option value="fiscal">Fiscalité / LMNP non optimisés</option>
+          <option value="reglement">Réglementation Paris / 120 jours / changement d'usage</option>
+          <option value="lancement">Je veux lancer mon premier bien</option>
+          <option value="scaling">Je veux passer de 1-2 biens à un portefeuille</option>
+          <option value="autre">Autre</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="timing">Quand souhaitez-vous démarrer ?</label>
+        <select name="timing" id="timing">
+          <option value="">— Choisir —</option>
+          <option value="immediate">Immédiatement (cohorte mai 2026)</option>
+          <option value="1mois">Sous 1 mois</option>
+          <option value="3mois">Sous 3 mois</option>
+          <option value="explorer">J'explore pour l'instant</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="message">Quelque chose à ajouter ? <span style="opacity:.5;font-weight:400;">(optionnel)</span></label>
+        <textarea name="message" id="message" rows="3" placeholder="Précisions sur votre situation, vos objectifs, vos contraintes…"></textarea>
+      </div>
+
+      <button type="submit" class="btn-cta apply-submit">
+        Envoyer ma candidature →
+      </button>
+
+      <p class="apply-note">🔒 Vos informations restent confidentielles. Utilisées uniquement pour préparer votre audit. Pas de spam, pas de revente.</p>
+    </form>
+  </div>
+</section>
+
 <!-- FINAL CTA -->
 <section class="final">
   <div class="final-inner">
     <div class="spots"><span></span> 3 places disponibles — cohorte mai 2026</div>
     <h2>Prêt à savoir exactement<br/>ce que vaut votre bien ?</h2>
     <p>Commencez par l'audit diagnostic gratuit. Un expert OPTIMI analyse votre annonce en amont et vous rappelle avec une évaluation de votre potentiel de revenus. Sans engagement, sans jargon, en 20 minutes.</p>
-    <a href="mailto:coaching@optimi-group.com?subject=Demande audit diagnostic — Méthode Rentabilité 360" class="btn-cta" style="font-size:1rem;padding:1rem 2.5rem;">Réserver mon audit diagnostic gratuit →</a>
+    <a href="#audit" class="btn-cta" style="font-size:1rem;padding:1rem 2.5rem;">Candidater maintenant →</a>
     <p class="final-note">Entretien gratuit · Réponse sous 48h · Aucun paiement à ce stade</p>
   </div>
 </section>
@@ -895,6 +1063,22 @@ function toggleFaq(btn){
   document.querySelectorAll('.faq-btn').forEach(b=>b.classList.remove('active'));
   if(!open){body.classList.add('open');btn.classList.add('active');}
 }
+
+// Form success state via ?success=1 query param after Netlify Forms submit
+(function(){
+  if(window.location.search.indexOf('success=1')!==-1){
+    var form=document.getElementById('applyForm');
+    var success=document.getElementById('applySuccess');
+    if(form&&success){
+      form.style.display='none';
+      success.style.display='block';
+      // Scroll to the success message
+      setTimeout(function(){
+        success.scrollIntoView({behavior:'smooth',block:'center'});
+      },150);
+    }
+  }
+})();
 </script>
 </body>
 </html>
