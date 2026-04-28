@@ -629,7 +629,73 @@
       .chat-window { bottom:160px; left:18px; right:18px; width:auto; max-height:60vh; }
       .toast { bottom:160px; left:18px; right:auto; max-width:calc(100% - 90px); }
       .cases-head h2, .section-title { font-size:clamp(1.6rem, 7vw, 2.1rem) !important; }
+      .blog-grid { grid-template-columns: 1fr; }
     }
+    @media (max-width:900px) and (min-width:601px) {
+      .blog-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* ── BLOG ── */
+    .blog { background: var(--white); }
+    .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; margin-top: 3.5rem; }
+    .blog-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: border-color .3s, transform .3s, box-shadow .3s;
+      display: flex; flex-direction: column;
+      text-decoration: none; color: inherit;
+    }
+    .blog-card:hover {
+      border-color: var(--gold-border);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .blog-card-img {
+      width: 100%; height: 200px;
+      background-size: cover; background-position: center;
+      background-color: var(--cream);
+      transition: transform .5s;
+    }
+    .blog-card:hover .blog-card-img { transform: scale(1.04); }
+    .blog-card-body {
+      padding: 1.75rem;
+      display: flex; flex-direction: column;
+      flex: 1;
+    }
+    .blog-card-meta {
+      display: flex; gap: 0.75rem; align-items: center;
+      margin-bottom: 1rem; flex-wrap: wrap;
+    }
+    .blog-card-cat {
+      background: var(--gold-soft); color: var(--gold);
+      font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.32rem 0.75rem; border-radius: 100px;
+    }
+    .blog-card-date { font-size: 0.78rem; color: var(--text-muted); }
+    .blog-card h3 {
+      font-size: 1.15rem; color: var(--navy);
+      font-family: 'Playfair Display', serif;
+      font-weight: 700; line-height: 1.3;
+      margin-bottom: 0.85rem;
+    }
+    .blog-card p {
+      font-size: 0.88rem; color: var(--text-muted);
+      line-height: 1.65; margin-bottom: 1.25rem;
+      flex: 1;
+      display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3;
+      -webkit-box-orient: vertical; overflow: hidden;
+    }
+    .blog-card-link {
+      font-size: 0.88rem; color: var(--gold);
+      font-weight: 700; letter-spacing: 0.02em;
+      margin-top: auto;
+      display: inline-flex; align-items: center; gap: 0.4rem;
+    }
+    .blog-card:hover .blog-card-link { gap: 0.6rem; }
+    .blog-card-link::after { content: '→'; transition: transform .3s; }
 
     /* ── PRESENCE / CITIES INTERACTIVE ── */
     .presence { background: linear-gradient(180deg, var(--white) 0%, var(--card-bg) 100%); }
@@ -1739,6 +1805,99 @@
           <span>d'amélioration</span>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     BLOG — Articles experts
+══════════════════════════════════════════ -->
+<section class="blog" id="blog">
+  <div class="section-inner">
+    <div class="section-head text-center" style="max-width:680px;margin-left:auto;margin-right:auto;">
+      <p class="section-label">Blog &amp; ressources</p>
+      <h2 class="section-title">Conseils d'experts pour propriétaires</h2>
+      <p class="section-sub" style="margin:0 auto;">Stratégies, analyses de marché, guides réglementaires — rédigés par notre équipe pour propriétaires exigeants.</p>
+    </div>
+
+    <div class="blog-grid">
+      <a href="blog/maximiser-revenus-airbnb.html" class="blog-card">
+        <div class="blog-card-img" style="background-image:url('https://images.pexels.com/photos/6863332/pexels-photo-6863332.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800')"></div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-card-cat">Optimisation</span>
+            <span class="blog-card-date">15 décembre 2025</span>
+          </div>
+          <h3>Maximiser vos revenus Airbnb : 10 stratégies éprouvées</h3>
+          <p>10 stratégies concrètes et éprouvées pour augmenter vos revenus Airbnb de 30 à 50%. Pricing dynamique, optimisation de l'annonce, expérience voyageur.</p>
+          <span class="blog-card-link">Lire l'article</span>
+        </div>
+      </a>
+
+      <a href="blog/courte-duree-vs-traditionnelle.html" class="blog-card">
+        <div class="blog-card-img" style="background-image:url('https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800')"></div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-card-cat">Analyse</span>
+            <span class="blog-card-date">12 décembre 2025</span>
+          </div>
+          <h3>Location courte durée vs traditionnelle : analyse comparative 2025</h3>
+          <p>Analyse complète et objective : rentabilité, fiscalité, gestion, risques. Quel modèle choisir en 2025 pour maximiser votre investissement ?</p>
+          <span class="blog-card-link">Lire l'article</span>
+        </div>
+      </a>
+
+      <a href="blog/ia-location-courte-duree.html" class="blog-card">
+        <div class="blog-card-img" style="background-image:url('https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800')"></div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-card-cat">Innovation</span>
+            <span class="blog-card-date">10 décembre 2025</span>
+          </div>
+          <h3>IA et location courte durée : révolutionnez votre gestion</h3>
+          <p>Pricing automatisé, communication IA, prédiction occupancy. Découvrez comment l'IA peut tripler votre efficacité et augmenter vos revenus de 25-40%.</p>
+          <span class="blog-card-link">Lire l'article</span>
+        </div>
+      </a>
+
+      <a href="blog/reglementation-2026.html" class="blog-card">
+        <div class="blog-card-img" style="background-image:url('https://images.pexels.com/photos/6077447/pexels-photo-6077447.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800')"></div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-card-cat">Réglementation</span>
+            <span class="blog-card-date">8 décembre 2025</span>
+          </div>
+          <h3>Réglementation 2026 : ce qui va changer pour les propriétaires</h3>
+          <p>Durcissement compensation, DPE obligatoire, contrôles renforcés. Anticipez les changements 2026 et restez 100% conforme.</p>
+          <span class="blog-card-link">Lire l'article</span>
+        </div>
+      </a>
+
+      <a href="blog/securite-airbnb.html" class="blog-card">
+        <div class="blog-card-img" style="background-image:url('https://images.pexels.com/photos/7578985/pexels-photo-7578985.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800')"></div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-card-cat">Sécurité</span>
+            <span class="blog-card-date">5 décembre 2025</span>
+          </div>
+          <h3>Sécurité Airbnb : protégez votre bien des voyageurs indésirables</h3>
+          <p>Vérification voyageurs, détection fêtes, assurances, technologies de protection. Réduisez les risques de 90% avec nos stratégies éprouvées.</p>
+          <span class="blog-card-link">Lire l'article</span>
+        </div>
+      </a>
+
+      <a href="blog/transformation-bureaux-logements.html" class="blog-card">
+        <div class="blog-card-img" style="background-image:url('https://images.pexels.com/photos/3862634/pexels-photo-3862634.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800')"></div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-card-cat">Investissement</span>
+            <span class="blog-card-date">3 décembre 2025</span>
+          </div>
+          <h3>Transformation des bureaux en logements : opportunités 2026</h3>
+          <p>Rentabilité 12-18%, plus-values 40-60%, aides publiques massives. Le marché de la conversion explose en 2026 — saisissez l'opportunité.</p>
+          <span class="blog-card-link">Lire l'article</span>
+        </div>
+      </a>
     </div>
   </div>
 </section>
