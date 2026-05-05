@@ -33,8 +33,8 @@
 <link rel="preconnect" href="https://images.unsplash.com"/>
 <link rel="dns-prefetch" href="//fonts.googleapis.com"/>
 <link rel="dns-prefetch" href="//images.unsplash.com"/>
-<link rel="dns-prefetch" href="//client.crisp.chat"/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="cookie-consent.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 
 <!-- Schema.org Service -->
 <script type="application/ld+json">
@@ -67,14 +67,6 @@
 }
 </script>
 
-<!-- Google Ads -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17544027457"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-17544027457');
-</script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{
@@ -94,7 +86,8 @@
 }
 html{scroll-behavior:smooth;}
 body{font-family:'Inter',sans-serif;color:var(--text);background:var(--white);line-height:1.6;overflow-x:hidden;}
-h1,h2,h3,h4{font-family:'Playfair Display',serif;line-height:1.2;}
+h1,h2,h3,h4 { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.15; letter-spacing: -0.02em; font-weight: 700; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: var(--navy); }
+h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; }
 a{text-decoration:none;}
 
 /* ── NAV ── */
@@ -104,7 +97,7 @@ nav{
   padding:0 5%;display:flex;align-items:center;justify-content:space-between;
   height:64px;border-bottom:1px solid rgba(201,165,83,0.18);
 }
-.nav-logo{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--white);letter-spacing:.04em;}
+.nav-logo{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;font-size:1.25rem;color:var(--white);letter-spacing:0.04em;font-weight:700;}
 .nav-logo span{color:var(--gold);}
 .nav-pill{background:rgba(201,165,83,.12);border:1px solid rgba(201,165,83,.28);color:var(--gold);font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .9rem;border-radius:100px;}
 .nav-btn{background:var(--gold);color:var(--navy);padding:.5rem 1.3rem;border-radius:6px;font-weight:700;font-size:.85rem;transition:all .2s;}
@@ -142,14 +135,14 @@ nav{
 }
 .hero-brand-line{width:48px;height:1px;background:var(--gold);opacity:.6;}
 .hero-brand-text{
-  font-family:'Playfair Display',serif;
+  font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size:.82rem;letter-spacing:.22em;
   color:var(--gold);font-weight:700;text-transform:uppercase;
 }
 .hero-brand-text em{font-style:italic;opacity:.6;font-weight:400;margin-left:.4rem;letter-spacing:.05em;}
 
 .hero-h1{
-  font-family:'Playfair Display',serif;
+  font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size:clamp(2.2rem,6vw,4.6rem);
   font-weight:800;color:#fff;
   line-height:1.22;letter-spacing:-.015em;
@@ -206,7 +199,7 @@ nav{
   transition:border-color .2s;
 }
 .op-item:hover{border-color:rgba(201,165,83,.4);}
-.op-num{font-family:'Playfair Display',serif;font-size:1.85rem;font-weight:700;color:var(--gold);line-height:1;}
+.op-num{font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;font-size:1.85rem;font-weight:700;color:var(--gold);line-height:1;}
 .op-txt{font-size:.74rem;color:rgba(255,255,255,.55);margin-top:.45rem;line-height:1.5;}
 .op-hero-metric{
   background:linear-gradient(135deg,rgba(201,165,83,.16) 0%,rgba(201,165,83,.06) 100%);
@@ -258,7 +251,7 @@ nav{
   width:56px;height:56px;border-radius:12px;
   background:var(--navy);color:var(--gold);
   display:flex;align-items:center;justify-content:center;
-  font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;
+  font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;font-size:1.5rem;font-weight:700;
   flex-shrink:0;
 }
 .sess-week{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.35rem;}
@@ -306,7 +299,7 @@ nav{
 .r-name{font-weight:700;font-size:.87rem;color:var(--navy);}
 .r-info{font-size:.75rem;color:var(--muted);}
 .r-stat{margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border);display:flex;align-items:baseline;gap:.5rem;}
-.r-stat strong{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--green);}
+.r-stat strong{font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;font-size:1.4rem;color:var(--green);}
 .r-stat span{font-size:.75rem;color:var(--muted);}
 
 /* ── INCLUDED ── */
@@ -345,7 +338,7 @@ nav{
   box-shadow:0 12px 50px rgba(201,165,83,.1);
 }
 .p-badge{display:inline-block;background:var(--gold);color:var(--navy);font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.32rem .9rem;border-radius:100px;margin-bottom:1.5rem;}
-.p-main{font-family:'Playfair Display',serif;font-size:3.2rem;font-weight:800;color:var(--navy);line-height:1;}
+.p-main{font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;font-size:3.2rem;font-weight:800;color:var(--navy);line-height:1;}
 .p-main sup{font-size:1.5rem;}
 .p-or{font-size:.85rem;color:var(--muted);margin:.5rem 0 1.5rem;}
 .p-list{list-style:none;text-align:left;margin-bottom:2rem;}
@@ -405,7 +398,7 @@ nav{
 .apply-inner{max-width:680px;margin:0 auto;}
 .apply-head{text-align:center;margin-bottom:2.5rem;}
 .apply-head .s-label{color:var(--gold);}
-.apply-head h2{color:#fff;font-size:clamp(1.7rem,3.2vw,2.4rem);margin-bottom:.85rem;font-family:'Playfair Display',serif;line-height:1.15;}
+.apply-head h2{color:#fff;font-size:clamp(1.7rem,3.2vw,2.4rem);margin-bottom:.85rem;font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;line-height:1.15;}
 .apply-head p{color:rgba(255,255,255,.65);max-width:520px;margin:0 auto;line-height:1.65;font-size:.95rem;}
 .apply-form{
   background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);
@@ -459,7 +452,7 @@ nav{
   background:rgba(34,197,94,.08);border:1.5px solid rgba(34,197,94,.3);
   border-radius:14px;padding:2.5rem 2rem;text-align:center;display:none;
 }
-.apply-success h3{color:#22c55e;font-size:1.4rem;margin-bottom:.6rem;font-family:'Playfair Display',serif;}
+.apply-success h3{color:#22c55e;font-size:1.4rem;margin-bottom:.6rem;font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;}
 .apply-success p{color:rgba(255,255,255,.78);font-size:.95rem;line-height:1.65;}
 
 /* ── FOOTER ── */
@@ -468,6 +461,81 @@ footer p{font-size:.78rem;color:rgba(255,255,255,.3);}
 .footer-links{display:flex;gap:1.5rem;}
 .footer-links a{color:rgba(255,255,255,.4);font-size:.78rem;transition:color .2s;}
 .footer-links a:hover{color:var(--gold);}
+
+/* ── MANIFESTO (animated reveal Rakidzich-style) ── */
+.manifesto{
+  background:linear-gradient(180deg,#060f1a 0%,#0B1828 100%);
+  padding:120px 5%;border-top:1px solid rgba(201,165,83,.12);border-bottom:1px solid rgba(201,165,83,.12);
+}
+.manifesto-inner{max-width:920px;margin:0 auto;text-align:center;}
+.manifesto-text{
+  font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size:clamp(1.6rem,3.4vw,2.6rem);
+  line-height:1.45;letter-spacing:-0.015em;
+  color:rgba(255,255,255,.95);font-weight:400;
+}
+.reveal-line{
+  display:block;
+  opacity:0;transform:translateY(24px);
+  transition:opacity .9s cubic-bezier(.4,0,.2,1),transform .9s cubic-bezier(.4,0,.2,1);
+}
+.reveal-line.in-view{opacity:1;transform:translateY(0);}
+.manifesto-text em{color:var(--gold);font-style:italic;font-weight:600;}
+.manifesto-text strong{color:#fff;font-weight:700;}
+.manifesto-sign{
+  margin-top:2.5rem;font-size:.78rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--gold);
+  opacity:0;transition:opacity 1s .8s;
+}
+.manifesto-sign.in-view{opacity:1;}
+
+/* ── SELECTION (qualifying section) ── */
+.selection{padding:100px 5%;background:var(--white);}
+.selection-inner{max-width:1000px;margin:0 auto;}
+.selection-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1.25rem;margin-top:3rem;
+}
+.select-card{
+  background:var(--cream);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:2rem 1.75rem;
+  position:relative;
+  transition:border-color .3s,transform .3s,box-shadow .3s;
+}
+.select-card:hover{
+  border-color:var(--gold-border);
+  transform:translateY(-4px);
+  box-shadow:0 8px 32px rgba(0,0,0,.06);
+}
+.select-num{
+  font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size:2.2rem;font-weight:700;
+  color:var(--gold);line-height:1;
+  margin-bottom:1.25rem;
+}
+.select-card h4{
+  font-family:'Inter',sans-serif;
+  font-size:1.05rem;font-weight:700;
+  color:var(--navy);margin-bottom:.85rem;
+  line-height:1.3;
+}
+.select-card p{
+  font-size:.92rem;color:var(--text-muted);
+  line-height:1.7;
+}
+.selection-note{
+  text-align:center;margin-top:3rem;
+  font-size:1rem;color:var(--text);
+  max-width:680px;margin-left:auto;margin-right:auto;
+  line-height:1.7;
+}
+.selection-note a{color:var(--gold);font-weight:700;text-decoration:underline;}
+
+@media (max-width:900px){
+  .selection-grid{grid-template-columns:1fr;}
+}
 
 /* ── TOAST SOCIAL PROOF ── */
 .toast{
@@ -551,6 +619,12 @@ footer p{font-size:.78rem;color:rgba(255,255,255,.3);}
   .toast{bottom:160px;left:14px;right:14px;max-width:none;padding:.75rem .9rem;}
   .toast-body strong{font-size:.78rem;}
   .toast-body span{font-size:.7rem;}
+
+  .manifesto{padding:80px 5%;}
+  .manifesto-text{font-size:clamp(1.4rem, 5.5vw, 1.85rem);line-height:1.4;}
+  .selection{padding:64px 5%;}
+  .select-card{padding:1.75rem 1.5rem;}
+  .select-num{font-size:1.85rem;}
 }
 </style>
 </head>
@@ -621,6 +695,19 @@ footer p{font-size:.78rem;color:rgba(255,255,255,.3);}
         <div class="op-txt">Délai pour mettre un bien en ligne</div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- MANIFESTO -->
+<section class="manifesto" id="manifesto">
+  <div class="manifesto-inner">
+    <p class="manifesto-text">
+      <span class="reveal-line">Pas de théorie.</span>
+      <span class="reveal-line">Pas de hacks Instagram.</span>
+      <span class="reveal-line">La méthode appliquée <em>chaque jour</em></span>
+      <span class="reveal-line">sur <strong>200+ biens parisiens</strong>.</span>
+    </p>
+    <div class="manifesto-sign">— L'équipe OPTIMI</div>
   </div>
 </section>
 
@@ -958,6 +1045,11 @@ footer p{font-size:.78rem;color:rgba(255,255,255,.3);}
     <div class="s-head">
       <div class="s-label">Investissement</div>
       <h2 class="s-title">Un programme qui se rembourse<br/>avant la fin du 2e mois</h2>
+      <p class="s-sub" style="margin:0 auto;text-align:center;">
+        💡 <a href="calculateur-roi-coaching.html" style="color:var(--gold);font-weight:600;text-decoration:underline;">Calculez votre ROI personnalisé en 30 secondes →</a>
+        &nbsp;·&nbsp;
+        🎥 <a href="audit-annonce-airbnb.html" style="color:var(--gold);font-weight:600;text-decoration:underline;">Audit gratuit de votre annonce Airbnb →</a>
+      </p>
     </div>
     <div class="price-card">
       <div class="p-badge">Méthode Rentabilité 360 — 60 jours</div>
@@ -985,6 +1077,39 @@ footer p{font-size:.78rem;color:rgba(255,255,255,.3);}
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- SELECTION (cohorte limitée — engagement mutuel) -->
+<section class="selection" id="selection">
+  <div class="selection-inner">
+    <div class="s-head text-center" style="text-align:center;max-width:720px;margin-left:auto;margin-right:auto;">
+      <div class="s-label">Cohorte limitée</div>
+      <h2 class="s-title" style="margin-bottom:1rem;">3 propriétaires par cohorte. Pas un de plus.</h2>
+      <p class="s-sub" style="margin:0 auto;">Notre engagement « +40% de revenus garantis » repose sur un accompagnement intensif et personnalisé. Pour le tenir, nous travaillons avec un nombre volontairement restreint de propriétaires — le temps de comprendre votre projet en profondeur et de calibrer la méthode pour votre bien.</p>
+    </div>
+
+    <div class="selection-grid">
+      <div class="select-card">
+        <div class="select-num">01</div>
+        <h4>Compréhension mutuelle</h4>
+        <p>L'audit gratuit nous permet de comprendre vos objectifs, votre marché et votre bien. Vous découvrez notre méthode, nous découvrons votre projet — et ensemble, nous validons si l'accompagnement est adapté.</p>
+      </div>
+
+      <div class="select-card">
+        <div class="select-num">02</div>
+        <h4>Approche sur-mesure</h4>
+        <p>Chaque bien a ses leviers spécifiques. Pendant les 4 sessions, nous adaptons la méthode à votre arrondissement, votre type de bien et vos contraintes. Pas de playbook standard — du calibrage précis.</p>
+      </div>
+
+      <div class="select-card">
+        <div class="select-num">03</div>
+        <h4>Engagement réciproque</h4>
+        <p>Notre garantie de résultats fonctionne dans les deux sens : vous appliquez la méthode, nous tenons les +40%. Si l'objectif n'est pas atteint à 60 jours, nous prolongeons gratuitement jusqu'à y parvenir.</p>
+      </div>
+    </div>
+
+    <p class="selection-note">→ Le meilleur point de départ : <a href="#audit">l'audit gratuit de 20 minutes</a>. Sans engagement, sans pression — juste une conversation honnête pour évaluer ensemble votre potentiel.</p>
   </div>
 </section>
 
@@ -1038,9 +1163,8 @@ footer p{font-size:.78rem;color:rgba(255,255,255,.3);}
       <p>Merci ! Un expert OPTIMI examine votre dossier et vous rappelle sous 48h ouvrées sur le numéro indiqué. À très vite.</p>
     </div>
 
-    <form class="apply-form" name="audit-coaching" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="applyForm" action="/coaching.html?success=1">
-      <input type="hidden" name="form-name" value="audit-coaching"/>
-      <p style="display:none"><label>Don't fill this out: <input name="bot-field"/></label></p>
+    <!-- GHL Form embed — remplacer ce bloc par le code embed GHL quand disponible -->
+    <form class="apply-form" name="audit-coaching" method="POST" id="applyForm">
 
       <div class="form-row">
         <div class="form-field">
@@ -1152,13 +1276,17 @@ footer p{font-size:.78rem;color:rgba(255,255,255,.3);}
 <footer>
   <p>© 2026 OPTIMI GROUP — Méthode Rentabilité 360</p>
   <div class="footer-links">
-    <a href="index.html">Site OPTIMI</a>
-    <a href="mailto:coaching@optimi-group.com">coaching@optimi-group.com</a>
+    <a href="index.html">Accueil</a>
+    <a href="ressources.html">Ressources</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="contact.html">Contact</a>
+    <a href="mentions-legales.html">Mentions légales</a>
+    <a href="politique-de-confidentialite.html">Confidentialité</a>
+    <a href="cgv.html">CGV</a>
   </div>
 </footer>
 
-<!-- CRISP -->
-<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="2bce32af-5870-4951-96c5-53397fa759e9";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+<script src="cookie-consent.js"></script>
 
 <script>
 function toggleFaq(btn){
@@ -1169,19 +1297,57 @@ function toggleFaq(btn){
   if(!open){body.classList.add('open');btn.classList.add('active');}
 }
 
-// Form success state via ?success=1 query param after Netlify Forms submit
+// Coaching candidature form — JS handler (Cloudflare Pages, no Netlify Forms)
 (function(){
-  if(window.location.search.indexOf('success=1')!==-1){
-    var form=document.getElementById('applyForm');
-    var success=document.getElementById('applySuccess');
-    if(form&&success){
-      form.style.display='none';
-      success.style.display='block';
-      setTimeout(function(){
-        success.scrollIntoView({behavior:'smooth',block:'center'});
-      },150);
+  var form = document.getElementById('applyForm');
+  if(!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var data = {};
+    var fields = ['prenom','nom','email','telephone','nb-biens','zone','blocage','timing','message'];
+    fields.forEach(function(f){
+      var input = form.querySelector('[name="'+f+'"]:checked, [name="'+f+'"]');
+      if(input) data[f] = input.value;
+    });
+    data.source = 'coaching-apply';
+    data.date = new Date().toISOString();
+    // Validate required
+    if(!data.prenom || !data.nom || !data.email || !data.telephone || !data['nb-biens'] || !data.zone){
+      alert('Merci de remplir tous les champs obligatoires (*)');
+      return;
     }
-  }
+    // Store locally — will replace with GHL Forms POST later
+    try{
+      var leads = JSON.parse(localStorage.getItem('optimi_leads') || '[]');
+      leads.push(data);
+      localStorage.setItem('optimi_leads', JSON.stringify(leads));
+    }catch(err){}
+    // Track conversion
+    if(typeof gtag !== 'undefined'){
+      gtag('event','coaching_application',{'event_category':'lead_high_intent','event_label':'audit-coaching'});
+    }
+    // Redirect to thank-you
+    window.location.href = 'merci-coaching.html';
+  });
+})();
+
+// Manifesto scroll reveal — Rakidzich-style progressive
+(function(){
+  if(!('IntersectionObserver' in window)) return;
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        const lines = entry.target.querySelectorAll('.reveal-line');
+        lines.forEach((line, i) => {
+          setTimeout(() => line.classList.add('in-view'), i * 280);
+        });
+        const sign = entry.target.querySelector('.manifesto-sign');
+        if(sign) setTimeout(() => sign.classList.add('in-view'), lines.length * 280 + 200);
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.4 });
+  document.querySelectorAll('.manifesto').forEach(el => obs.observe(el));
 })();
 
 // Social proof toasts — coaching context

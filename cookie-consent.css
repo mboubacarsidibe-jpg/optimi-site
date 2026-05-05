@@ -1,0 +1,38 @@
+#optimi-consent-banner{
+  position:fixed;bottom:0;left:0;right:0;z-index:99999;
+  display:none;align-items:center;justify-content:center;
+  background:var(--navy,#0B1828);
+  border-top:1px solid rgba(201,165,83,.25);
+  padding:1.25rem 5%;
+  box-shadow:0 -4px 32px rgba(0,0,0,.35);
+  font-family:'Inter',sans-serif;
+}
+.ocb-inner{
+  max-width:1100px;width:100%;
+  display:flex;align-items:center;justify-content:space-between;gap:2rem;
+}
+.ocb-text strong{
+  display:block;color:#fff;font-size:.95rem;font-weight:700;margin-bottom:.35rem;
+}
+.ocb-text p{
+  color:rgba(255,255,255,.6);font-size:.8rem;line-height:1.5;max-width:640px;margin:0;
+}
+.ocb-actions{display:flex;gap:.75rem;flex-shrink:0;}
+.ocb-btn{
+  padding:.6rem 1.4rem;border-radius:8px;font-size:.85rem;font-weight:600;
+  font-family:'Inter',sans-serif;cursor:pointer;border:none;transition:all .2s;
+  white-space:nowrap;
+}
+.ocb-refuse{
+  background:transparent;color:rgba(255,255,255,.55);
+  border:1.5px solid rgba(255,255,255,.2);
+}
+.ocb-refuse:hover{color:#fff;border-color:rgba(255,255,255,.5);}
+.ocb-accept{
+  background:var(--gold,#C9A553);color:#0B1828;
+}
+.ocb-accept:hover{background:#d4b060;transform:translateY(-1px);}
+@media(max-width:640px){
+  .ocb-inner{flex-direction:column;align-items:flex-start;gap:1rem;}
+  .ocb-actions{width:100%;justify-content:flex-end;}
+}

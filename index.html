@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://images.pexels.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link rel="dns-prefetch" href="//images.pexels.com" />
-  <link rel="dns-prefetch" href="//client.crisp.chat" />
+  <link rel="stylesheet" href="cookie-consent.css" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -144,7 +144,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -197,7 +197,8 @@
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--warm-bg); line-height: 1.6; overflow-x: hidden; }
 
-    h1,h2,h3,h4 { font-family: 'Playfair Display', serif; line-height: 1.25; }
+    h1,h2,h3,h4 { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.15; letter-spacing: -0.02em; font-weight: 700; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: var(--navy); }
+h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; }
 
     /* ── NAV ── */
     nav {
@@ -208,7 +209,7 @@
       display: flex; align-items: center; justify-content: space-between;
       height: 68px; border-bottom: 1px solid rgba(201,165,83,0.2);
     }
-    .nav-logo { font-family:'Playfair Display',serif; font-size:1.35rem; color:var(--white); letter-spacing:0.04em; }
+    .nav-logo{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;font-size:1.25rem;color:var(--white);letter-spacing:0.04em;font-weight:700;}
     .nav-logo span { color: var(--gold); }
     .nav-links { display:flex; gap:2rem; align-items:center; }
     .nav-links a { color:rgba(255,255,255,0.75); text-decoration:none; font-size:0.875rem; font-weight:500; transition:color .2s; }
@@ -257,7 +258,7 @@
     .btn-ghost:hover { border-color:var(--gold); color:var(--gold); }
     .hero-stats { display:flex; gap:2rem; }
     .hero-stat { }
-    .hero-stat strong { display:block; font-size:1.6rem; font-weight:700; color:var(--gold); font-family:'Playfair Display',serif; }
+    .hero-stat strong { display:block; font-size:1.6rem; font-weight:700; color:var(--gold); font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
     .hero-stat span { font-size:0.8rem; color:rgba(255,255,255,0.55); }
 
     /* Estimation card */
@@ -328,10 +329,10 @@
     }
     .seg-highlight .sh-label { font-size:0.75rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--gold); margin-bottom:1rem; }
     .seg-kpi { margin-bottom:1.25rem; }
-    .seg-kpi strong { display:block; font-size:2rem; color:var(--gold); font-family:'Playfair Display',serif; }
+    .seg-kpi strong { display:block; font-size:2rem; color:var(--gold); font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
     .seg-kpi span { font-size:0.8rem; color:rgba(255,255,255,0.6); }
     .seg-kpi-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:1.5rem; }
-    .seg-kpi-small strong { font-size:1.3rem; color:var(--gold-light); font-family:'Playfair Display',serif; }
+    .seg-kpi-small strong { font-size:1.3rem; color:var(--gold-light); font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
     .seg-kpi-small span { font-size:0.75rem; color:rgba(255,255,255,0.5); }
 
     /* ── LEAD MAGNET ── */
@@ -367,7 +368,7 @@
     .process-num {
       width:64px; height:64px; border-radius:50%;
       background:var(--navy); color:var(--gold);
-      font-family:'Playfair Display',serif; font-size:1.5rem; font-weight:700;
+      font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size:1.5rem; font-weight:700;
       display:flex; align-items:center; justify-content:center;
       margin:0 auto 1.25rem; border:3px solid var(--gold-light);
     }
@@ -425,7 +426,7 @@
     .aport-tier:hover { border-color:var(--gold); }
     .aport-tier .tier-info h5 { font-size:0.9rem; font-family:'Inter',sans-serif; font-weight:700; color:var(--navy); }
     .aport-tier .tier-info p { font-size:0.78rem; color:var(--muted); }
-    .aport-tier .tier-rate { font-family:'Playfair Display',serif; font-size:1.6rem; color:var(--gold); font-weight:700; }
+    .aport-tier .tier-rate { font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size:1.3rem; color:var(--gold); font-weight:700; }
     .aport-content h3 { font-size:1.6rem; color:var(--navy); margin-bottom:0.75rem; }
     .aport-content p { color:var(--muted); margin-bottom:1.5rem; font-size:0.93rem; }
     .aport-perks { list-style:none; display:flex; flex-direction:column; gap:0.6rem; margin-bottom:2rem; }
@@ -522,8 +523,49 @@
     .calc-btn:hover { background:#d4b060; transform:translateY(-1px); }
     .calc-result { display:none; margin-top:1.5rem; padding:1.5rem; background:rgba(201,165,83,0.1); border:1px solid rgba(201,165,83,0.25); border-radius:12px; }
     .calc-result.show { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+    .calc-detail-form {
+      display:none; margin-top:1.25rem; padding:1.5rem;
+      background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1);
+      border-radius:12px;
+    }
+    .calc-detail-form.show { display:block; }
+    .calc-detail-form-head { margin-bottom:1rem; }
+    .calc-detail-form-head h4 {
+      font-family:'Inter',sans-serif; font-size:0.95rem;
+      color:var(--white); font-weight:700; margin-bottom:0.4rem;
+    }
+    .calc-detail-form-head p {
+      font-size:0.8rem; color:rgba(255,255,255,0.55); line-height:1.55;
+    }
+    .calc-detail-form-row {
+      display:flex; gap:0.65rem;
+    }
+    .calc-detail-form input {
+      flex:1; padding:0.75rem 1rem;
+      border:1.5px solid rgba(255,255,255,0.15);
+      border-radius:8px; background:rgba(255,255,255,0.06);
+      color:var(--white); font-size:0.88rem; font-family:'Inter',sans-serif;
+      outline:none; transition:border-color .2s;
+    }
+    .calc-detail-form input:focus { border-color:var(--gold); }
+    .calc-detail-form input::placeholder { color:rgba(255,255,255,0.35); }
+    .calc-detail-form button {
+      padding:0.75rem 1.25rem; background:var(--gold); color:var(--navy);
+      border:none; border-radius:8px; font-weight:700; font-size:0.85rem;
+      cursor:pointer; font-family:'Inter',sans-serif; white-space:nowrap;
+      transition:background .2s;
+    }
+    .calc-detail-form button:hover { background:#d4b060; }
+    .calc-detail-form-note {
+      font-size:0.7rem; color:rgba(255,255,255,0.4);
+      margin-top:0.6rem; text-align:left;
+    }
+    .calc-detail-success {
+      color:#4ade80; font-size:0.88rem; font-weight:600;
+      padding:0.5rem 0; line-height:1.55;
+    }
     .cr-item { text-align:center; }
-    .cr-item strong { display:block; font-family:'Playfair Display',serif; font-size:1.8rem; color:var(--gold); }
+    .cr-item strong { display:block; font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size:1.8rem; color:var(--gold); }
     .cr-item span { font-size:0.75rem; color:rgba(255,255,255,0.55); }
     .calc-disclaimer { font-size:0.72rem; color:rgba(255,255,255,0.3); margin-top:1rem; text-align:center; }
 
@@ -558,7 +600,7 @@
       text-align:center; flex-shrink:0;
     }
     .guarantee-badge span { font-size:2rem; }
-    .guarantee-badge strong { font-family:'Playfair Display',serif; font-size:0.85rem; color:var(--gold); line-height:1.3; }
+    .guarantee-badge strong { font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size:0.85rem; color:var(--gold); line-height:1.3; }
     .guarantee-content h3 { font-size:1.6rem; color:var(--white); margin-bottom:0.75rem; }
     .guarantee-content p { color:rgba(255,255,255,0.65); font-size:0.93rem; line-height:1.75; margin-bottom:1.25rem; }
     .guarantee-items { display:flex; flex-direction:column; gap:0.5rem; }
@@ -567,13 +609,15 @@
 
     /* ── TOAST ── */
     .toast {
-      position:fixed; bottom:110px; left:100px; z-index:997;
+      position:fixed; bottom:110px; left:24px; z-index:997;
       background:var(--white); border-radius:12px; padding:0.9rem 1.1rem;
       box-shadow:0 8px 32px rgba(0,0,0,0.15); border-left:4px solid var(--gold);
       display:flex; align-items:center; gap:0.75rem; max-width:300px;
-      transform:translateX(-120%); transition:transform .4s ease; pointer-events:none;
+      opacity:0; visibility:hidden;
+      transform:translateX(-120%); transition:transform .5s cubic-bezier(0.4,0,0.2,1), opacity .4s ease, visibility 0s .4s;
+      pointer-events:none;
     }
-    .toast.show { transform:translateX(0); }
+    .toast.show { transform:translateX(0); opacity:1; visibility:visible; transition:transform .5s cubic-bezier(0.4,0,0.2,1), opacity .4s ease, visibility 0s 0s; }
     .toast-icon { font-size:1.5rem; flex-shrink:0; }
     .toast strong { display:block; font-size:0.82rem; color:var(--navy); }
     .toast span { font-size:0.75rem; color:var(--muted); }
@@ -722,7 +766,7 @@
     .blog-card-date { font-size: 0.78rem; color: var(--text-muted); }
     .blog-card h3 {
       font-size: 1.15rem; color: var(--navy);
-      font-family: 'Playfair Display', serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       font-weight: 700; line-height: 1.3;
       margin-bottom: 0.85rem;
     }
@@ -741,6 +785,308 @@
     }
     .blog-card:hover .blog-card-link { gap: 0.6rem; }
     .blog-card-link::after { content: '→'; transition: transform .3s; }
+
+    /* ──────────────────────────────────────────
+       DESIGN HARMONIZATION — Apple-style consistency
+       Override layer for legacy sections
+       ────────────────────────────────────────── */
+
+    /* Why section — refined cards */
+    .why-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      transition: border-color .3s ease, transform .3s ease, box-shadow .3s ease;
+    }
+    .why-card:hover {
+      border-color: var(--gold-border);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .why-icon { font-size: 1.5rem; margin-bottom: 1.25rem; }
+    .why-card h4 {
+      font-size: 1rem; font-weight: 700;
+      color: var(--navy); margin-bottom: 0.6rem;
+      font-family: 'Inter', sans-serif; line-height: 1.3;
+    }
+    .why-card p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.7; }
+
+    /* Reglementation — refined cards */
+    .regle-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      border-radius: var(--radius);
+      padding: 2rem;
+      transition: border-color .3s ease, transform .3s ease, box-shadow .3s ease;
+    }
+    .regle-card:hover {
+      border-color: var(--gold-border);
+      border-left-color: var(--gold);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .regle-card h4 { font-size: 1.1rem; margin-bottom: 1rem; line-height: 1.3; }
+    .regle-card p { font-size: 0.92rem; line-height: 1.7; color: var(--text-muted); }
+    .regle-card .tag {
+      display: inline-block;
+      background: var(--gold-soft);
+      color: var(--gold);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.32rem 0.8rem;
+      border-radius: 100px;
+      margin-bottom: 1rem;
+    }
+
+    /* Testimonials — refined */
+    .testi-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius);
+      padding: 2rem;
+      transition: border-color .3s, transform .3s;
+    }
+    .testi-card:hover {
+      border-color: rgba(201,165,83,0.4);
+      transform: translateY(-4px);
+    }
+    .testi-stars { font-size: 1rem; margin-bottom: 1.25rem; letter-spacing: 3px; }
+    .testi-card p {
+      font-size: 1rem; font-style: italic;
+      margin-bottom: 1.5rem; line-height: 1.7;
+      color: rgba(255,255,255,0.85);
+    }
+    .testi-author strong { font-size: 0.92rem; }
+
+    /* Apporteurs — refined tiers */
+    .aport-tier {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.75rem;
+      transition: border-color .3s, transform .3s, box-shadow .3s;
+    }
+    .aport-tier:hover {
+      border-color: var(--gold-border);
+      transform: translateX(4px);
+      box-shadow: var(--shadow-soft);
+    }
+    .aport-tier .tier-info h5 {
+      font-size: 0.92rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.2rem;
+    }
+    .aport-tier .tier-info p { font-size: 0.78rem; color: var(--text-muted); }
+    .aport-tier .tier-rate { font-size: 1.4rem; }
+    .aport-content h3 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      color: var(--navy);
+      margin-bottom: 1rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+    }
+    .aport-content p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 1.75rem;
+    }
+
+    /* Local arrondissements — cleaner pills */
+    .zone-tag {
+      background: var(--white);
+      border: 1px solid var(--border);
+      padding: 0.5rem 1rem;
+      border-radius: 100px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text);
+      transition: all 0.2s ease;
+      letter-spacing: -0.005em;
+    }
+    .zone-tag:hover {
+      background: var(--navy);
+      color: var(--white);
+      border-color: var(--navy);
+      transform: translateY(-1px);
+    }
+    .zone-tag.premium {
+      background: var(--gold-soft);
+      border-color: var(--gold-border);
+      color: var(--navy);
+      font-weight: 600;
+    }
+    .zone-tag.premium:hover {
+      background: var(--gold);
+      color: var(--navy);
+      border-color: var(--gold);
+    }
+    .local-sub { font-size: 0.88rem; line-height: 1.7; color: var(--text-muted); margin-top: 2rem; }
+
+    /* FAQ — refined cards style */
+    .faq-list {
+      border: none;
+      background: transparent;
+      border-radius: 0;
+      overflow: visible;
+      gap: 0.75rem;
+    }
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 0;
+      overflow: hidden;
+      transition: border-color .3s;
+    }
+    .faq-item:hover { border-color: var(--gold-border); }
+    .faq-q {
+      padding: 1.4rem 1.75rem;
+      background: transparent;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .faq-q:hover { background: var(--cream); }
+    .faq-q .faq-icon {
+      font-size: 1.3rem;
+      color: var(--gold);
+      font-weight: 300;
+      line-height: 1;
+    }
+    .faq-a {
+      padding: 0 1.75rem;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: var(--text-muted);
+    }
+    .faq-a.open { padding: 0 1.75rem 1.5rem; }
+
+    /* Lead magnet — book card refined */
+    .lm-book {
+      border-radius: var(--radius);
+      box-shadow: 6px 6px 0 var(--gold);
+      transition: box-shadow .3s ease, transform .3s ease;
+      padding: 2.25rem;
+    }
+    .lm-book:hover {
+      box-shadow: 10px 10px 0 var(--gold);
+      transform: translate(-2px, -2px);
+    }
+    .lm-book h4 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.6rem; }
+    .lm-book p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1.5rem; }
+    .lm-toc li { font-size: 0.85rem; line-height: 1.6; color: var(--text); }
+    .lm-content .section-title { letter-spacing: -0.02em; }
+    .lm-form input { padding: 0.95rem 1.15rem; font-size: 0.95rem; }
+    .lm-form button { padding: 0.95rem 1.75rem; }
+
+    /* Compare table — cleaner spacing & typography */
+    .compare-table {
+      border-spacing: 0 0.4rem;
+      border-collapse: separate;
+    }
+    .compare-table th {
+      padding: 1.1rem 1.25rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+    }
+    .compare-table th.col-optimi {
+      border-radius: var(--radius) var(--radius) 0 0;
+    }
+    .compare-table th.col-diy,
+    .compare-table th.col-generic {
+      border-radius: var(--radius) var(--radius) 0 0;
+    }
+    .compare-table td {
+      padding: 1rem 1.25rem;
+      font-size: 0.92rem;
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    /* Process steps — cleaner */
+    .process-grid { gap: 2rem; }
+    .step-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      border: 1px solid var(--border);
+      text-align: center;
+      transition: border-color .3s, transform .3s;
+    }
+    .step-card:hover {
+      border-color: var(--gold-border);
+      transform: translateY(-3px);
+    }
+    .step-num {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 2px solid var(--gold);
+      color: var(--navy);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      position: relative;
+      z-index: 2;
+    }
+    .step-card h4 { font-size: 1rem; margin-bottom: 0.6rem; line-height: 1.3; }
+    .step-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; }
+
+    /* Final CTA — refined typography */
+    .final-cta {
+      padding: 120px 5%;
+    }
+    .final-cta h2 {
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      letter-spacing: -0.02em;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 1.25rem;
+    }
+    .final-cta h2 em { color: var(--gold); font-style: normal; }
+    .final-cta p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* Buttons — unified */
+    .btn-primary, .btn-ghost, .btn-gold, .btn-outline {
+      letter-spacing: -0.005em;
+      font-weight: 700;
+      transition: all 0.2s ease;
+    }
+
+    /* Section titles globally — Apple-style */
+    .section-title {
+      letter-spacing: -0.02em !important;
+    }
+
+    /* Mobile harmonization */
+    @media (max-width: 600px) {
+      .why-card, .regle-card, .testi-card, .lm-book { padding: 1.5rem; }
+      .aport-tier { padding: 1.25rem 1.5rem; }
+      .aport-tier .tier-rate { font-size: 1.2rem; }
+      .faq-q { padding: 1.15rem 1.25rem; font-size: 0.92rem; }
+      .faq-a { padding: 0 1.25rem; font-size: 0.9rem; }
+      .faq-a.open { padding: 0 1.25rem 1.25rem; }
+      .final-cta { padding: 80px 5%; }
+      .lm-book { box-shadow: 4px 4px 0 var(--gold); margin-right: 4px; }
+      .lm-book:hover { box-shadow: 6px 6px 0 var(--gold); }
+      .compare-table th, .compare-table td { padding: 0.6rem 0.7rem !important; font-size: 0.74rem !important; }
+    }
 
     /* ── PRESENCE / CITIES INTERACTIVE ── */
     .presence { background: linear-gradient(180deg, var(--white) 0%, var(--card-bg) 100%); }
@@ -810,8 +1156,8 @@
     }
     .city-stat-num {
       display:block;
-      font-family:'Playfair Display',serif;
-      font-size:1.75rem; font-weight:700;
+      font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size:1.35rem; font-weight:700;
       color:var(--navy);
       line-height:1;
       letter-spacing:-0.02em;
@@ -864,15 +1210,15 @@
     .case-meta-row span:last-child { color:var(--text); font-weight:600; }
     .case-meta-row.highlight span:last-child {
       color:var(--gold);
-      font-family:'Playfair Display', serif;
+      font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       font-size:1.1rem;
       font-weight:700;
     }
     .case-result { text-align:center; margin-top:auto; }
     .case-result strong {
       display:block;
-      font-family:'Playfair Display',serif;
-      font-size:clamp(2.5rem, 4vw, 3.4rem);
+      font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size:clamp(1.8rem, 3vw, 2.3rem);
       color:var(--navy);
       line-height:1;
       letter-spacing:-0.03em;
@@ -943,14 +1289,6 @@
   }
   </script>
 
-  <!-- Google Ads -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17544027457"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-17544027457');
-  </script>
 </head>
 <body>
 
@@ -958,13 +1296,13 @@
      NAV
 ══════════════════════════════════════════ -->
 <nav>
-  <a class="nav-logo" href="#">OPTIMI<span>.</span></a>
+  <a class="nav-logo" href="#">OPTI<span>MI</span></a>
   <div class="nav-links">
-    <a href="#segments">Nos formules</a>
-    <a href="#transformation">Travaux & Conversion</a>
-    <a href="#reglementation">Réglementation 2026</a>
-    <a href="#apporteurs">Programme apporteurs</a>
-    <a href="#local">Zones couvertes</a>
+    <a href="#segments">Formules</a>
+    <a href="ressources.html">Ressources</a>
+    <a href="coaching.html">Coaching</a>
+    <a href="#blog">Blog</a>
+    <a href="a-propos.html">À propos</a>
     <a class="nav-cta" href="#estimation">Estimation gratuite</a>
   </div>
 </nav>
@@ -1310,6 +1648,19 @@
           <span>Taux d'occupation estimé</span>
         </div>
       </div>
+
+      <div class="calc-detail-form" id="calc-detail-form">
+        <div class="calc-detail-form-head">
+          <h4>📩 Recevez la simulation détaillée par email</h4>
+          <p>Comparatif fiscal LMNP/LMP personnalisé + projection annuelle + 3 leviers d'optimisation pour votre profil. Gratuit, en 1 clic.</p>
+        </div>
+        <div class="calc-detail-form-row">
+          <input type="email" id="calc-email" placeholder="Votre email" autocomplete="email"/>
+          <button type="button" id="calc-detail-submit">Recevoir →</button>
+        </div>
+        <p class="calc-detail-form-note">🔒 Pas de spam · Désabonnement 1 clic</p>
+      </div>
+
       <p class="calc-disclaimer">Estimation indicative basée sur les données de marché Paris 2025. Les résultats réels varient selon l'état du bien, la période et la réglementation locale. Pour une estimation personnalisée et précise : <a href="#estimation" style="color:var(--gold);">demandez votre audit gratuit</a>.</p>
     </div>
   </div>
@@ -1336,12 +1687,9 @@
     <div class="lm-content">
       <p class="section-label">Ressource exclusive</p>
       <h2 class="section-title" style="color:#fff;font-size:1.7rem;">Recevez le guide expert<br/>Airbnb Paris 2026</h2>
-      <p class="section-sub">42 pages de contenu expert : réglementation, fiscalité LMNP/LMP, stratégie courte vs moyenne durée. Rédigé par nos experts. Offert sans condition.</p>
-      <div class="lm-form">
-        <input type="email" placeholder="Votre adresse email" />
-        <button>Recevoir le guide →</button>
-      </div>
-      <p style="font-size:0.75rem;color:rgba(255,255,255,0.35);margin-top:0.75rem;">🔒 Aucun spam · Désabonnement en 1 clic</p>
+      <p class="section-sub">42 pages de contenu expert : réglementation 2026, fiscalité LMNP/LMP, tarification dynamique, simulations chiffrées par profil. Rédigé par nos experts qui gèrent 200+ biens. Offert sans condition.</p>
+      <a href="guide-airbnb-paris-2026.html" class="btn-primary" style="display:inline-block;text-align:center;font-size:1rem;padding:1rem 1.75rem;margin-top:0.5rem;">Télécharger le guide gratuit →</a>
+      <p style="font-size:0.75rem;color:rgba(255,255,255,0.35);margin-top:0.75rem;">🔒 Aucun spam · Désabonnement en 1 clic · 42 pages PDF</p>
     </div>
   </div>
 </section>
@@ -2096,33 +2444,36 @@
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <span class="nav-logo">OPTIMI<span>.</span></span>
-        <p>Conciergerie Airbnb premium à Paris et en Île-de-France. Gestion locative clé en main depuis 2020.</p>
+        <span class="nav-logo">OPTI<span>MI</span></span>
+        <p>Conciergerie Airbnb premium à Paris, en Île-de-France et à l'international. 337+ biens en gestion active.</p>
       </div>
       <div class="footer-col">
         <h5>Services</h5>
-        <a href="#">Gestion courte durée</a>
-        <a href="#">Bail mobilité</a>
-        <a href="#">Investisseurs</a>
-        <a href="#">Portefeuille multi-biens</a>
+        <a href="#segments">Nos formules</a>
+        <a href="#calculateur">Simulateur revenus</a>
+        <a href="coaching.html">Coaching Méthode 360</a>
+        <a href="#apporteurs">Programme apporteurs</a>
       </div>
       <div class="footer-col">
         <h5>Ressources</h5>
-        <a href="#">Guide LMNP 2026</a>
-        <a href="#">Réglementation Paris</a>
-        <a href="#">Simulateur de revenus</a>
-        <a href="#">Programme apporteurs</a>
+        <a href="ressources.html">Toutes les ressources</a>
+        <a href="guide-airbnb-paris-2026.html">Guide Airbnb 2026</a>
+        <a href="calculateur-roi-coaching.html">Calculateur ROI</a>
+        <a href="audit-annonce-airbnb.html">Audit annonce gratuit</a>
+        <a href="#blog">Blog &amp; articles</a>
       </div>
       <div class="footer-col">
-        <h5>Contact</h5>
-        <a href="mailto:contact@optimi-group.com">contact@optimi-group.com</a>
-        <a href="tel:+33XXXXXXXXX">+33 X XX XX XX XX</a>
-        <a href="#">Paris, Île-de-France</a>
+        <h5>Société</h5>
+        <a href="a-propos.html">À propos</a>
+        <a href="contact.html">Contact</a>
+        <a href="mailto:contactoptgroup@gmail.com">contactoptgroup@gmail.com</a>
+        <a href="tel:+33612784932">+33 6 12 78 49 32</a>
+        <a href="#">50 av. des Champs-Élysées, 75008 Paris</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 OPTIMI Group · Tous droits réservés · <a href="#" style="color:rgba(255,255,255,0.3)">Mentions légales</a> · <a href="#" style="color:rgba(255,255,255,0.3)">CGV</a></p>
-      <p style="color:rgba(255,255,255,0.2)">Conciergerie Airbnb Paris — Gestion locative premium Île-de-France</p>
+      <p>© 2026 OPTIMI Group · Tous droits réservés · <a href="mentions-legales.html" style="color:rgba(255,255,255,0.4)">Mentions légales</a> · <a href="politique-de-confidentialite.html" style="color:rgba(255,255,255,0.4)">Confidentialité</a> · <a href="cgv.html" style="color:rgba(255,255,255,0.4)">CGV</a></p>
+      <p style="color:rgba(255,255,255,0.2)">Conciergerie Airbnb Paris — Gestion locative premium Île-de-France &amp; international</p>
     </div>
   </div>
 </footer>
@@ -2171,6 +2522,9 @@
     document.getElementById('cr-occ').textContent  = occ;
     const result = document.getElementById('calc-result');
     result.classList.add('show');
+    // Show email capture form after result (non-blocking)
+    const detailForm = document.getElementById('calc-detail-form');
+    if (detailForm) detailForm.classList.add('show');
     result.scrollIntoView({ behavior:'smooth', block:'nearest' });
   }
 
@@ -2185,17 +2539,30 @@
     { name:'Nathalie · Levallois-Perret', msg:'vient de recevoir son estimation gratuite' },
   ];
   let toastIdx = 0;
+  let toastTimeout = null;
   function showToast() {
-    const t = toasts[toastIdx % toasts.length];
-    document.getElementById('toast-name').textContent = t.name;
-    document.getElementById('toast-msg').textContent  = t.msg;
     const el = document.getElementById('toast');
-    el.classList.add('show');
-    setTimeout(() => el.classList.remove('show'), 4000);
-    toastIdx++;
+    if (!el) return;
+    // If already showing, hide first then re-show with new content
+    if (el.classList.contains('show')) {
+      el.classList.remove('show');
+      if (toastTimeout) clearTimeout(toastTimeout);
+      setTimeout(displayNext, 600);
+    } else {
+      displayNext();
+    }
+    function displayNext() {
+      const t = toasts[toastIdx % toasts.length];
+      document.getElementById('toast-name').textContent = t.name;
+      document.getElementById('toast-msg').textContent  = t.msg;
+      el.classList.add('show');
+      if (toastTimeout) clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => el.classList.remove('show'), 5000);
+      toastIdx++;
+    }
   }
-  // Show first toast after 8s, then every 18s
-  setTimeout(() => { showToast(); setInterval(showToast, 18000); }, 8000);
+  // Show first toast after 10s, then every 25s (avoid overlap with 5s display + 600ms transition buffer)
+  setTimeout(() => { showToast(); setInterval(showToast, 25000); }, 10000);
 
   /* ── CITIES INTERACTIVE ── */
   const CITIES = [
@@ -2248,6 +2615,40 @@
 
   renderCityList();
 
+  /* ── CALC EMAIL CAPTURE (post-result) ── */
+  const calcSubmit = document.getElementById('calc-detail-submit');
+  if (calcSubmit) {
+    calcSubmit.addEventListener('click', () => {
+      const emailInput = document.getElementById('calc-email');
+      const email = emailInput.value.trim();
+      if (!email || !email.includes('@')) {
+        emailInput.style.borderColor = '#ef4444';
+        return;
+      }
+      // Capture context (zone/type/mode for the simulation context)
+      const context = {
+        zone: document.getElementById('calc-zone').value,
+        type: document.getElementById('calc-type').value,
+        mode: document.getElementById('calc-mode').value,
+        brut: document.getElementById('cr-brut').textContent,
+        net: document.getElementById('cr-net').textContent,
+      };
+      // Store locally — will replace with GHL Forms POST later
+      try {
+        const leads = JSON.parse(localStorage.getItem('optimi_leads') || '[]');
+        leads.push({email, source:'calc-detail', context, date: new Date().toISOString()});
+        localStorage.setItem('optimi_leads', JSON.stringify(leads));
+      } catch(e){}
+      // Track Google Ads conversion
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'calc_email_capture', {'event_category':'lead_magnet','event_label':'calculator'});
+      }
+      // Replace form with success message
+      const detailForm = document.getElementById('calc-detail-form');
+      detailForm.innerHTML = '<div class="calc-detail-success">✓ Merci ! Votre simulation détaillée arrive dans les 5 prochaines minutes sur <strong>'+email+'</strong>. Vérifiez aussi vos spams.</div>';
+    });
+  }
+
   /* ── SMOOTH SCROLL ── */
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
@@ -2262,7 +2663,7 @@
 </script>
 
 <!-- ── CRISP CHAT ── -->
-<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="2bce32af-5870-4951-96c5-53397fa759e9";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+<script src="cookie-consent.js"></script>
 
 <!-- ── CHATBOT ── -->
 <style>
