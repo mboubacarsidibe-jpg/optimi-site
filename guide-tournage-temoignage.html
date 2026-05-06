@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Guide tournage témoignage — OPTIMI Group</title>
+<meta name="robots" content="noindex, nofollow"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{--navy:#0B1828;--white:#FFFFFF;--cream:#FAFAF8;--gold:#C9A553;--gold-soft:rgba(201,165,83,0.08);--text:#1C1C2E;--text-muted:#6B6B80;--border:#E5E0D7;--radius:16px;--green:#2E8B57;--red:#C04040;}
+body{font-family:'Inter',sans-serif;color:var(--text);background:var(--white);line-height:1.7;}
+h1,h2,h3 { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.15; letter-spacing: -0.02em; font-weight: 700; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: var(--navy); }
+h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; }
+.container{max-width:780px;margin:0 auto;padding:60px 5% 80px;}
+.cover{text-align:center;padding:100px 5% 80px;background:linear-gradient(135deg,#FAFAF8 0%,#F5EFE0 100%);border-bottom:3px solid var(--gold);}
+.cover .brand{font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;font-size:1.4rem;color:var(--navy);letter-spacing:.06em;margin-bottom:1.5rem;}
+.cover .brand span{color:var(--gold);}
+.cover h1{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:1rem;}
+.cover .subtitle{font-size:1.1rem;color:var(--text-muted);max-width:520px;margin:0 auto;line-height:1.6;}
+.cover .meta{margin-top:3rem;font-size:0.85rem;color:var(--text-muted);}
+section{margin-bottom:3rem;}
+section h2{font-size:1.6rem;margin-bottom:1.2rem;border-bottom:2px solid var(--gold);padding-bottom:0.5rem;display:inline-block;}
+section h3{font-size:1.15rem;font-family:'Inter',sans-serif;font-weight:700;margin-top:1.5rem;margin-bottom:0.6rem;color:var(--navy);}
+p{margin-bottom:1rem;}
+ul,ol{padding-left:1.4rem;margin-bottom:1rem;}
+li{margin-bottom:0.5rem;line-height:1.65;}
+.callout{background:var(--gold-soft);border-left:4px solid var(--gold);padding:1.25rem 1.5rem;margin:1.5rem 0;border-radius:0 var(--radius) var(--radius) 0;}
+.callout strong{color:var(--navy);}
+.box-do{background:#F0F8F2;border-left:4px solid var(--green);padding:1.25rem 1.5rem;margin:1rem 0;border-radius:0 var(--radius) var(--radius) 0;}
+.box-dont{background:#FBF1F1;border-left:4px solid var(--red);padding:1.25rem 1.5rem;margin:1rem 0;border-radius:0 var(--radius) var(--radius) 0;}
+.box-do strong, .box-dont strong{display:block;margin-bottom:0.4rem;}
+.box-do strong{color:var(--green);}
+.box-dont strong{color:var(--red);}
+.steps{counter-reset:step;}
+.steps .step{counter-increment:step;display:flex;gap:1rem;margin-bottom:1.25rem;align-items:flex-start;}
+.steps .step::before{content:counter(step);background:var(--gold);color:var(--white);width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0;font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;}
+.steps .step-content{flex:1;}
+.steps .step-content strong{display:block;margin-bottom:0.25rem;}
+.questions{background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem 1.75rem;margin:1.5rem 0;}
+.questions h3{margin-top:0;}
+.questions ol li{margin-bottom:0.85rem;line-height:1.6;}
+.questions li strong{display:block;color:var(--navy);font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;margin-bottom:0.25rem;font-size:1.05rem;}
+.consent-box{background:#F8F4E8;border:2px solid var(--gold);border-radius:var(--radius);padding:1.5rem 1.75rem;margin:2rem 0;font-size:0.92rem;}
+.consent-box h3{margin-top:0;color:var(--navy);}
+.send-info{background:var(--navy);color:var(--white);padding:2rem;border-radius:var(--radius);margin-top:3rem;text-align:center;}
+.send-info h2{color:var(--white);border-color:var(--gold);}
+.send-info a{color:var(--gold);text-decoration:none;font-weight:600;}
+.footer-note{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);font-size:0.82rem;color:var(--text-muted);text-align:center;}
+@media print{
+  body{font-size:11pt;}
+  .cover{padding:50px 5% 30px;page-break-after:always;}
+  section{page-break-inside:avoid;margin-bottom:1.5rem;}
+  .container{padding:30px 5%;}
+}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="brand">OPTI<span>MI</span> GROUP</div>
+  <h1>Guide tournage<br/>témoignage client</h1>
+  <p class="subtitle">Tout ce qu'il vous faut pour tourner un témoignage simple, authentique, et professionnel — depuis votre smartphone, en moins de 10 minutes.</p>
+  <div class="meta">Mise à jour : avril 2026</div>
+</div>
+
+<div class="container">
+
+<section>
+  <h2>Pourquoi votre témoignage compte</h2>
+  <p>Vos résultats parlent d'eux-mêmes — mais entendre les choses directement de votre voix a un impact <strong>x10</strong> auprès de futurs propriétaires hésitants.</p>
+  <p>Un témoignage selfie de 60 à 90 secondes peut nous aider à toucher des dizaines de propriétaires comme vous, à leur faire gagner du temps et de l'argent. Et en passant, à renforcer la cohorte OPTIMI.</p>
+  <div class="callout">
+    <strong>Bonne nouvelle :</strong> ce n'est pas un tournage pro. C'est <strong>vous, votre téléphone, 5-10 minutes</strong>. Plus c'est authentique, mieux c'est.
+  </div>
+</section>
+
+<section>
+  <h2>1. Setup tournage (5 minutes)</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-content">
+        <strong>Mode portrait — téléphone à la verticale</strong>
+        Format <em>9:16</em>, comme un Reel ou un TikTok. Tenez votre téléphone <strong>vertical</strong>, jamais horizontal.
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-content">
+        <strong>Lumière naturelle, fenêtre devant</strong>
+        Tournez face à une fenêtre (la lumière éclaire votre visage). Évitez la fenêtre <em>derrière</em> vous (vous deviendrez une silhouette noire).
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-content">
+        <strong>Fond simple et propre</strong>
+        Mur uni, plante, ou pièce rangée. Pas de chaos visible derrière. Un fond neutre met votre visage en valeur.
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-content">
+        <strong>Test audio rapide</strong>
+        Enregistrez 5 secondes de test. Réécoutez. Si on entend la rue, le ventilo, la TV — changez de pièce. <strong>Le son est plus important que l'image.</strong>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-content">
+        <strong>Stabilisation simple</strong>
+        Posez votre téléphone sur des livres, contre un mur, ou tenez-le à 2 mains. Pas besoin de trépied — juste pas de tremblements.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>2. Structure d'un bon témoignage (60-90 secondes)</h2>
+  <p>Un bon témoignage se découpe en 4 parties simples. Vous n'avez <strong>pas besoin de réciter par cœur</strong> — parlez naturellement, dans vos mots à vous.</p>
+  <ol>
+    <li><strong>L'avant :</strong> Comment c'était avant OPTIMI ? (problème, douleur, frustration)</li>
+    <li><strong>La décision :</strong> Pourquoi vous avez choisi OPTIMI ? (ce qui a fait pencher la balance)</li>
+    <li><strong>Le résultat :</strong> Qu'est-ce qui a changé concrètement ? (chiffres, sensations, temps gagné)</li>
+    <li><strong>La recommandation :</strong> Vous le recommanderiez à qui ? Pourquoi ?</li>
+  </ol>
+</section>
+
+<section>
+  <div class="questions">
+    <h3>📋 Vos 6 questions guides</h3>
+    <p style="margin-bottom:1.25rem;font-size:0.95rem;">Filmez une réponse par question (séquences courtes 10-30 secondes chacune). Notre équipe assemblera. <strong>N'essayez pas de tout faire en une prise.</strong></p>
+    <ol>
+      <li><strong>1. Présentez-vous</strong> "Je m'appelle [prénom], je suis [profession/situation], et je gère [N] biens en location courte durée à [ville]."</li>
+      <li><strong>2. Qu'est-ce qui vous a poussé à chercher une solution ?</strong> "Avant OPTIMI, le plus difficile pour moi c'était..."</li>
+      <li><strong>3. Pourquoi avoir choisi OPTIMI plutôt qu'une autre solution ?</strong> "Ce qui m'a convaincu, c'est..."</li>
+      <li><strong>4. Quel est le résultat concret depuis ?</strong> "Aujourd'hui, [chiffre, sensation, temps libéré]." (les chiffres parlent fort — n'ayez pas peur d'en partager)</li>
+      <li><strong>5. Qu'est-ce qui vous a le plus surpris ?</strong> "Ce que je n'avais pas anticipé, c'est..."</li>
+      <li><strong>6. Vous le recommanderiez à qui ?</strong> "Si vous êtes [type de personne], OPTIMI peut vraiment vous changer la vie." (parlez à votre 'vous d'avant')</li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <h2>3. À FAIRE / À ÉVITER</h2>
+
+  <div class="box-do">
+    <strong>✓ À FAIRE</strong>
+    <ul style="margin:0;">
+      <li>Parlez naturellement, comme à un ami</li>
+      <li>Utilisez des chiffres précis si vous les connaissez ("+28%", "31 000€/an", "8h gagnées par semaine")</li>
+      <li>Regardez la caméra (le petit cercle en haut de votre téléphone)</li>
+      <li>Sourriez quand c'est sincère</li>
+      <li>Recommencez si vous bafouillez — pas grave, on garde la meilleure prise</li>
+      <li>Soyez vous-même — les bafouilles légères rendent plus authentique</li>
+    </ul>
+  </div>
+
+  <div class="box-dont">
+    <strong>✗ À ÉVITER</strong>
+    <ul style="margin:0;">
+      <li>Ne lisez pas un script écrit (ça se voit immédiatement)</li>
+      <li>Pas d'éclairage zénithal (lumière au-dessus de vous = ombres dures)</li>
+      <li>Pas de musique de fond (notre équipe ajoute ce qui convient)</li>
+      <li>Pas de filtre beauté / Snapchat / Instagram</li>
+      <li>Pas de caméra horizontale (toujours vertical 9:16)</li>
+      <li>Pas de cravate / costume si vous n'en portez jamais — restez vous-même</li>
+      <li>Évitez les promesses (genre "+50% garanti") — partagez VOTRE expérience</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>4. Bonus pour rendre votre témoignage encore plus fort</h2>
+  <ul>
+    <li><strong>B-roll de votre bien</strong> (optionnel) : 4-6 plans de 5 secondes de votre logement Airbnb (salon, cuisine, terrasse). On les insérera pendant que vous parlez.</li>
+    <li><strong>Capture d'écran dashboard</strong> (optionnel mais puissant) : un screenshot de vos revenus Airbnb sur les 6 derniers mois. Floutez vos infos perso si vous voulez — les chiffres seuls font massive.</li>
+    <li><strong>Photo "avant" et "après"</strong> de votre annonce : si vous avez gardé l'ancienne version, c'est un visuel très fort.</li>
+  </ul>
+</section>
+
+<section>
+  <div class="consent-box">
+    <h3>🔒 Consentement utilisation publicitaire (RGPD)</h3>
+    <p>En nous envoyant votre vidéo, vous nous autorisez à l'utiliser à des fins promotionnelles d'OPTIMI Group : sur nos pages réseaux sociaux (Instagram, TikTok, YouTube, LinkedIn, Facebook), sur nos campagnes publicitaires payantes, sur notre site web, et dans nos communications email pour une durée de <strong>3 ans renouvelable</strong>.</p>
+    <p>Vous pouvez retirer cette autorisation à tout moment en nous écrivant à <strong>contactoptgroup@gmail.com</strong>. Dans ce cas, nous retirerons votre vidéo de tous nos supports sous 30 jours.</p>
+    <p>Aucune information personnelle (nom complet, adresse exacte) ne sera utilisée sans votre accord explicite préalable, en plus de cette autorisation.</p>
+    <p style="margin-top:1rem;"><strong>En envoyant votre vidéo, vous confirmez avoir lu et accepté ces termes.</strong></p>
+  </div>
+</section>
+
+<section>
+  <div class="send-info">
+    <h2 style="color:var(--white);">Comment nous envoyer votre vidéo</h2>
+    <p style="margin-bottom:1.5rem;">Filmez vos 6 réponses (séquences courtes), pas besoin de monter — on s'en charge.</p>
+    <p>Envoyez via <a href="https://wetransfer.com">WeTransfer</a> ou Google Drive à : <a href="mailto:contactoptgroup@gmail.com?subject=Témoignage%20vidéo%20OPTIMI">contactoptgroup@gmail.com</a></p>
+    <p style="margin-top:1rem;font-size:0.9rem;color:rgba(255,255,255,0.7);">Précisez "Témoignage vidéo OPTIMI" en objet, on s'occupe du reste.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Merci !</h2>
+  <p>Votre témoignage est précieux. Il aidera concrètement d'autres propriétaires comme vous à choisir la bonne voie.</p>
+  <p>En remerciement, vous recevez : <strong>1 mois de commission gratuite</strong> sur votre prochain mois de mandat (valeur 200-450€ selon votre profil).</p>
+  <p>Si vous avez la moindre question pendant le tournage, écrivez à <a href="mailto:contactoptgroup@gmail.com" style="color:var(--gold);">contactoptgroup@gmail.com</a> — on est là.</p>
+</section>
+
+<div class="footer-note">
+  © 2026 OPTIMI GROUP — Document privé. Ne pas redistribuer sans autorisation.<br/>
+  contactoptgroup@gmail.com · optimi-group.com
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Calculateur ROI Coaching Airbnb — Méthode 360 | OPTIMI</title>
+<meta name="description" content="Calculez en 30 secondes le retour sur investissement du programme coaching OPTIMI Méthode Rentabilité 360. Combien gagneriez-vous en plus avec +40% de revenus ? En combien de mois le coaching se rembourse-t-il ?"/>
+<meta name="robots" content="index, follow"/>
+<meta name="author" content="OPTIMI GROUP"/>
+<meta name="keywords" content="calculateur ROI coaching airbnb, rentabilité coaching location courte durée, simulation revenus airbnb, méthode rentabilité 360"/>
+<meta name="msvalidate.01" content="C464E4CC8C43866E36C93B7BC23B68F4"/>
+<link rel="canonical" href="https://optimi-group.com/calculateur-roi-coaching.html"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+
+<!-- Open Graph -->
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="OPTIMI Group"/>
+<meta property="og:title" content="Calculateur ROI Coaching — Méthode Rentabilité 360"/>
+<meta property="og:description" content="En 30 secondes : combien le programme coaching OPTIMI va vous rapporter, et en combien de mois il se rembourse."/>
+<meta property="og:url" content="https://optimi-group.com/calculateur-roi-coaching.html"/>
+<meta property="og:image" content="https://optimi-group.com/og-image.jpg"/>
+<meta property="og:locale" content="fr_FR"/>
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Calculateur ROI Coaching Airbnb — OPTIMI"/>
+<meta name="twitter:description" content="Combien gagneriez-vous en plus avec +40% de revenus ?"/>
+<meta name="twitter:image" content="https://optimi-group.com/og-image.jpg"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#0B1828;--white:#FFFFFF;--cream:#FAFAF8;--card:#F4F1EC;
+  --gold:#C9A553;--gold-soft:rgba(201,165,83,0.08);--gold-border:rgba(201,165,83,0.4);
+  --green:#16a34a;--green-soft:rgba(22,163,74,0.08);
+  --text:#1C1C2E;--text-muted:#6B6B80;--text-subtle:#9A9AAB;
+  --border:#E5E0D7;--border-soft:#EFEAE0;
+  --radius:16px;--radius-sm:10px;
+  --shadow-soft:0 4px 20px rgba(0,0,0,0.05);--shadow-md:0 8px 32px rgba(0,0,0,0.08);
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;color:var(--text);background:var(--cream);line-height:1.6;overflow-x:hidden;}
+h1,h2,h3,h4 { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.15; letter-spacing: -0.02em; font-weight: 700; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: var(--navy); }
+h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; }
+a{color:var(--gold);text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(11,24,40,0.97);backdrop-filter:blur(14px);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:64px;border-bottom:1px solid rgba(201,165,83,0.18);}
+.nav-logo{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;font-size:1.25rem;color:var(--white);letter-spacing:0.04em;font-weight:700;}
+.nav-logo span{color:var(--gold);}
+.nav-back{color:rgba(255,255,255,0.75);font-size:0.85rem;}
+.nav-back:hover{color:var(--gold);text-decoration:none;}
+
+/* HERO */
+.calc-hero{
+  background:linear-gradient(160deg,#060f1a 0%,#0B1828 50%,#0f2438 100%);
+  padding:64px 5% 72px;text-align:center;position:relative;overflow:hidden;
+}
+.calc-hero::before{content:'';position:absolute;top:-30%;right:-10%;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(201,165,83,0.07) 0%,transparent 60%);pointer-events:none;}
+.calc-hero-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+.calc-badge{
+  display:inline-block;background:var(--gold-soft);
+  border:1px solid var(--gold-border);color:var(--gold);
+  font-size:0.72rem;font-weight:700;letter-spacing:0.12em;
+  text-transform:uppercase;padding:0.4rem 1rem;border-radius:100px;
+  margin-bottom:1.5rem;
+}
+.calc-hero h1{
+  font-size:clamp(1.85rem,4vw,3rem);color:var(--white);
+  font-weight:800;letter-spacing:-0.02em;line-height:1.1;
+  margin-bottom:1.25rem;
+}
+.calc-hero h1 em{color:var(--gold);font-style:italic;font-weight:600;}
+.calc-hero p{
+  font-size:1.05rem;color:rgba(255,255,255,0.75);
+  line-height:1.7;max-width:580px;margin:0 auto;
+}
+
+/* MAIN CALC SECTION */
+.calc-main{padding:80px 5%;background:var(--cream);}
+.calc-main-inner{max-width:760px;margin:0 auto;}
+
+.calc-card{
+  background:var(--white);border:1px solid var(--border);
+  border-radius:var(--radius);padding:3rem 2.5rem;
+  box-shadow:var(--shadow-md);
+}
+
+/* INPUT STAGE */
+.calc-input-area{display:block;}
+.calc-step{margin-bottom:2rem;}
+.calc-step:last-child{margin-bottom:0;}
+.calc-step-label{
+  display:block;font-size:0.78rem;font-weight:700;
+  letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:0.85rem;
+}
+.calc-step h3{
+  font-family:'Inter',sans-serif;font-size:1.25rem;
+  color:var(--navy);margin-bottom:1.25rem;line-height:1.3;
+  font-weight:700;
+}
+
+.calc-revenue-input{
+  position:relative;
+}
+.calc-revenue-input input{
+  width:100%;padding:1.4rem 1.4rem 1.4rem 4rem;
+  font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size:2.5rem;font-weight:700;color:var(--navy);
+  background:var(--cream);border:2px solid var(--border);
+  border-radius:var(--radius);outline:none;
+  transition:border-color .2s,background .2s;
+  letter-spacing:-0.02em;
+}
+.calc-revenue-input input:focus{border-color:var(--gold);background:var(--white);}
+.calc-revenue-input input::placeholder{color:var(--text-subtle);font-size:1.5rem;font-style:italic;}
+.calc-revenue-input .currency{
+  position:absolute;top:50%;left:1.5rem;transform:translateY(-50%);
+  font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;font-size:2rem;font-weight:700;
+  color:var(--gold);pointer-events:none;
+}
+.calc-revenue-input .suffix{
+  position:absolute;top:50%;right:1.5rem;transform:translateY(-50%);
+  font-size:0.85rem;color:var(--text-muted);
+  pointer-events:none;
+}
+
+.calc-quick-options{
+  display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:1rem;
+}
+.calc-quick-options button{
+  padding:0.5rem 0.95rem;
+  background:var(--white);border:1.5px solid var(--border);
+  border-radius:100px;font-size:0.82rem;color:var(--text);
+  cursor:pointer;font-family:'Inter',sans-serif;font-weight:500;
+  transition:all .2s;
+}
+.calc-quick-options button:hover{border-color:var(--gold);color:var(--navy);}
+.calc-quick-options button.active{background:var(--navy);color:var(--white);border-color:var(--navy);}
+
+.calc-cta-row{
+  margin-top:2.5rem;text-align:center;
+}
+.calc-btn-primary{
+  background:var(--gold);color:var(--navy);
+  padding:1.1rem 2.5rem;border:none;border-radius:var(--radius-sm);
+  font-weight:800;font-size:1rem;cursor:pointer;
+  font-family:'Inter',sans-serif;
+  transition:all .2s;letter-spacing:-0.005em;
+  box-shadow:0 4px 20px rgba(201,165,83,0.25);
+}
+.calc-btn-primary:hover{background:#d4b060;transform:translateY(-2px);box-shadow:0 8px 30px rgba(201,165,83,0.35);}
+.calc-btn-primary:disabled{opacity:0.4;cursor:not-allowed;transform:none;}
+
+/* RESULTS STAGE */
+.calc-results{display:none;animation:fadeIn .6s ease;}
+.calc-results.show{display:block;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+
+.calc-results-head{text-align:center;margin-bottom:2.5rem;}
+.calc-results-label{
+  font-size:0.78rem;font-weight:700;letter-spacing:0.12em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:0.85rem;
+}
+.calc-results-head h2{
+  font-size:clamp(1.4rem,3vw,2rem);color:var(--navy);
+  margin-bottom:0.5rem;line-height:1.2;letter-spacing:-0.02em;
+}
+.calc-results-head p{
+  color:var(--text-muted);font-size:0.95rem;
+}
+
+.calc-result-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:2rem;
+}
+.calc-result-cell{
+  background:var(--cream);border:1px solid var(--border);
+  border-radius:var(--radius);padding:1.5rem 1.25rem;text-align:center;
+}
+.calc-result-cell.highlight{
+  background:linear-gradient(135deg,var(--gold-soft) 0%,rgba(201,165,83,0.15) 100%);
+  border-color:var(--gold-border);
+}
+.calc-result-cell-label{
+  font-size:0.75rem;color:var(--text-muted);
+  letter-spacing:0.04em;margin-bottom:0.6rem;
+  text-transform:uppercase;font-weight:600;
+}
+.calc-result-cell strong{
+  display:block;font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;
+  color:var(--navy);line-height:1;letter-spacing:-0.02em;
+}
+.calc-result-cell.highlight strong{color:var(--gold);}
+.calc-result-cell-sub{
+  display:block;font-size:0.78rem;
+  color:var(--text-muted);margin-top:0.5rem;
+}
+
+/* ROI Visual */
+.roi-visual{
+  background:var(--navy);color:var(--white);
+  border-radius:var(--radius);padding:2rem;
+  text-align:center;margin-bottom:2rem;
+}
+.roi-visual-label{
+  font-size:0.78rem;font-weight:700;letter-spacing:0.1em;
+  color:var(--gold);text-transform:uppercase;margin-bottom:1rem;
+}
+.roi-visual-text{
+  font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size:clamp(1.25rem,2.5vw,1.75rem);
+  font-weight:600;line-height:1.45;
+}
+.roi-visual-text strong{color:var(--gold);font-weight:700;}
+
+/* EMAIL CAPTURE */
+.calc-email-capture{
+  background:var(--cream);border:1px dashed var(--gold-border);
+  border-radius:var(--radius);padding:1.75rem;
+}
+.calc-email-capture h4{
+  font-family:'Inter',sans-serif;font-size:1rem;
+  font-weight:700;color:var(--navy);margin-bottom:0.4rem;
+}
+.calc-email-capture p{
+  font-size:0.88rem;color:var(--text-muted);
+  margin-bottom:1.25rem;line-height:1.6;
+}
+.calc-email-form{
+  display:flex;gap:0.65rem;
+}
+.calc-email-form input{
+  flex:1;padding:0.85rem 1.1rem;
+  background:var(--white);border:1.5px solid var(--border);
+  border-radius:var(--radius-sm);font-size:0.92rem;
+  font-family:'Inter',sans-serif;outline:none;
+}
+.calc-email-form input:focus{border-color:var(--gold);}
+.calc-email-form button{
+  padding:0.85rem 1.5rem;background:var(--navy);color:var(--white);
+  border:none;border-radius:var(--radius-sm);
+  font-weight:700;font-size:0.9rem;cursor:pointer;
+  font-family:'Inter',sans-serif;white-space:nowrap;
+  transition:background .2s;
+}
+.calc-email-form button:hover{background:#1a3350;}
+.calc-email-note{
+  font-size:0.72rem;color:var(--text-muted);
+  margin-top:0.65rem;text-align:center;
+}
+.calc-email-success{
+  background:var(--green-soft);
+  border:1.5px solid rgba(22,163,74,0.3);
+  border-radius:var(--radius);padding:1.5rem;
+  color:var(--green);font-weight:600;text-align:center;
+  display:none;line-height:1.55;
+}
+.calc-email-success.show{display:block;}
+
+/* AUDIT CTA */
+.calc-audit-cta{
+  text-align:center;margin-top:2.5rem;padding-top:2.5rem;
+  border-top:1px solid var(--border);
+}
+.calc-audit-cta h4{
+  font-family:'Inter',sans-serif;font-size:1.1rem;
+  font-weight:700;color:var(--navy);margin-bottom:0.65rem;
+}
+.calc-audit-cta p{
+  font-size:0.92rem;color:var(--text-muted);
+  margin-bottom:1.25rem;line-height:1.65;
+}
+.calc-audit-link{
+  display:inline-block;background:var(--gold);color:var(--navy);
+  padding:0.95rem 2rem;border-radius:var(--radius-sm);
+  font-weight:700;font-size:0.95rem;
+  text-decoration:none;transition:all .2s;
+}
+.calc-audit-link:hover{background:#d4b060;transform:translateY(-1px);text-decoration:none;}
+
+/* TRUST */
+.calc-trust{
+  background:var(--white);padding:64px 5%;
+  border-top:1px solid var(--border-soft);
+}
+.calc-trust-inner{
+  max-width:760px;margin:0 auto;text-align:center;
+}
+.calc-trust-label{
+  font-size:0.72rem;font-weight:700;letter-spacing:0.12em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem;
+}
+.calc-trust-text{
+  font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size:clamp(1.25rem,2.5vw,1.65rem);
+  color:var(--navy);line-height:1.45;letter-spacing:-0.01em;
+  font-weight:400;
+}
+.calc-trust-text strong{font-weight:700;color:var(--gold);}
+.calc-trust-stats{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;
+  margin-top:2.5rem;
+}
+.calc-trust-stat{
+  background:var(--cream);border:1px solid var(--border);
+  border-radius:var(--radius);padding:1.25rem 0.75rem;
+}
+.calc-trust-stat strong{
+  display:block;font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size:1.65rem;font-weight:700;color:var(--navy);
+  letter-spacing:-0.02em;
+}
+.calc-trust-stat span{
+  display:block;font-size:0.7rem;color:var(--text-muted);
+  margin-top:0.4rem;letter-spacing:0.04em;
+}
+
+/* FOOTER */
+footer{background:#060f1a;color:var(--white);padding:32px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;border-top:1px solid rgba(255,255,255,0.06);}
+footer p{font-size:0.78rem;color:rgba(255,255,255,0.3);}
+footer a{color:rgba(255,255,255,0.4);font-size:0.78rem;}
+footer a:hover{color:var(--gold);text-decoration:none;}
+
+@media (max-width:600px){
+  .calc-hero{padding:48px 5% 56px;}
+  .calc-main{padding:48px 5%;}
+  .calc-card{padding:2rem 1.5rem;}
+  .calc-revenue-input input{font-size:1.85rem;padding:1.1rem 1.2rem 1.1rem 3.2rem;}
+  .calc-revenue-input .currency{font-size:1.5rem;left:1.1rem;}
+  .calc-result-grid{grid-template-columns:1fr 1fr;}
+  .calc-trust-stats{grid-template-columns:1fr 1fr;}
+  .calc-email-form{flex-direction:column;}
+}
+</style>
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"Calculateur ROI Coaching OPTIMI",
+  "applicationCategory":"BusinessApplication",
+  "operatingSystem":"Any",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},
+  "description":"Calculateur de retour sur investissement du programme coaching Méthode Rentabilité 360 par OPTIMI Group."
+}
+</script>
+
+<!-- Google Ads -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17544027457"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-17544027457');
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">OPTI<span>MI</span></a>
+  <a href="coaching.html" class="nav-back">← Retour au coaching</a>
+</nav>
+
+<!-- HERO -->
+<section class="calc-hero">
+  <div class="calc-hero-inner">
+    <div class="calc-badge">⚡ Calculateur · 30 secondes</div>
+    <h1>Combien le coaching <em>Méthode Rentabilité 360</em> va vous rapporter ?</h1>
+    <p>Entrez vos revenus Airbnb actuels — découvrez en 30 secondes votre gain mensuel potentiel, votre retour sur investissement et le délai de remboursement du programme.</p>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="calc-main">
+  <div class="calc-main-inner">
+    <div class="calc-card">
+
+      <!-- Input stage -->
+      <div class="calc-input-area" id="inputArea">
+        <div class="calc-step">
+          <span class="calc-step-label">Étape 1/1</span>
+          <h3>Quels sont vos revenus Airbnb actuels ? <span style="color:var(--text-muted);font-size:0.85rem;font-weight:400;">(par mois, en moyenne)</span></h3>
+          <div class="calc-revenue-input">
+            <span class="currency">€</span>
+            <input type="number" id="revenueInput" placeholder="2 500" min="0" step="100" autofocus/>
+            <span class="suffix">/ mois</span>
+          </div>
+          <div class="calc-quick-options">
+            <button type="button" data-value="800">800€</button>
+            <button type="button" data-value="1500">1 500€</button>
+            <button type="button" data-value="2500">2 500€</button>
+            <button type="button" data-value="4000">4 000€</button>
+            <button type="button" data-value="6000">6 000€</button>
+            <button type="button" data-value="10000">10 000€+</button>
+          </div>
+        </div>
+
+        <div class="calc-cta-row">
+          <button type="button" class="calc-btn-primary" id="calcBtn">Calculer mon ROI →</button>
+        </div>
+      </div>
+
+      <!-- Results stage -->
+      <div class="calc-results" id="resultsArea">
+        <div class="calc-results-head">
+          <div class="calc-results-label">Votre projection</div>
+          <h2>Voici ce que la <em style="color:var(--gold);font-style:normal;">Méthode Rentabilité 360</em> peut vous rapporter</h2>
+          <p>Sur la base de notre garantie de +40% de revenus en 60 jours, appliquée sur 200+ biens parisiens.</p>
+        </div>
+
+        <div class="calc-result-grid">
+          <div class="calc-result-cell highlight">
+            <div class="calc-result-cell-label">Gain mensuel</div>
+            <strong id="resGainMonth">+0€</strong>
+            <span class="calc-result-cell-sub">+40% de revenus</span>
+          </div>
+          <div class="calc-result-cell highlight">
+            <div class="calc-result-cell-label">Gain annuel</div>
+            <strong id="resGainYear">+0€</strong>
+            <span class="calc-result-cell-sub">sur 12 mois</span>
+          </div>
+          <div class="calc-result-cell">
+            <div class="calc-result-cell-label">Coût programme</div>
+            <strong>2 191€</strong>
+            <span class="calc-result-cell-sub">paiement unique</span>
+          </div>
+          <div class="calc-result-cell">
+            <div class="calc-result-cell-label">Remboursé en</div>
+            <strong id="resPayback">— mois</strong>
+            <span class="calc-result-cell-sub">après le programme</span>
+          </div>
+        </div>
+
+        <div class="roi-visual">
+          <div class="roi-visual-label">ROI 12 mois</div>
+          <div class="roi-visual-text" id="resROI">
+            Votre investissement de <strong>2 191€</strong> génère <strong>0€ de gain</strong> sur 12 mois — soit un ROI de <strong>0×</strong>.
+          </div>
+        </div>
+
+        <!-- Email capture for detailed report -->
+        <div class="calc-email-capture" id="emailCapture">
+          <h4>📩 Recevez le rapport personnalisé détaillé</h4>
+          <p>Comparatif fiscal LMNP/LMP adapté à votre profil + 5 leviers spécifiques d'optimisation pour votre niveau de revenus + simulation complète.</p>
+          <div class="calc-email-form">
+            <input type="email" id="emailInput" placeholder="Votre email" autocomplete="email"/>
+            <button type="button" id="emailSubmit">Recevoir le rapport →</button>
+          </div>
+          <p class="calc-email-note">🔒 Pas de spam · Désabonnement 1 clic · RGPD</p>
+        </div>
+
+        <div class="calc-email-success" id="emailSuccess">
+          ✓ Merci ! Votre rapport personnalisé arrive dans votre boîte mail dans les prochaines minutes.
+        </div>
+
+        <!-- Final CTA -->
+        <div class="calc-audit-cta">
+          <h4>Convaincu ? L'étape suivante : audit gratuit 20 min</h4>
+          <p>Une conversation honnête avec un expert OPTIMI pour valider que la méthode est adaptée à votre situation. Sans engagement, sans pression.</p>
+          <a href="coaching.html#audit" class="calc-audit-link">Réserver mon audit gratuit →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="calc-trust">
+  <div class="calc-trust-inner">
+    <div class="calc-trust-label">Ces chiffres sont-ils crédibles ?</div>
+    <p class="calc-trust-text">
+      L'estimation +40% n'est pas marketing. C'est notre <strong>garantie contractuelle</strong> appliquée sur 200+ biens à Paris en ce moment. Et si nous ne tenons pas, <strong>nous continuons gratuitement</strong> jusqu'à y parvenir.
+    </p>
+    <div class="calc-trust-stats">
+      <div class="calc-trust-stat">
+        <strong>15M€+</strong>
+        <span>générés pour clients</span>
+      </div>
+      <div class="calc-trust-stat">
+        <strong>337+</strong>
+        <span>biens gérés</span>
+      </div>
+      <div class="calc-trust-stat">
+        <strong>+40%</strong>
+        <span>revenus garantis</span>
+      </div>
+      <div class="calc-trust-stat">
+        <strong>4.9★</strong>
+        <span>note hôte moyenne</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 OPTIMI GROUP — Méthode Rentabilité 360</p>
+  <div style="display:flex;gap:1.5rem;">
+    <a href="index.html">Accueil</a>
+    <a href="coaching.html">Coaching</a>
+    <a href="mailto:contactoptgroup@gmail.com">contactoptgroup@gmail.com</a>
+  </div>
+</footer>
+
+<!-- CRISP -->
+<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="695efad35caa57681323b378"></script>
+
+<script>
+const fmt = (n) => Math.round(n).toLocaleString('fr-FR') + '€';
+const COST = 2191; // Programme coaching paiement unique
+const UPLIFT = 0.40; // Garantie +40%
+
+// Quick option chips
+document.querySelectorAll('.calc-quick-options button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.calc-quick-options button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('revenueInput').value = btn.dataset.value;
+    document.getElementById('revenueInput').focus();
+  });
+});
+
+document.getElementById('revenueInput').addEventListener('input', () => {
+  document.querySelectorAll('.calc-quick-options button').forEach(b => b.classList.remove('active'));
+});
+
+// Calculate ROI
+document.getElementById('calcBtn').addEventListener('click', () => {
+  const revenue = parseFloat(document.getElementById('revenueInput').value);
+  if (!revenue || revenue < 100) {
+    document.getElementById('revenueInput').style.borderColor = '#ef4444';
+    document.getElementById('revenueInput').focus();
+    return;
+  }
+
+  const gainMonth = revenue * UPLIFT;
+  const gainYear = gainMonth * 12;
+  const paybackMonths = COST / gainMonth;
+  const roiMultiple = gainYear / COST;
+
+  document.getElementById('resGainMonth').textContent = '+' + fmt(gainMonth);
+  document.getElementById('resGainYear').textContent = '+' + fmt(gainYear);
+
+  let paybackText;
+  if (paybackMonths < 1) {
+    paybackText = '< 1 mois';
+  } else if (paybackMonths < 12) {
+    paybackText = Math.ceil(paybackMonths) + ' mois';
+  } else {
+    paybackText = '12+ mois';
+  }
+  document.getElementById('resPayback').textContent = paybackText;
+
+  document.getElementById('resROI').innerHTML =
+    'Votre investissement de <strong>2 191€</strong> génère <strong>' + fmt(gainYear) + ' de gain</strong> sur 12 mois — soit un ROI de <strong>' +
+    roiMultiple.toFixed(1).replace('.', ',') + '×</strong>.';
+
+  // Hide input, show results
+  document.getElementById('inputArea').style.display = 'none';
+  document.getElementById('resultsArea').classList.add('show');
+  document.getElementById('resultsArea').scrollIntoView({behavior:'smooth',block:'start'});
+
+  // Track Google Ads conversion
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'roi_calc_complete', {
+      'event_category':'lead_magnet',
+      'event_label':'roi-coaching',
+      'value': revenue
+    });
+  }
+
+  // Save context for email
+  window._calcContext = {revenue, gainMonth, gainYear, paybackMonths, roiMultiple};
+});
+
+// Email capture submit
+document.getElementById('emailSubmit').addEventListener('click', () => {
+  const email = document.getElementById('emailInput').value.trim();
+  if (!email || !email.includes('@')) {
+    document.getElementById('emailInput').style.borderColor = '#ef4444';
+    return;
+  }
+  const ctx = window._calcContext || {};
+  const ctxMsg = 'Revenue actuel: ' + (ctx.revenue || '-') + '€/mois — Gain projeté: ' +
+    (ctx.gainYear ? Math.round(ctx.gainYear) + '€/an' : '-') +
+    ' — ROI: ' + (ctx.roiMultiple ? ctx.roiMultiple.toFixed(1) + 'x' : '-');
+  OPTIMI.submitLead({
+    email: email,
+    message: ctxMsg,
+    objectif: 'Calc ROI Coaching',
+    budgetRange: ctx.revenue ? String(ctx.revenue) : '',
+    source:    'roi-calc-coaching',
+    formName:  'Calculateur ROI Coaching',
+    tags:      ['calc-roi','lead-magnet','roi-coaching'],
+    leadScore: 15,
+    redirect:  'merci-roi.html'
+  });
+});
+</script>
+<script src="optimi-form-handler.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+# Cloudflare Pages redirects — OPTIMI Group
+
+# Legacy routes (anti-404)
+/conciergerie    /index.html#services    301
+/services        /index.html#services    301
+/about           /a-propos.html          301
+/legal           /mentions-legales.html  301
+/privacy         /politique-de-confidentialite.html  301
+/terms           /cgv.html               301
+
+# Tracking shortcuts
+/audit           /audit-annonce-airbnb.html  301
+/calc            /calculateur-roi-coaching.html  301
+/guide           /guide-airbnb-paris-2026.html  301
+/parrain         /parrainage.html        301
+/parrainage-link /parrainage.html        301
+
+# Coaching
+/methode-360     /coaching.html          301
+/coaching-airbnb /coaching.html          301
+
+# Blog clean URLs (Cloudflare auto-handles .html, but redirect www if needed)
+# /blog/         /blog/index.html (auto)
+
+# Catch-all 404
+/*               /404.html               404

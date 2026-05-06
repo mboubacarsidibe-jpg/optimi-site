@@ -2098,7 +2098,7 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
 
       <div class="city-detail">
         <div class="city-hero">
-          <img id="cityImg" src="https://images.pexels.com/photos/739407/pexels-photo-739407.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Paris" loading="lazy"/>
+          <img id="cityImg" src="https://images.pexels.com/photos/739407/pexels-photo-739407.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Paris" loading="lazy" width="1200" height="800"/>
           <div class="city-hero-overlay">
             <h3 id="cityName">Paris</h3>
             <p id="cityRegion">Île-de-France</p>
@@ -2625,25 +2625,23 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
         emailInput.style.borderColor = '#ef4444';
         return;
       }
-      // Capture context (zone/type/mode for the simulation context)
-      const context = {
-        zone: document.getElementById('calc-zone').value,
-        type: document.getElementById('calc-type').value,
-        mode: document.getElementById('calc-mode').value,
-        brut: document.getElementById('cr-brut').textContent,
-        net: document.getElementById('cr-net').textContent,
-      };
-      // Store locally — will replace with GHL Forms POST later
-      try {
-        const leads = JSON.parse(localStorage.getItem('optimi_leads') || '[]');
-        leads.push({email, source:'calc-detail', context, date: new Date().toISOString()});
-        localStorage.setItem('optimi_leads', JSON.stringify(leads));
-      } catch(e){}
-      // Track Google Ads conversion
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'calc_email_capture', {'event_category':'lead_magnet','event_label':'calculator'});
-      }
-      // Replace form with success message
+      const zone = document.getElementById('calc-zone').value;
+      const type = document.getElementById('calc-type').value;
+      const mode = document.getElementById('calc-mode').value;
+      const brut = document.getElementById('cr-brut').textContent;
+      const net  = document.getElementById('cr-net').textContent;
+      const ctxMsg = 'Zone: '+zone+' — Type: '+type+' — Mode: '+mode+' — Brut: '+brut+' — Net: '+net;
+      OPTIMI.submitLead({
+        email: email,
+        city: zone,
+        message: ctxMsg,
+        objectif: 'Simulation détaillée Calc Home',
+        source: 'calc-detail',
+        formName: 'Calculateur Home (Simulation Détaillée)',
+        tags: ['calc-roi','lead-magnet','calc-home','calculator'],
+        leadScore: 15
+      });
+      // Replace form with success message (inline UX)
       const detailForm = document.getElementById('calc-detail-form');
       detailForm.innerHTML = '<div class="calc-detail-success">✓ Merci ! Votre simulation détaillée arrive dans les 5 prochaines minutes sur <strong>'+email+'</strong>. Vérifiez aussi vos spams.</div>';
     });
@@ -2662,8 +2660,9 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
   });
 </script>
 
-<!-- ── CRISP CHAT ── -->
+<!-- ── COOKIE CONSENT + FORM HANDLER ── -->
 <script src="cookie-consent.js"></script>
+<script src="optimi-form-handler.js"></script>
 
 <!-- ── CHATBOT ── -->
 <style>
@@ -2777,5 +2776,7 @@ function sendChat(){
   },700);
 }
 </script>
+
+<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="695efad35caa57681323b378"></script>
 </body>
 </html>
