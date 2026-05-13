@@ -7,7 +7,6 @@
   X-XSS-Protection: 1; mode=block
 
 /parrainage.html
-  X-Frame-Options: SAMEORIGIN
   Cache-Control: public, max-age=300
 
 /coaching.html
@@ -19,18 +18,57 @@
 /blog/*
   Cache-Control: public, max-age=3600
 
-*.css
+/conciergerie-airbnb-paris.html
+  Cache-Control: public, max-age=600
+
+/conciergerie-airbnb-nice.html
+  Cache-Control: public, max-age=600
+
+/conciergerie-airbnb-cannes.html
+  Cache-Control: public, max-age=600
+
+/conciergerie-airbnb-monaco.html
+  Cache-Control: public, max-age=600
+
+/conciergerie-airbnb-marseille.html
+  Cache-Control: public, max-age=600
+
+/conciergerie-airbnb-bordeaux.html
+  Cache-Control: public, max-age=600
+
+/conciergerie-airbnb-dakar.html
+  Cache-Control: public, max-age=600
+
+/conciergerie-airbnb-saly.html
+  Cache-Control: public, max-age=600
+
+/conciergerie-airbnb-abidjan.html
+  Cache-Control: public, max-age=600
+
+/conciergerie-airbnb-assinie.html
+  Cache-Control: public, max-age=600
+
+/conciergerie-airbnb-new-york.html
+  Cache-Control: public, max-age=600
+
+/conciergerie-airbnb-los-angeles.html
+  Cache-Control: public, max-age=600
+
+/cookie-consent.css
   Cache-Control: public, max-age=31536000, immutable
 
-*.js
+/cookie-consent.js
   Cache-Control: public, max-age=31536000, immutable
 
-*.svg
+/optimi-form-handler.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/favicon.svg
   Cache-Control: public, max-age=31536000, immutable
   Content-Type: image/svg+xml
 
-*.jpg
+/og-image.jpg
   Cache-Control: public, max-age=31536000, immutable
 
-*.png
+/guide-airbnb-paris-2026.pdf
   Cache-Control: public, max-age=31536000, immutable
