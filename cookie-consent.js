@@ -33,20 +33,14 @@
   }
 
   function loadChat(){
-    // GHL Web Chat Widget — remplacer WIDGET_ID par l'ID GHL réel
-    // var w = document.createElement('script');
-    // w.src = 'https://widgets.leadconnectorhq.com/loader.js';
-    // w.setAttribute('data-resources-url','https://widgets.leadconnectorhq.com/chat-widget/loader.js');
-    // w.setAttribute('data-widget-id','VOTRE_GHL_WIDGET_ID');
-    // document.body.appendChild(w);
-
-    // Crisp (temporaire — supprimer quand GHL widget activé)
-    window.$crisp = [];
-    window.CRISP_WEBSITE_ID = '2bce32af-5870-4951-96c5-53397fa759e9';
-    var c = document.createElement('script');
-    c.src = 'https://client.crisp.chat/l.js';
-    c.async = true;
-    document.head.appendChild(c);
+    // GHL Web Chat Widget — chargement post-consent uniquement (RGPD).
+    // Source de vérité unique : on retire le tag direct des HTML, on le charge ici.
+    var w = document.createElement('script');
+    w.src = 'https://widgets.leadconnectorhq.com/loader.js';
+    w.setAttribute('data-resources-url','https://widgets.leadconnectorhq.com/chat-widget/loader.js');
+    w.setAttribute('data-widget-id','695efad35caa57681323b378');
+    w.async = true;
+    document.body.appendChild(w);
   }
 
   function hideBanner(){
