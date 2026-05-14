@@ -45,6 +45,28 @@ footer a{color:rgba(255,255,255,0.4);font-size:0.78rem;}
 footer a:hover{color:var(--gold);text-decoration:none;}
 
 @media(max-width:600px){.thanks-card{padding:2.5rem 1.5rem;}.thanks-icon-wrap{width:90px;height:90px;font-size:2.5rem;}}
+/* thanks enhanced styles */
+
+.thanks-steps{display:flex;flex-direction:column;gap:1rem;margin-top:1.5rem;}
+.thanks-step{display:flex;gap:1rem;text-align:left;background:rgba(201,165,83,0.05);border:1px solid rgba(201,165,83,0.18);border-radius:10px;padding:1rem 1.25rem;}
+.thanks-step-badge{flex-shrink:0;background:var(--gold);color:var(--white);font-size:0.72rem;font-weight:700;letter-spacing:0.05em;padding:0.4rem 0.7rem;border-radius:6px;height:fit-content;}
+.thanks-step strong{display:block;color:var(--navy);font-size:0.95rem;margin-bottom:0.25rem;}
+.thanks-step p{font-size:0.85rem;color:var(--text-muted);line-height:1.55;margin:0;}
+.thanks-testimonial{margin:2rem 0 1.5rem;padding:1.5rem 1.75rem;background:var(--cream);border-left:3px solid var(--gold);border-radius:6px;text-align:left;}
+.thanks-testimonial p{font-style:italic;color:var(--navy);font-size:0.95rem;line-height:1.55;margin-bottom:0.75rem;}
+.thanks-testimonial footer{font-size:0.82rem;color:var(--text-muted);}
+.thanks-testimonial strong{color:var(--navy);}
+.thanks-result{color:var(--gold);font-weight:600;}
+.thanks-trust{display:flex;justify-content:center;gap:2rem;margin:1.5rem 0;padding:1.25rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.thanks-trust div{text-align:center;}
+.thanks-trust strong{display:block;font-size:1.35rem;color:var(--navy);font-weight:700;}
+.thanks-trust span{font-size:0.72rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;}
+.thanks-cross-sell{margin-top:1.5rem;}
+.thanks-cross-sell h3{font-size:0.92rem;color:var(--navy);margin-bottom:1rem;}
+.thanks-cta-row{display:flex;flex-direction:column;gap:0.6rem;}
+.thanks-cta-card{display:block;padding:0.85rem 1.25rem;background:var(--white);border:1px solid var(--border);border-radius:8px;color:var(--navy);font-size:0.92rem;font-weight:600;text-decoration:none;text-align:left;transition:all .2s;}
+.thanks-cta-card:hover{border-color:var(--gold);background:rgba(201,165,83,0.04);transform:translateX(2px);text-decoration:none;}
+@media (max-width:600px){.thanks-trust{gap:1.2rem;}.thanks-step{flex-direction:column;}}
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17544027457"></script>
 <script>
@@ -62,14 +84,53 @@ gtag('event','guide_thank_you',{'event_category':'conversion','event_label':'mer
 <main class="thanks-main">
   <div class="thanks-card">
     <div class="thanks-icon-wrap">📘</div>
-    <h1>Votre guide est <em>en route</em></h1>
-    <p class="subtitle">Le Guide Expert Airbnb Paris 2026 (42 pages) arrive dans votre boîte mail dans les prochaines minutes. Si rien après 5 minutes, vérifiez vos spams.</p>
+    <h1>Guide <em>en route</em></h1>
+    <p class="subtitle">Votre guide Airbnb 2026 est dans votre boîte mail (vérifiez les spams sous quelques minutes). <strong>Lisez d'abord la page 14</strong> — c'est la grille de pricing qu'on applique sur 337+ biens.</p>
 
     <div class="thanks-next">
-      <h3>Pendant que vous attendez, découvrez nos autres ressources</h3>
+      <h3>Ce que vous allez recevoir cette semaine</h3>
+      <div class="thanks-steps">
+      <div class="thanks-step">
+        <div class="thanks-step-badge">Maintenant</div>
+        <div>
+          <strong>Le guide en PDF + lecture rapide page 14</strong>
+          <p>47 pages, mais commencez par la page 14 — c'est la mécanique la plus rentable, en 5 minutes.</p>
+        </div>
+      </div>
+      <div class="thanks-step">
+        <div class="thanks-step-badge">J+1</div>
+        <div>
+          <strong>Étude de cas Marc, Paris 11e</strong>
+          <p>Comment Marc est passé de 1 800€ à 4 100€/mois nets en appliquant 3 leviers. Étude complète par email.</p>
+        </div>
+      </div>
+      <div class="thanks-step">
+        <div class="thanks-step-badge">J+3 à J+7</div>
+        <div>
+          <strong>3 emails value-add</strong>
+          <p>Diagnostic des erreurs courantes, calculateur ROI personnalisé, et une option pour aller plus loin si vous le souhaitez.</p>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <blockquote class="thanks-testimonial">
+      <p>« J'ai téléchargé le guide en pensant que c'était du contenu marketing. Page 14, j'ai appliqué directement. +12% de CA le mois suivant. »</p>
+      <footer><strong>Camille, Paris 16e</strong> · <span class="thanks-result">+12% CA mois 1</span></footer>
+    </blockquote>
+
+    <div class="thanks-trust">
+      <div><strong>337+</strong><span>biens en gestion</span></div>
+      <div><strong>12</strong><span>villes</span></div>
+      <div><strong>4,92★</strong><span>note moyenne</span></div>
+    </div>
+
+    <div class="thanks-cross-sell">
+      <h3>Pour aller plus loin maintenant</h3>
       <div class="thanks-cta-row">
-        <a href="calculateur-roi-coaching.html" class="btn-primary">Calculer mon ROI coaching →</a>
-        <a href="audit-annonce-airbnb.html" class="btn-outline">Demander un audit gratuit</a>
+        <a href="calculateur-roi-coaching.html" class="thanks-cta-card">Calculer mon ROI →</a>
+        <a href="audit-annonce-airbnb.html" class="thanks-cta-card">Demander un audit →</a>
+        <a href="coaching.html" class="thanks-cta-card">Découvrir le coaching →</a>
       </div>
     </div>
   </div>

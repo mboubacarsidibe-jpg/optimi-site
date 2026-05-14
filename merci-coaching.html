@@ -45,6 +45,28 @@ footer a{color:rgba(255,255,255,0.4);font-size:0.78rem;}
 footer a:hover{color:var(--gold);text-decoration:none;}
 
 @media(max-width:600px){.thanks-card{padding:2.5rem 1.5rem;}.thanks-icon-wrap{width:90px;height:90px;font-size:2.5rem;}}
+/* thanks enhanced styles */
+
+.thanks-steps{display:flex;flex-direction:column;gap:1rem;margin-top:1.5rem;}
+.thanks-step{display:flex;gap:1rem;text-align:left;background:rgba(201,165,83,0.05);border:1px solid rgba(201,165,83,0.18);border-radius:10px;padding:1rem 1.25rem;}
+.thanks-step-badge{flex-shrink:0;background:var(--gold);color:var(--white);font-size:0.72rem;font-weight:700;letter-spacing:0.05em;padding:0.4rem 0.7rem;border-radius:6px;height:fit-content;}
+.thanks-step strong{display:block;color:var(--navy);font-size:0.95rem;margin-bottom:0.25rem;}
+.thanks-step p{font-size:0.85rem;color:var(--text-muted);line-height:1.55;margin:0;}
+.thanks-testimonial{margin:2rem 0 1.5rem;padding:1.5rem 1.75rem;background:var(--cream);border-left:3px solid var(--gold);border-radius:6px;text-align:left;}
+.thanks-testimonial p{font-style:italic;color:var(--navy);font-size:0.95rem;line-height:1.55;margin-bottom:0.75rem;}
+.thanks-testimonial footer{font-size:0.82rem;color:var(--text-muted);}
+.thanks-testimonial strong{color:var(--navy);}
+.thanks-result{color:var(--gold);font-weight:600;}
+.thanks-trust{display:flex;justify-content:center;gap:2rem;margin:1.5rem 0;padding:1.25rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.thanks-trust div{text-align:center;}
+.thanks-trust strong{display:block;font-size:1.35rem;color:var(--navy);font-weight:700;}
+.thanks-trust span{font-size:0.72rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;}
+.thanks-cross-sell{margin-top:1.5rem;}
+.thanks-cross-sell h3{font-size:0.92rem;color:var(--navy);margin-bottom:1rem;}
+.thanks-cta-row{display:flex;flex-direction:column;gap:0.6rem;}
+.thanks-cta-card{display:block;padding:0.85rem 1.25rem;background:var(--white);border:1px solid var(--border);border-radius:8px;color:var(--navy);font-size:0.92rem;font-weight:600;text-decoration:none;text-align:left;transition:all .2s;}
+.thanks-cta-card:hover{border-color:var(--gold);background:rgba(201,165,83,0.04);transform:translateX(2px);text-decoration:none;}
+@media (max-width:600px){.thanks-trust{gap:1.2rem;}.thanks-step{flex-direction:column;}}
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17544027457"></script>
 <script>
@@ -63,13 +85,52 @@ gtag('event','coaching_thank_you',{'event_category':'conversion','event_label':'
   <div class="thanks-card">
     <div class="thanks-icon-wrap">🎯</div>
     <h1>Candidature <em>reçue</em></h1>
-    <p class="subtitle">Un expert OPTIMI examine votre dossier et vous rappelle sous 48h ouvrées sur le numéro indiqué pour valider l'audit gratuit de 20 minutes. À très vite.</p>
+    <p class="subtitle">Un expert OPTIMI examine votre dossier et vous rappelle <strong>sous 48h ouvrées</strong> sur le numéro indiqué pour valider l'entretien de qualification gratuit.</p>
 
     <div class="thanks-next">
-      <h3>Pendant que nous traitons votre dossier</h3>
+      <h3>Les 3 prochaines étapes</h3>
+      <div class="thanks-steps">
+      <div class="thanks-step">
+        <div class="thanks-step-badge">48h</div>
+        <div>
+          <strong>Appel de qualification</strong>
+          <p>Notre expert vous appelle pour vérifier que le programme correspond à votre situation. 15-20 minutes max.</p>
+        </div>
+      </div>
+      <div class="thanks-step">
+        <div class="thanks-step-badge">J+3</div>
+        <div>
+          <strong>Si retenu : entretien stratégique</strong>
+          <p>Visio 45-60 min avec votre futur coach. Vous repartez avec votre plan d'attaque même si vous ne signez pas.</p>
+        </div>
+      </div>
+      <div class="thanks-step">
+        <div class="thanks-step-badge">J+7</div>
+        <div>
+          <strong>Décision et accès programme</strong>
+          <p>Vous décidez sereinement. Si oui : accès modules + Slack + workbook + premier appel 1:1 calé.</p>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <blockquote class="thanks-testimonial">
+      <p>« Après un T2 racheté avant la hausse des taux, j'étais à 1 800€/mois nets. 11 mois après le coaching : 4 100€/mois nets. Aucune rénovation, juste de la mécanique. »</p>
+      <footer><strong>Marc, Paris 11e</strong> · <span class="thanks-result">+128% CA mensuel</span></footer>
+    </blockquote>
+
+    <div class="thanks-trust">
+      <div><strong>337+</strong><span>biens en gestion</span></div>
+      <div><strong>12</strong><span>villes</span></div>
+      <div><strong>4,92★</strong><span>note moyenne</span></div>
+    </div>
+
+    <div class="thanks-cross-sell">
+      <h3>En attendant</h3>
       <div class="thanks-cta-row">
-        <a href="calculateur-roi-coaching.html" class="btn-primary">Calculer mon ROI →</a>
-        <a href="guide-airbnb-paris-2026.html" class="btn-outline">Télécharger le Guide 2026</a>
+        <a href="guide-airbnb-paris-2026.html" class="thanks-cta-card">Lire le guide 2026 →</a>
+        <a href="calculateur-roi-coaching.html" class="thanks-cta-card">Calculer mon ROI →</a>
+        <a href="ressources.html" class="thanks-cta-card">Voir les ressources →</a>
       </div>
     </div>
   </div>

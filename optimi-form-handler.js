@@ -65,13 +65,64 @@
     } catch (e) { /* noop */ }
   }
 
+  // Granular GAds + GA4 event mapping per form_name
+  // Aligned with FORM_TAG_MAP. Add a row when adding a new form.
+  var EVENT_NAME_MAP = {
+    'audit-coaching':   'lead_coaching_apply',
+    'guide-2026':       'lead_guide_download',
+    'roi-calc':         'lead_roi_calc',
+    'audit-loom':       'lead_audit_request',
+    'discovery-call':   'lead_discovery_call',
+    'Coaching Candidature': 'lead_coaching_apply',
+    'Audit Loom Annonce':   'lead_audit_request'
+  };
+
   function trackConversion(opts) {
     if (typeof window.gtag !== 'function') return;
+
+    var formName = opts.formName || opts.source || 'unknown';
+    var eventName = EVENT_NAME_MAP[formName] || 'lead_submit_generic';
+    var leadValue = typeof opts.leadScore === 'number' ? opts.leadScore : 10;
+
+    // Granular GA4 / GAds event (per form)
+    window.gtag('event', eventName, {
+      event_category: 'lead',
+      event_label: opts.source || formName,
+      value: leadValue,
+      currency: 'EUR',
+      lead_source: opts.source || '',
+      form_name: formName,
+      lead_score: leadValue,
+      city: opts.city || '',
+      nb_biens: opts.nbBiens || ''
+    });
+
+    // Also fire a generic `lead_submit` event so existing dashboards/audiences
+    // keep working without rebuild.
     window.gtag('event', 'lead_submit', {
       event_category: 'lead',
       event_label: opts.source || 'unknown',
-      value: typeof opts.leadScore === 'number' ? opts.leadScore : 10
+      value: leadValue
     });
+
+    // Meta Pixel (if loaded post-consent — fbq is set up in cookie-consent.js)
+    if (typeof window.fbq === 'function') {
+      window.fbq('track', 'Lead', {
+        content_name: eventName,
+        content_category: opts.source || '',
+        value: leadValue,
+        currency: 'EUR'
+      });
+    }
+
+    // TikTok Pixel (if loaded post-consent)
+    if (typeof window.ttq === 'object' && typeof window.ttq.track === 'function') {
+      window.ttq.track('SubmitForm', {
+        content_id: eventName,
+        value: leadValue,
+        currency: 'EUR'
+      });
+    }
   }
 
   function submitLead(opts) {
