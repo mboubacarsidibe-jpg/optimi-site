@@ -1287,6 +1287,7 @@ footer p{font-size:.78rem;color:rgba(255,255,255,.3);}
 </footer>
 
 <script src="cookie-consent.js"></script>
+<script src="optimi-form-handler.js"></script>
 
 <script>
 function toggleFaq(btn){
@@ -1297,7 +1298,7 @@ function toggleFaq(btn){
   if(!open){body.classList.add('open');btn.classList.add('active');}
 }
 
-// Coaching candidature form — JS handler (Cloudflare Pages, no Netlify Forms)
+// Coaching candidature form — POST to GHL webhook
 (function(){
   var form = document.getElementById('applyForm');
   if(!form) return;
@@ -1309,25 +1310,26 @@ function toggleFaq(btn){
       var input = form.querySelector('[name="'+f+'"]:checked, [name="'+f+'"]');
       if(input) data[f] = input.value;
     });
-    data.source = 'coaching-apply';
-    data.date = new Date().toISOString();
-    // Validate required
     if(!data.prenom || !data.nom || !data.email || !data.telephone || !data['nb-biens'] || !data.zone){
       alert('Merci de remplir tous les champs obligatoires (*)');
       return;
     }
-    // Store locally — will replace with GHL Forms POST later
-    try{
-      var leads = JSON.parse(localStorage.getItem('optimi_leads') || '[]');
-      leads.push(data);
-      localStorage.setItem('optimi_leads', JSON.stringify(leads));
-    }catch(err){}
-    // Track conversion
-    if(typeof gtag !== 'undefined'){
-      gtag('event','coaching_application',{'event_category':'lead_high_intent','event_label':'audit-coaching'});
-    }
-    // Redirect to thank-you
-    window.location.href = 'merci-coaching.html';
+    OPTIMI.submitLead({
+      firstName: data.prenom,
+      lastName:  data.nom,
+      email:     data.email,
+      phone:     data.telephone,
+      city:      data.zone,
+      nbBiens:   data['nb-biens'],
+      objectif:  data.blocage || '',
+      timeline:  data.timing || '',
+      message:   data.message || '',
+      source:    'coaching-apply',
+      formName:  'Coaching Candidature',
+      tags:      ['coaching','lead-high-intent','form-audit-coaching'],
+      leadScore: 80,
+      redirect:  'merci-coaching.html'
+    });
   });
 })();
 
@@ -1381,5 +1383,7 @@ function toggleFaq(btn){
   setTimeout(function(){showToast();setInterval(showToast,22000);},9000);
 })();
 </script>
+
+<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="695efad35caa57681323b378"></script>
 </body>
 </html>
