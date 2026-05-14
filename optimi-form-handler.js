@@ -16,19 +16,38 @@
 
   var WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/xa1Zp0IzF90BRcev1zuG/webhook-trigger/e91d78e2-b85c-4ec0-8ab2-5ebcfc66fc56';
 
+  // Config-driven : 1 ligne par form pour injecter automatiquement des tags GHL.
+  // Source de vérité unique pour le routing form → workflow GHL.
+  var FORM_TAG_MAP = {
+    'audit-coaching':  ['form-audit-coaching'],   // déclenche W2 Coaching Audit Lead
+    'guide-2026':      ['guide-2026-downloaded'], // déclenche W1 Welcome Guide DL
+    'roi-calc':        ['roi-calc-completed'],
+    'audit-loom':      ['audit-loom-requested'],
+    'discovery-call':  ['form-discovery-call']
+  };
+
   function buildPayload(opts) {
+    var formName = opts.formName || opts.source || 'unknown';
+    var callerTags = Array.isArray(opts.tags)
+      ? opts.tags
+      : (opts.tags ? String(opts.tags).split(',') : []);
+    var autoTags = FORM_TAG_MAP[formName] || [];
+    var allTags = callerTags.concat(autoTags).filter(function (t, i, arr) {
+      return t && arr.indexOf(t) === i;
+    });
+
     return {
       firstName: opts.firstName || '',
       lastName: opts.lastName || '',
       email: opts.email || '',
       phone: opts.phone || '',
       source: opts.source || 'unknown',
-      form_name: opts.formName || opts.source || 'unknown',
+      form_name: formName,
       page_url: window.location.href,
       message: opts.message || '',
       consent_rgpd: opts.consentRgpd !== false,
       submitted_at: new Date().toISOString(),
-      tags: Array.isArray(opts.tags) ? opts.tags.join(',') : (opts.tags || ''),
+      tags: allTags.join(','),
       lead_score: typeof opts.leadScore === 'number' ? opts.leadScore : 10,
       city: opts.city || '',
       nb_biens: opts.nbBiens || '',
