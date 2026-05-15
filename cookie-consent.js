@@ -24,16 +24,16 @@
     gtag('js', new Date());
     gtag('config', 'AW-17544027457');
 
-    // TODO: Meta Pixel — décommenter quand pixel ID disponible
+    // TODO: Meta Pixel - décommenter quand pixel ID disponible
     // !function(f,b,e,v,n,t,s){...}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
     // fbq('init','VOTRE_META_PIXEL_ID');fbq('track','PageView');
 
-    // TODO: TikTok Pixel — décommenter quand pixel ID disponible
-    // TODO: LinkedIn Insight Tag — décommenter quand ID disponible
+    // TODO: TikTok Pixel - décommenter quand pixel ID disponible
+    // TODO: LinkedIn Insight Tag - décommenter quand ID disponible
   }
 
   function loadChat(){
-    // GHL Web Chat Widget — chargement post-consent uniquement (RGPD).
+    // GHL Web Chat Widget - chargement post-consent uniquement (RGPD).
     // Source de vérité unique : on retire le tag direct des HTML, on le charge ici.
     var w = document.createElement('script');
     w.src = 'https://widgets.leadconnectorhq.com/loader.js';

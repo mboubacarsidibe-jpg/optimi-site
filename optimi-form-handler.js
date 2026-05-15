@@ -1,5 +1,5 @@
 /**
- * OPTIMI Form Handler — POST leads to GHL Inbound Webhook
+ * OPTIMI Form Handler - POST leads to GHL Inbound Webhook
  *
  * Usage:
  *   OPTIMI.submitLead({
@@ -105,7 +105,7 @@
       value: leadValue
     });
 
-    // Meta Pixel (if loaded post-consent — fbq is set up in cookie-consent.js)
+    // Meta Pixel (if loaded post-consent - fbq is set up in cookie-consent.js)
     if (typeof window.fbq === 'function') {
       window.fbq('track', 'Lead', {
         content_name: eventName,
