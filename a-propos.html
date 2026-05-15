@@ -92,6 +92,54 @@ footer a:hover{color:var(--gold);text-decoration:none;}
 @media(max-width:900px){.about-stats-inner{grid-template-columns:repeat(2,1fr);}.values-grid{grid-template-columns:1fr;}}
 @media(max-width:600px){.about-hero{padding:60px 5% 50px;}.about-section{padding:48px 5%;}.cta-section{padding:48px 5%;}}
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.optimi-group.com/" },
+    { "@type": "ListItem", "position": 2, "name": "À propos", "item": "https://www.optimi-group.com/a-propos.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "OPTIMI Group",
+    "alternateName": "OPTIMI",
+    "url": "https://www.optimi-group.com",
+    "foundingDate": "2022",
+    "founder": {
+      "@type": "Person",
+      "name": "Jean-Marc Taouo",
+      "jobTitle": "Fondateur & CEO",
+      "email": "jean-marc@optimi-group.com",
+      "worksFor": { "@type": "Organization", "name": "OPTIMI Group" },
+      "knowsAbout": [
+        "Location courte durée",
+        "Conciergerie Airbnb",
+        "Coaching propriétaire LCD",
+        "Réglementation loi Le Meur 2026",
+        "Fiscalité LMNP",
+        "Bail mobilité"
+      ]
+    },
+    "description": "Conciergerie Airbnb premium et coaching LCD. 337+ biens en gestion active, 12 villes, 4 pays (France, Sénégal, Côte d'Ivoire, USA).",
+    "areaServed": [
+      { "@type": "Country", "name": "France" },
+      { "@type": "Country", "name": "Sénégal" },
+      { "@type": "Country", "name": "Côte d'Ivoire" },
+      { "@type": "Country", "name": "United States" }
+    ]
+  }
+}
+</script>
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17544027457"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-17544027457');</script>
 </head>
