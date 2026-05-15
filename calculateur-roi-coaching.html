@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Calculateur ROI Coaching Airbnb — Méthode 360 | OPTIMI</title>
+<title>Calculateur ROI Coaching Airbnb - Méthode 360 | OPTIMI</title>
 <meta name="description" content="Calculez en 30 secondes le retour sur investissement du programme coaching OPTIMI Méthode Rentabilité 360. Combien gagneriez-vous en plus avec +40% de revenus ? En combien de mois le coaching se rembourse-t-il ?"/>
 <meta name="robots" content="index, follow"/>
 <meta name="author" content="OPTIMI GROUP"/>
@@ -15,7 +15,7 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="OPTIMI Group"/>
-<meta property="og:title" content="Calculateur ROI Coaching — Méthode Rentabilité 360"/>
+<meta property="og:title" content="Calculateur ROI Coaching - Méthode Rentabilité 360"/>
 <meta property="og:description" content="En 30 secondes : combien le programme coaching OPTIMI va vous rapporter, et en combien de mois il se rembourse."/>
 <meta property="og:url" content="https://www.optimi-group.com/calculateur-roi-coaching.html"/>
 <meta property="og:image" content="https://www.optimi-group.com/og-image.jpg"/>
@@ -23,7 +23,7 @@
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Calculateur ROI Coaching Airbnb — OPTIMI"/>
+<meta name="twitter:title" content="Calculateur ROI Coaching Airbnb - OPTIMI"/>
 <meta name="twitter:description" content="Combien gagneriez-vous en plus avec +40% de revenus ?"/>
 <meta name="twitter:image" content="https://www.optimi-group.com/og-image.jpg"/>
 
@@ -374,7 +374,7 @@ footer a:hover{color:var(--gold);text-decoration:none;}
   <div class="calc-hero-inner">
     <div class="calc-badge">⚡ Calculateur · 30 secondes</div>
     <h1>Combien le coaching <em>Méthode Rentabilité 360</em> va vous rapporter ?</h1>
-    <p>Entrez vos revenus Airbnb actuels — découvrez en 30 secondes votre gain mensuel potentiel, votre retour sur investissement et le délai de remboursement du programme.</p>
+    <p>Entrez vos revenus Airbnb actuels - découvrez en 30 secondes votre gain mensuel potentiel, votre retour sur investissement et le délai de remboursement du programme.</p>
   </div>
 </section>
 
@@ -434,7 +434,7 @@ footer a:hover{color:var(--gold);text-decoration:none;}
           </div>
           <div class="calc-result-cell">
             <div class="calc-result-cell-label">Remboursé en</div>
-            <strong id="resPayback">— mois</strong>
+            <strong id="resPayback">- mois</strong>
             <span class="calc-result-cell-sub">après le programme</span>
           </div>
         </div>
@@ -442,7 +442,7 @@ footer a:hover{color:var(--gold);text-decoration:none;}
         <div class="roi-visual">
           <div class="roi-visual-label">ROI 12 mois</div>
           <div class="roi-visual-text" id="resROI">
-            Votre investissement de <strong>2 191€</strong> génère <strong>0€ de gain</strong> sur 12 mois — soit un ROI de <strong>0×</strong>.
+            Votre investissement de <strong>2 191€</strong> génère <strong>0€ de gain</strong> sur 12 mois - soit un ROI de <strong>0×</strong>.
           </div>
         </div>
 
@@ -502,7 +502,7 @@ footer a:hover{color:var(--gold);text-decoration:none;}
 </section>
 
 <footer>
-  <p>© 2026 OPTIMI GROUP — Méthode Rentabilité 360</p>
+  <p>© 2026 OPTIMI GROUP - Méthode Rentabilité 360</p>
   <div style="display:flex;gap:1.5rem;">
     <a href="index.html">Accueil</a>
     <a href="coaching.html">Coaching</a>
@@ -559,7 +559,7 @@ document.getElementById('calcBtn').addEventListener('click', () => {
   document.getElementById('resPayback').textContent = paybackText;
 
   document.getElementById('resROI').innerHTML =
-    'Votre investissement de <strong>2 191€</strong> génère <strong>' + fmt(gainYear) + ' de gain</strong> sur 12 mois — soit un ROI de <strong>' +
+    'Votre investissement de <strong>2 191€</strong> génère <strong>' + fmt(gainYear) + ' de gain</strong> sur 12 mois - soit un ROI de <strong>' +
     roiMultiple.toFixed(1).replace('.', ',') + '×</strong>.';
 
   // Hide input, show results
@@ -588,9 +588,9 @@ document.getElementById('emailSubmit').addEventListener('click', () => {
     return;
   }
   const ctx = window._calcContext || {};
-  const ctxMsg = 'Revenue actuel: ' + (ctx.revenue || '-') + '€/mois — Gain projeté: ' +
+  const ctxMsg = 'Revenue actuel: ' + (ctx.revenue || '-') + '€/mois - Gain projeté: ' +
     (ctx.gainYear ? Math.round(ctx.gainYear) + '€/an' : '-') +
-    ' — ROI: ' + (ctx.roiMultiple ? ctx.roiMultiple.toFixed(1) + 'x' : '-');
+    ' - ROI: ' + (ctx.roiMultiple ? ctx.roiMultiple.toFixed(1) + 'x' : '-');
   OPTIMI.submitLead({
     email: email,
     message: ctxMsg,
