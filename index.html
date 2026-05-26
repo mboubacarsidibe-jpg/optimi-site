@@ -744,9 +744,10 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
     }
     .blog-card-img {
       width: 100%; height: 200px;
-      background-size: cover; background-position: center;
+      object-fit: cover; object-position: center;
       background-color: var(--cream);
       transition: transform .5s;
+      display: block;
     }
     .blog-card:hover .blog-card-img { transform: scale(1.04); }
     .blog-card-body {
@@ -2216,7 +2217,7 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
 
     <div class="blog-grid">
       <a href="blog/maximiser-revenus-airbnb" class="blog-card">
-        <div class="blog-card-img" style="background-image:url('https://images.pexels.com/photos/6863332/pexels-photo-6863332.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800')"></div>
+        <img class="blog-card-img" src="https://images.pexels.com/photos/6863332/pexels-photo-6863332.jpeg?auto=compress&cs=tinysrgb&w=800" loading="lazy" decoding="async" alt="Maximiser les revenus de votre Airbnb à Paris" width="800" height="533"/>
         <div class="blog-card-body">
           <div class="blog-card-meta">
             <span class="blog-card-cat">Optimisation</span>
@@ -2229,7 +2230,7 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
       </a>
 
       <a href="blog/courte-duree-vs-traditionnelle" class="blog-card">
-        <div class="blog-card-img" style="background-image:url('https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800')"></div>
+        <img class="blog-card-img" src="https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&w=800" loading="lazy" decoding="async" alt="Comparaison location courte durée vs traditionnelle" width="800" height="533"/>
         <div class="blog-card-body">
           <div class="blog-card-meta">
             <span class="blog-card-cat">Analyse</span>
@@ -2242,7 +2243,7 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
       </a>
 
       <a href="blog/ia-location-courte-duree" class="blog-card">
-        <div class="blog-card-img" style="background-image:url('https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800')"></div>
+        <img class="blog-card-img" src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800" loading="lazy" decoding="async" alt="L'IA au service de la location courte durée" width="800" height="533"/>
         <div class="blog-card-body">
           <div class="blog-card-meta">
             <span class="blog-card-cat">Innovation</span>
@@ -2255,7 +2256,7 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
       </a>
 
       <a href="blog/reglementation-2026" class="blog-card">
-        <div class="blog-card-img" style="background-image:url('https://images.pexels.com/photos/6077447/pexels-photo-6077447.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800')"></div>
+        <img class="blog-card-img" src="https://images.pexels.com/photos/6077447/pexels-photo-6077447.jpeg?auto=compress&cs=tinysrgb&w=800" loading="lazy" decoding="async" alt="Réglementation Airbnb 2026" width="800" height="533"/>
         <div class="blog-card-body">
           <div class="blog-card-meta">
             <span class="blog-card-cat">Réglementation</span>
@@ -2268,7 +2269,7 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
       </a>
 
       <a href="blog/securite-airbnb" class="blog-card">
-        <div class="blog-card-img" style="background-image:url('https://images.pexels.com/photos/7578985/pexels-photo-7578985.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800')"></div>
+        <img class="blog-card-img" src="https://images.pexels.com/photos/7578985/pexels-photo-7578985.jpeg?auto=compress&cs=tinysrgb&w=800" loading="lazy" decoding="async" alt="Sécurité des locations Airbnb" width="800" height="533"/>
         <div class="blog-card-body">
           <div class="blog-card-meta">
             <span class="blog-card-cat">Sécurité</span>
@@ -2281,7 +2282,7 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
       </a>
 
       <a href="blog/transformation-bureaux-logements" class="blog-card">
-        <div class="blog-card-img" style="background-image:url('https://images.pexels.com/photos/3862634/pexels-photo-3862634.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800')"></div>
+        <img class="blog-card-img" src="https://images.pexels.com/photos/3862634/pexels-photo-3862634.jpeg?auto=compress&cs=tinysrgb&w=800" loading="lazy" decoding="async" alt="Transformation bureaux en logements" width="800" height="533"/>
         <div class="blog-card-body">
           <div class="blog-card-meta">
             <span class="blog-card-cat">Investissement</span>
