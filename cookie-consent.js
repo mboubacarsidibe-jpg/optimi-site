@@ -30,6 +30,13 @@
 
     // TODO: TikTok Pixel - décommenter quand pixel ID disponible
     // TODO: LinkedIn Insight Tag - décommenter quand ID disponible
+
+    // Replay les conversion events déclarés par la page (merci-*, etc.)
+    // Pattern : <script>window.__OPTIMI_GTAG_EVENT = ['guide_thank_you', {event_category:'conversion', event_label:'merci-guide'}];</script>
+    if (Array.isArray(window.__OPTIMI_GTAG_EVENT)) {
+      try { gtag.apply(null, ['event'].concat(window.__OPTIMI_GTAG_EVENT)); }
+      catch(e) { /* silent */ }
+    }
   }
 
   function loadChat(){

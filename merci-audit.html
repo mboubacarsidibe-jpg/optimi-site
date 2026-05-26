@@ -68,11 +68,9 @@ footer a:hover{color:var(--gold);text-decoration:none;}
 .thanks-cta-card:hover{border-color:var(--gold);background:rgba(201,165,83,0.04);transform:translateX(2px);text-decoration:none;}
 @media (max-width:600px){.thanks-trust{gap:1.2rem;}.thanks-step{flex-direction:column;}}
 </style>
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17544027457"></script>
-<script>
-window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-17544027457');
-gtag('event','audit_thank_you',{'event_category':'conversion','event_label':'merci-audit'});
-</script>
+
+<link rel="stylesheet" href="cookie-consent.css">
+<script>window.__OPTIMI_GTAG_EVENT = ['audit_thank_you', {'event_category':'conversion','event_label':'merci-audit'}];</script>
 </head>
 <body>
 
@@ -146,5 +144,6 @@ gtag('event','audit_thank_you',{'event_category':'conversion','event_label':'mer
 </footer>
 
 
+<script src="cookie-consent.js" defer></script>
 </body>
 </html>
