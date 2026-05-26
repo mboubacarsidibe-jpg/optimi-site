@@ -9,7 +9,8 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"/></noscript>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{--navy:#0B1828;--white:#FFFFFF;--cream:#FAFAF8;--gold:#C9A553;--text:#1C1C2E;--text-muted:#6B6B80;--border:#E5E0D7;--radius:16px;--radius-sm:10px;}
@@ -75,8 +76,8 @@ footer a:hover{color:var(--gold);text-decoration:none;}
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo">OPTI<span>MI</span></a>
-  <a href="index.html" class="nav-back">← Retour au site</a>
+  <a href="index" class="nav-logo">OPTI<span>MI</span></a>
+  <a href="index" class="nav-back">← Retour au site</a>
 </nav>
 
 <main class="thanks-main">
@@ -126,9 +127,9 @@ footer a:hover{color:var(--gold);text-decoration:none;}
     <div class="thanks-cross-sell">
       <h3>Ressources utiles immédiatement</h3>
       <div class="thanks-cta-row">
-        <a href="guide-airbnb-paris-2026.html" class="thanks-cta-card">Lire le guide 2026 →</a>
-        <a href="calculateur-roi-coaching.html" class="thanks-cta-card">Calculer mon ROI →</a>
-        <a href="ressources.html" class="thanks-cta-card">Voir toutes les ressources →</a>
+        <a href="guide-airbnb-paris-2026" class="thanks-cta-card">Lire le guide 2026 →</a>
+        <a href="calculateur-roi-coaching" class="thanks-cta-card">Calculer mon ROI →</a>
+        <a href="ressources" class="thanks-cta-card">Voir toutes les ressources →</a>
       </div>
     </div>
   </div>
@@ -137,9 +138,9 @@ footer a:hover{color:var(--gold);text-decoration:none;}
 <footer>
   <p>© 2026 OPTIMI GROUP - Tous droits réservés</p>
   <div style="display:flex;gap:1.5rem;flex-wrap:wrap;">
-    <a href="index.html">Accueil</a>
-    <a href="ressources.html">Ressources</a>
-    <a href="contact.html">Contact</a>
+    <a href="index">Accueil</a>
+    <a href="ressources">Ressources</a>
+    <a href="contact">Contact</a>
   </div>
 </footer>
 

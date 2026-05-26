@@ -1,26 +1,27 @@
 # Cloudflare Pages redirects - OPTIMI Group
 
-# Legacy routes (anti-404)
-/conciergerie    /index.html#services    301
-/services        /index.html#services    301
-/about           /a-propos.html          301
-/legal           /mentions-legales.html  301
-/privacy         /politique-de-confidentialite.html  301
-/terms           /cgv.html               301
+# Legacy routes (anti-404) — pointing to clean URLs (no .html)
+/conciergerie    /#services           301
+/services        /#services           301
+/about           /a-propos            301
+/legal           /mentions-legales    301
+/privacy         /politique-de-confidentialite  301
+/terms           /cgv                 301
 
 # Tracking shortcuts
-/audit           /audit-annonce-airbnb.html  301
-/calc            /calculateur-roi-coaching.html  301
-/guide           /guide-airbnb-paris-2026.html  301
-/parrain         /parrainage.html        301
-/parrainage-link /parrainage.html        301
+/audit           /audit-annonce-airbnb        301
+/calc            /calculateur-roi-coaching    301
+/guide           /guide-airbnb-paris-2026     301
+/parrain         /parrainage                  301
+/parrainage-link /parrainage                  301
 
 # Coaching
-/methode-360     /coaching.html          301
-/coaching-airbnb /coaching.html          301
+/methode-360     /coaching                    301
+/coaching-airbnb /coaching                    301
 
-# Blog clean URLs (Cloudflare auto-handles .html, but redirect www if needed)
-# /blog/         /blog/index.html (auto)
+# Blog landing (pas d'index.html yet) → article phare
+/blog            /blog/loi-le-meur-2026-airbnb-paris  301
+/blog/           /blog/loi-le-meur-2026-airbnb-paris  301
 
 # Catch-all 404
-/*               /404.html               404
+/*               /404.html            404
