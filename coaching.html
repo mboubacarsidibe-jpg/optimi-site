@@ -34,8 +34,15 @@
 <link rel="dns-prefetch" href="//fonts.googleapis.com"/>
 <link rel="dns-prefetch" href="//images.unsplash.com"/>
 
-<!-- Preload hero LCP image (Paris apartment) -->
-<link rel="preload" as="image" href="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=2400&q=90&auto=format&fit=crop" fetchpriority="high"/>
+<!-- Preload hero LCP image (Paris apartment) — responsive srcset matching -->
+<link rel="preload" as="image"
+      href="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=1600&q=80&auto=format&fit=crop"
+      imagesrcset="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800&q=75&auto=format&fit=crop 800w,
+                   https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=1200&q=80&auto=format&fit=crop 1200w,
+                   https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=1600&q=80&auto=format&fit=crop 1600w,
+                   https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=2400&q=85&auto=format&fit=crop 2400w"
+      imagesizes="100vw"
+      fetchpriority="high"/>
 
 <!-- Non-blocking Google Fonts (preload + swap) — réduit 1198ms render-blocking -->
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
@@ -190,17 +197,24 @@ nav{
 
 /* ── HERO Rakidzich-style ── */
 .hero{
-  background:
-    linear-gradient(180deg,rgba(6,11,20,.72) 0%,rgba(6,11,20,.55) 40%,rgba(6,11,20,.88) 100%),
-    url('https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=2400&q=90&auto=format&fit=crop') center/cover no-repeat,
-    #060B14;
+  background:#060B14;
   padding:90px 5% 100px;
   position:relative;overflow:hidden;
   min-height:78vh;
   display:flex;align-items:center;justify-content:center;
 }
+.hero-img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center;
+  z-index:0;
+}
+.hero::after{
+  content:'';position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,rgba(6,11,20,.72) 0%,rgba(6,11,20,.55) 40%,rgba(6,11,20,.88) 100%);
+  pointer-events:none;
+}
 .hero::before{
-  content:'';position:absolute;inset:0;
+  content:'';position:absolute;inset:0;z-index:1;
   background:radial-gradient(ellipse at 50% 40%,rgba(201,165,83,.06) 0%,transparent 70%);
   pointer-events:none;
 }
@@ -718,6 +732,17 @@ footer p{font-size:.78rem;color:rgba(255,255,255,.3);}
 
 <!-- HERO (Rakidzich-style premium) -->
 <section class="hero">
+  <img class="hero-img"
+       src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=1600&q=80&auto=format&fit=crop"
+       srcset="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800&q=75&auto=format&fit=crop 800w,
+               https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=1200&q=80&auto=format&fit=crop 1200w,
+               https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=1600&q=80&auto=format&fit=crop 1600w,
+               https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=2400&q=85&auto=format&fit=crop 2400w"
+       sizes="100vw"
+       alt="Intérieur appartement parisien — coaching propriétaires Airbnb OPTIMI"
+       fetchpriority="high"
+       decoding="async"
+       width="1600" height="900"/>
   <div class="hero-inner">
     <div class="hero-brand">
       <span class="hero-brand-line"></span>
