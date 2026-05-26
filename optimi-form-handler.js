@@ -14,7 +14,11 @@
 (function (window) {
   'use strict';
 
-  var WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/xa1Zp0IzF90BRcev1zuG/webhook-trigger/e91d78e2-b85c-4ec0-8ab2-5ebcfc66fc56';
+  // Edge fn Supabase qui appelle GHL Contacts API direct (mapping CF + tags propre).
+  // Remplace l'ancien webhook natif GHL dont les variables {{...}} n'étaient pas interpolées.
+  var INGEST_URL = 'https://qzfytakavkkrewrpkfuf.supabase.co/functions/v1/optimi-lead-ingest';
+  // Legacy webhook GHL — gardé en fallback si edge fn down
+  var FALLBACK_WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/xa1Zp0IzF90BRcev1zuG/webhook-trigger/e91d78e2-b85c-4ec0-8ab2-5ebcfc66fc56';
 
   // Config-driven : 1 ligne par form pour injecter automatiquement des tags GHL.
   // Source de vérité unique pour le routing form → workflow GHL.
@@ -36,24 +40,48 @@
       return t && arr.indexOf(t) === i;
     });
 
+    // Shape attendue par /optimi-lead-ingest edge fn (camelCase, tags array)
     return {
       firstName: opts.firstName || '',
       lastName: opts.lastName || '',
       email: opts.email || '',
       phone: opts.phone || '',
       source: opts.source || 'unknown',
-      form_name: formName,
-      page_url: window.location.href,
+      formName: formName,
+      pageUrl: window.location.href,
       message: opts.message || '',
-      consent_rgpd: opts.consentRgpd !== false,
-      submitted_at: new Date().toISOString(),
-      tags: allTags.join(','),
-      lead_score: typeof opts.leadScore === 'number' ? opts.leadScore : 10,
+      consentRgpd: opts.consentRgpd !== false,
+      tags: allTags,
+      leadScore: typeof opts.leadScore === 'number' ? opts.leadScore : 10,
       city: opts.city || '',
-      nb_biens: opts.nbBiens || '',
+      nbBiens: opts.nbBiens || '',
       objectif: opts.objectif || '',
-      budget_range: opts.budgetRange || '',
-      timeline: opts.timeline || ''
+      budgetRange: opts.budgetRange || '',
+      timeline: opts.timeline || '',
+      website: opts.website || ''  // honeypot anti-bot
+    };
+  }
+
+  // Legacy payload shape (snake_case + tags csv) pour fallback webhook GHL
+  function buildLegacyPayload(opts, jsonPayload) {
+    return {
+      firstName: jsonPayload.firstName,
+      lastName: jsonPayload.lastName,
+      email: jsonPayload.email,
+      phone: jsonPayload.phone,
+      source: jsonPayload.source,
+      form_name: jsonPayload.formName,
+      page_url: jsonPayload.pageUrl,
+      message: jsonPayload.message,
+      consent_rgpd: jsonPayload.consentRgpd,
+      submitted_at: new Date().toISOString(),
+      tags: (jsonPayload.tags || []).join(','),
+      lead_score: jsonPayload.leadScore,
+      city: jsonPayload.city,
+      nb_biens: jsonPayload.nbBiens,
+      objectif: jsonPayload.objectif,
+      budget_range: jsonPayload.budgetRange,
+      timeline: jsonPayload.timeline
     };
   }
 
@@ -125,10 +153,24 @@
     }
   }
 
+  function postToFallback(payload, opts) {
+    var legacyBody = buildLegacyPayload(opts, payload);
+    return fetch(FALLBACK_WEBHOOK_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(legacyBody),
+      mode: 'cors',
+      credentials: 'omit'
+    }).then(function (res) {
+      if (!res.ok) throw new Error('Fallback webhook returned ' + res.status);
+      return res.json().catch(function () { return {}; });
+    });
+  }
+
   function submitLead(opts) {
     var payload = buildPayload(opts);
 
-    return fetch(WEBHOOK_URL, {
+    return fetch(INGEST_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
@@ -136,8 +178,14 @@
       credentials: 'omit'
     })
       .then(function (res) {
-        if (!res.ok) throw new Error('Webhook returned ' + res.status);
+        if (!res.ok) throw new Error('Ingest returned ' + res.status);
         return res.json().catch(function () { return {}; });
+      })
+      .catch(function (primaryErr) {
+        // Edge fn down ou erreur réseau : fallback sur le webhook GHL legacy.
+        // Tags/CF perdront le mapping propre mais on garde le contact dans GHL.
+        console.warn('Primary ingest failed, fallback to GHL webhook:', primaryErr.message);
+        return postToFallback(payload, opts);
       })
       .then(function (data) {
         trackConversion(opts);
@@ -159,5 +207,6 @@
 
   window.OPTIMI = window.OPTIMI || {};
   window.OPTIMI.submitLead = submitLead;
-  window.OPTIMI.WEBHOOK_URL = WEBHOOK_URL;
+  window.OPTIMI.INGEST_URL = INGEST_URL;
+  window.OPTIMI.WEBHOOK_URL = FALLBACK_WEBHOOK_URL;  // legacy alias
 })(window);
