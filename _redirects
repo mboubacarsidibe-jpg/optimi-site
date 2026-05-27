@@ -19,9 +19,7 @@
 /methode-360     /coaching                    301
 /coaching-airbnb /coaching                    301
 
-# Blog landing (pas d'index.html yet) → article phare
-/blog            /blog/loi-le-meur-2026-airbnb-paris  301
-/blog/           /blog/loi-le-meur-2026-airbnb-paris  301
+# Blog landing now has its own index.html — Cloudflare serves it automatically
 
 # Catch-all 404
 /*               /404.html            404
