@@ -165,6 +165,7 @@
       --gold-pale:   #F7F0E0;
       --gold-soft:   rgba(201,165,83,0.08);
       --gold-border: rgba(201,165,83,0.4);
+      --gold-dark:   #8A7036; /* WCAG AA pour texte normal sur fond clair (4.57:1) */
 
       /* Text hierarchy */
       --text:        #1C1C2E;
@@ -302,7 +303,7 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
     /* ── SECTIONS ── */
     section { padding:var(--section-py) var(--section-px); }
     .section-inner { max-width:1100px; margin:0 auto; }
-    .section-label { font-size:0.75rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); margin-bottom:1rem; }
+    .section-label { font-size:0.75rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold-dark); margin-bottom:1rem; }
     .section-title { font-size:clamp(2rem, 4vw, 3rem); color:var(--navy); margin-bottom:1.25rem; line-height:1.1; letter-spacing:-0.02em; font-weight:700; }
     .section-sub { font-size:1.05rem; color:var(--text-muted); max-width:600px; line-height:1.75; }
     .section-head { margin-bottom:3rem; }
@@ -427,7 +428,7 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
     .aport-tier:hover { border-color:var(--gold); }
     .aport-tier .tier-info h5 { font-size:0.9rem; font-family:'Inter',sans-serif; font-weight:700; color:var(--navy); }
     .aport-tier .tier-info p { font-size:0.78rem; color:var(--muted); }
-    .aport-tier .tier-rate { font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size:1.3rem; color:var(--gold); font-weight:700; }
+    .aport-tier .tier-rate { font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size:1.3rem; color:var(--gold-dark); font-weight:700; }
     .aport-content h3 { font-size:1.6rem; color:var(--navy); margin-bottom:0.75rem; }
     .aport-content p { color:var(--muted); margin-bottom:1.5rem; font-size:0.93rem; }
     .aport-perks { list-style:none; display:flex; flex-direction:column; gap:0.6rem; margin-bottom:2rem; }
@@ -637,8 +638,8 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
     .seo-local-inner { max-width:1100px; margin:0 auto; }
     .seo-local h2 { font-size:1.5rem; color:var(--white); margin-bottom:1rem; }
     .seo-local p { font-size:0.875rem; color:rgba(255,255,255,0.5); line-height:1.8; max-width:900px; }
-    .seo-local p a { color:rgba(201,165,83,0.7); text-decoration:none; }
-    .seo-local p a:hover { color:var(--gold); }
+    .seo-local p a { color:rgba(201,165,83,0.85); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px; }
+    .seo-local p a:hover { color:var(--gold); text-decoration-thickness:2px; }
 
     /* ── RESPONSIVE ── */
     @media (max-width:900px) {
@@ -760,7 +761,7 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
       margin-bottom: 1rem; flex-wrap: wrap;
     }
     .blog-card-cat {
-      background: var(--gold-soft); color: var(--gold);
+      background: var(--gold-soft); color: var(--gold-dark);
       font-size: 0.68rem; font-weight: 700;
       letter-spacing: 0.1em; text-transform: uppercase;
       padding: 0.32rem 0.75rem; border-radius: 100px;
@@ -780,7 +781,7 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
       -webkit-box-orient: vertical; overflow: hidden;
     }
     .blog-card-link {
-      font-size: 0.88rem; color: var(--gold);
+      font-size: 0.88rem; color: var(--gold-dark);
       font-weight: 700; letter-spacing: 0.02em;
       margin-top: auto;
       display: inline-flex; align-items: center; gap: 0.4rem;
@@ -1349,8 +1350,8 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
       <h3>Estimation de revenus gratuite</h3>
       <p>Gratuit · Résultat immédiat · Sans engagement</p>
       <div class="form-group">
-        <label>Type de propriétaire</label>
-        <select>
+        <label for="profil-proprietaire">Type de propriétaire</label>
+        <select id="profil-proprietaire" name="profil-proprietaire" aria-label="Type de propriétaire">
           <option value="">Sélectionnez votre profil</option>
           <option>Propriétaire occupant / résidence secondaire</option>
           <option>Investisseur - appartement</option>
@@ -1609,8 +1610,8 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
     <div class="calc-widget">
       <div class="calc-inputs">
         <div class="calc-input-group">
-          <label>Arrondissement / Ville</label>
-          <select id="calc-zone">
+          <label for="calc-zone">Arrondissement / Ville</label>
+          <select id="calc-zone" aria-label="Arrondissement ou ville du bien">
             <option value="premium">Paris 1-8e / 16e / 17e</option>
             <option value="mid">Paris 9-15e / 18-20e</option>
             <option value="suburb">Neuilly / Boulogne / Levallois</option>
@@ -1618,8 +1619,8 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
           </select>
         </div>
         <div class="calc-input-group">
-          <label>Type de bien</label>
-          <select id="calc-type">
+          <label for="calc-type">Type de bien</label>
+          <select id="calc-type" aria-label="Type de bien">
             <option value="studio">Studio / T1</option>
             <option value="t2">2 pièces (T2)</option>
             <option value="t3">3 pièces (T3)</option>
@@ -1627,8 +1628,8 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
           </select>
         </div>
         <div class="calc-input-group">
-          <label>Durée cible</label>
-          <select id="calc-mode">
+          <label for="calc-mode">Durée cible</label>
+          <select id="calc-mode" aria-label="Durée cible de location">
             <option value="short">Courte durée (Airbnb)</option>
             <option value="mid">Moyenne durée (bail mobilité)</option>
             <option value="mix">Mix optimisé OPTIMI</option>
