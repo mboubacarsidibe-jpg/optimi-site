@@ -580,9 +580,9 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
     .compare-table th.col-diy { background:var(--border); color:#4f4f5e; border-radius:12px 12px 0 0; }
     .compare-table th.col-generic { background:var(--border); color:#4f4f5e; border-radius:12px 12px 0 0; }
     .compare-table td { padding:0.85rem 1.25rem; font-size:0.875rem; border-bottom:1px solid var(--border); background:var(--white); }
-    .compare-table td:first-child { background:transparent; color:var(--text); font-weight:500; }
+    .compare-table tbody th { padding:0.85rem 1.25rem; font-size:0.875rem; border-bottom:1px solid var(--border); background:transparent; color:var(--text); font-weight:500; text-align:left; }
     .compare-table td.col-optimi { background:rgba(11,24,40,0.04); text-align:center; }
-    .compare-table td.col-diy, .compare-table td.col-generic { text-align:center; color:var(--muted); }
+    .compare-table td.col-diy, .compare-table td.col-generic { text-align:center; color:#4f4f5e; }
     .compare-table tr:last-child td { border-bottom:none; border-radius:0 0 12px 12px; }
     .chk { color:#22C55E; font-size:1.1rem; }
     .cross { color:#EF4444; font-size:1rem; }
@@ -1347,7 +1347,7 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
       </div>
     </div>
     <div class="hero-card" id="estimation">
-      <h3>Estimation de revenus gratuite</h3>
+      <h2>Estimation de revenus gratuite</h2>
       <p>Gratuit · Résultat immédiat · Sans engagement</p>
       <div class="form-group">
         <label for="profil-proprietaire">Type de propriétaire</label>
@@ -1654,7 +1654,7 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
 
       <div class="calc-detail-form" id="calc-detail-form">
         <div class="calc-detail-form-head">
-          <h4>📩 Recevez la simulation détaillée par email</h4>
+          <h3>📩 Recevez la simulation détaillée par email</h3>
           <p>Comparatif fiscal LMNP/LMP personnalisé + projection annuelle + 3 leviers d'optimisation pour votre profil. Gratuit, en 1 clic.</p>
         </div>
         <div class="calc-detail-form-row">
@@ -1676,7 +1676,7 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
   <div class="lm-inner">
     <div class="lm-book">
       <div class="lm-book-badge">Guide gratuit 2026</div>
-      <h4>Airbnb Paris 2026 :<br/>Fiscalité, Réglementation & Rendement</h4>
+      <h3>Airbnb Paris 2026 :<br/>Fiscalité, Réglementation & Rendement</h3>
       <p>Le guide complet pour propriétaires parisiens</p>
       <ul class="lm-toc">
         <li>Loi anti-Airbnb : ce qui change en 2026</li>
@@ -1734,62 +1734,62 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
         <thead>
           <tr>
             <th></th>
-            <th class="col-optimi">OPTIMI ✦</th>
-            <th class="col-diy">Gérer seul</th>
-            <th class="col-generic">Autre conciergerie</th>
+            <th class="col-optimi" scope="col">OPTIMI ✦</th>
+            <th class="col-diy" scope="col">Gérer seul</th>
+            <th class="col-generic" scope="col">Autre conciergerie</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Tarification dynamique temps réel</td>
+            <th scope="row">Tarification dynamique temps réel</th>
             <td class="col-optimi"><span class="chk">✓</span> Algorithme propriétaire</td>
             <td class="col-diy"><span class="cross">✗</span> Manuel</td>
             <td class="col-generic"><span class="half">≈</span> Variable</td>
           </tr>
           <tr>
-            <td>Distribution multi-plateformes</td>
+            <th scope="row">Distribution multi-plateformes</th>
             <td class="col-optimi"><span class="chk">✓</span> 5 plateformes + direct</td>
             <td class="col-diy"><span class="cross">✗</span> Airbnb seul souvent</td>
             <td class="col-generic"><span class="half">≈</span> 2-3 max</td>
           </tr>
           <tr>
-            <td>Conformité réglementation 2026</td>
+            <th scope="row">Conformité réglementation 2026</th>
             <td class="col-optimi"><span class="chk">✓</span> Suivi 120j, déclaration</td>
             <td class="col-diy"><span class="cross">✗</span> À votre charge</td>
             <td class="col-generic"><span class="half">≈</span> Partiel</td>
           </tr>
           <tr>
-            <td>Optimisation LMNP / fiscale</td>
+            <th scope="row">Optimisation LMNP / fiscale</th>
             <td class="col-optimi"><span class="chk">✓</span> Partenaires comptables</td>
             <td class="col-diy"><span class="cross">✗</span> Non inclus</td>
             <td class="col-generic"><span class="cross">✗</span> Rarement</td>
           </tr>
           <tr>
-            <td>Suivi de travaux & conversion bureaux</td>
+            <th scope="row">Suivi de travaux & conversion bureaux</th>
             <td class="col-optimi"><span class="chk">✓</span> Service intégré</td>
             <td class="col-diy"><span class="cross">✗</span> Non</td>
             <td class="col-generic"><span class="cross">✗</span> Non</td>
           </tr>
           <tr>
-            <td>Reporting mensuel détaillé</td>
+            <th scope="row">Reporting mensuel détaillé</th>
             <td class="col-optimi"><span class="chk">✓</span> Dashboard + virement</td>
             <td class="col-diy"><span class="half">≈</span> Airbnb dashboard</td>
             <td class="col-generic"><span class="half">≈</span> Variable</td>
           </tr>
           <tr>
-            <td>Programme apporteurs d'affaires</td>
+            <th scope="row">Programme apporteurs d'affaires</th>
             <td class="col-optimi"><span class="chk">✓</span> 3 à 7% récurrent</td>
             <td class="col-diy"><span class="cross">✗</span></td>
             <td class="col-generic"><span class="cross">✗</span> Rare</td>
           </tr>
           <tr>
-            <td>Résiliation libre</td>
+            <th scope="row">Résiliation libre</th>
             <td class="col-optimi"><span class="chk">✓</span> Préavis 30 jours</td>
             <td class="col-diy"><span class="chk">✓</span></td>
             <td class="col-generic"><span class="cross">✗</span> Souvent 3-6 mois</td>
           </tr>
           <tr>
-            <td>Commission tout inclus</td>
+            <th scope="row">Commission tout inclus</th>
             <td class="col-optimi"><span class="chk">✓</span> <strong>20% TTC - zéro surprise</strong></td>
             <td class="col-diy">0% + votre temps</td>
             <td class="col-generic">15-30% + extras</td>
@@ -1815,22 +1815,22 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
     <div class="process-grid">
       <div class="process-step">
         <div class="process-num">1</div>
-        <h4>Audit gratuit 24h</h4>
+        <h3>Audit gratuit 24h</h3>
         <p>Analyse de votre bien, estimation de revenus, recommandation courte / moyenne durée selon votre profil.</p>
       </div>
       <div class="process-step">
         <div class="process-num">2</div>
-        <h4>Mise en ligne 72h</h4>
+        <h3>Mise en ligne 72h</h3>
         <p>Shooting photo professionnel, rédaction optimisée, paramétrage multi-plateformes et tarification dynamique.</p>
       </div>
       <div class="process-step">
         <div class="process-num">3</div>
-        <h4>Gestion quotidienne</h4>
+        <h3>Gestion quotidienne</h3>
         <p>Réservations, voyageurs, check-in/out, ménage 5★, linge hôtel. Vous ne faites rien, vous encaissez.</p>
       </div>
       <div class="process-step">
         <div class="process-num">4</div>
-        <h4>Reporting mensuel</h4>
+        <h3>Reporting mensuel</h3>
         <p>Dashboard propriétaire, virement automatique, relevé fiscal LMNP. Pilotez votre actif en toute clarté.</p>
       </div>
     </div>
@@ -1850,32 +1850,32 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
     <div class="why-grid">
       <div class="why-card">
         <div class="why-icon">📈</div>
-        <h4>Tarification dynamique propriétaire</h4>
+        <h3>Tarification dynamique propriétaire</h3>
         <p>Notre algorithme ajuste vos prix en temps réel selon la demande, les événements parisiens, la saisonnalité et la concurrence locale.</p>
       </div>
       <div class="why-card">
         <div class="why-icon">🏙️</div>
-        <h4>Expert local Paris & banlieue proche</h4>
+        <h3>Expert local Paris & banlieue proche</h3>
         <p>Nous connaissons chaque arrondissement, chaque réglementation de copropriété, chaque spécificité du marché parisien. Pas un opérateur national généraliste.</p>
       </div>
       <div class="why-card">
         <div class="why-icon">⚖️</div>
-        <h4>Conformité réglementaire 2026</h4>
+        <h3>Conformité réglementaire 2026</h3>
         <p>Numéro d'enregistrement en mairie, suivi des 120 nuitées, bail mobilité, LMNP : vous êtes 100% en règle, sans vous en occuper.</p>
       </div>
       <div class="why-card">
         <div class="why-icon">🔄</div>
-        <h4>Multi-plateformes synchronized</h4>
+        <h3>Multi-plateformes synchronized</h3>
         <p>Airbnb, Booking.com, VRBO, Abritel, Expedia - un calendrier unique synchronisé en temps réel pour zéro double réservation.</p>
       </div>
       <div class="why-card">
         <div class="why-icon">📊</div>
-        <h4>Dashboard propriétaire en temps réel</h4>
+        <h3>Dashboard propriétaire en temps réel</h3>
         <p>Réservations, revenus, taux d'occupation, notes voyageurs : tout en un coup d'œil sur votre espace propriétaire dédié.</p>
       </div>
       <div class="why-card">
         <div class="why-icon">🤝</div>
-        <h4>Commission transparente, sans surprise</h4>
+        <h3>Commission transparente, sans surprise</h3>
         <p>20% TTC tout inclus. Pas de frais cachés, pas de forfait photo, pas de supplément ménage. Une ligne, une vérité.</p>
       </div>
     </div>
@@ -1954,22 +1954,22 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
     <div class="regle-grid">
       <div class="regle-card">
         <span class="tag">Loi anti-Airbnb 2024/2026</span>
-        <h4>120 nuitées à Paris : comptabilisation obligatoire</h4>
+        <h3>120 nuitées à Paris : comptabilisation obligatoire</h3>
         <p>À Paris, la location de votre résidence principale est limitée à 120 nuits par an. OPTIMI comptabilise chaque nuitée automatiquement et vous alerte avant dépassement. En cas de résidence secondaire, nous arbitrons entre déclaration de changement d'usage ou statut meublé de tourisme classifié.</p>
       </div>
       <div class="regle-card">
         <span class="tag">Fiscalité LMNP / LMP</span>
-        <h4>Optimisez votre imposition sur les revenus locatifs</h4>
+        <h3>Optimisez votre imposition sur les revenus locatifs</h3>
         <p>Sous le régime LMNP, vous pouvez déduire les amortissements du bien et du mobilier, réduisant significativement votre base imposable. Au-delà de 23 000€ de revenus locatifs annuels, le statut LMP s'impose - avec ses avantages (déficits imputables sur le revenu global) et ses contraintes (cotisations sociales).</p>
       </div>
       <div class="regle-card">
         <span class="tag">Bail mobilité</span>
-        <h4>La moyenne durée : la stratégie sous-estimée en 2026</h4>
+        <h3>La moyenne durée : la stratégie sous-estimée en 2026</h3>
         <p>Le bail mobilité (1 à 10 mois) est une alternative très efficace en zones tendues où la courte durée est réglementée. Pas de limite de 120 nuits, recours aux garanties locataires, revenus stables. OPTIMI analyse pour chaque bien si la moyenne durée est plus rentable que la courte durée au cas par cas.</p>
       </div>
       <div class="regle-card">
         <span class="tag">Copropriété</span>
-        <h4>Louer en Airbnb dans une copropriété : vos droits</h4>
+        <h3>Louer en Airbnb dans une copropriété : vos droits</h3>
         <p>La jurisprudence évolue. En l'absence de clause d'habitation bourgeoise exclusive dans le règlement de copropriété, la location meublée touristique reste légale. OPTIMI audite votre règlement avant tout démarrage et vous accompagne si une mise en conformité est nécessaire avec votre syndic.</p>
       </div>
     </div>
@@ -2049,21 +2049,21 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
         <div class="aport-tiers">
           <div class="aport-tier">
             <div class="tier-info">
-              <h5>1 à 2 biens apportés</h5>
+              <h4>1 à 2 biens apportés</h4>
               <p>Commission sur revenus mensuels générés</p>
             </div>
             <div class="tier-rate">3%</div>
           </div>
           <div class="aport-tier">
             <div class="tier-info">
-              <h5>3 à 9 biens apportés</h5>
+              <h4>3 à 9 biens apportés</h4>
               <p>Commission sur revenus mensuels générés</p>
             </div>
             <div class="tier-rate">5%</div>
           </div>
           <div class="aport-tier">
             <div class="tier-info">
-              <h5>10 biens et plus</h5>
+              <h4>10 biens et plus</h4>
               <p>Partenaire stratégique - conditions sur mesure</p>
             </div>
             <div class="tier-rate">7%</div>
@@ -2158,7 +2158,7 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
     </div>
     <div class="cases-grid">
       <div class="case-card">
-        <h4>Transformation Bureau → Hôtel</h4>
+        <h3>Transformation Bureau → Hôtel</h3>
         <div class="case-meta">
           <div class="case-meta-row"><span>Localisation</span><span>Monaco</span></div>
           <div class="case-meta-row"><span>Surface</span><span>70 m²</span></div>
@@ -2173,7 +2173,7 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
       </div>
 
       <div class="case-card">
-        <h4>Optimisation Airbnb</h4>
+        <h3>Optimisation Airbnb</h3>
         <div class="case-meta">
           <div class="case-meta-row"><span>Localisation</span><span>Paris Marais</span></div>
           <div class="case-meta-row"><span>Surface</span><span>45 m²</span></div>
@@ -2188,7 +2188,7 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
       </div>
 
       <div class="case-card">
-        <h4>Bail Mobilité Premium</h4>
+        <h3>Bail Mobilité Premium</h3>
         <div class="case-meta">
           <div class="case-meta-row"><span>Localisation</span><span>Cannes</span></div>
           <div class="case-meta-row"><span>Surface</span><span>70 m²</span></div>
@@ -2478,14 +2478,14 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
         <p>Conciergerie Airbnb premium à Paris, en Île-de-France et à l'international. 337+ biens en gestion active.</p>
       </div>
       <div class="footer-col">
-        <h5>Services</h5>
+        <h3>Services</h3>
         <a href="#segments">Nos formules</a>
         <a href="#calculateur">Simulateur revenus</a>
         <a href="coaching">Coaching Méthode 360</a>
         <a href="#apporteurs">Programme apporteurs</a>
       </div>
       <div class="footer-col">
-        <h5>Ressources</h5>
+        <h3>Ressources</h3>
         <a href="ressources">Toutes les ressources</a>
         <a href="guide-airbnb-paris-2026">Guide Airbnb 2026</a>
         <a href="calculateur-roi-coaching">Calculateur ROI</a>
@@ -2493,7 +2493,7 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
         <a href="#blog">Blog &amp; articles</a>
       </div>
       <div class="footer-col">
-        <h5>Nos villes</h5>
+        <h3>Nos villes</h3>
         <a href="conciergerie-airbnb-paris">Paris</a>
         <a href="conciergerie-airbnb-nice">Nice</a>
         <a href="conciergerie-airbnb-cannes">Cannes</a>
@@ -2508,7 +2508,7 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
         <a href="conciergerie-airbnb-los-angeles">Los Angeles</a>
       </div>
       <div class="footer-col">
-        <h5>Société</h5>
+        <h3>Société</h3>
         <a href="a-propos">À propos</a>
         <a href="pourquoi-optimi">Pourquoi OPTIMI ?</a>
         <a href="cas-clients">Cas clients</a>
