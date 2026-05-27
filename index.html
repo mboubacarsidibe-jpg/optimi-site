@@ -165,7 +165,7 @@
       --gold-pale:   #F7F0E0;
       --gold-soft:   rgba(201,165,83,0.08);
       --gold-border: rgba(201,165,83,0.4);
-      --gold-dark:   #8A7036; /* WCAG AA pour texte normal sur fond clair (4.57:1) */
+      --gold-dark:   #7A6020; /* WCAG AA pour texte normal sur fond clair (5.5:1 sur cream) */
 
       /* Text hierarchy */
       --text:        #1C1C2E;
@@ -353,7 +353,7 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
     .lm-toc { text-align:left; list-style:none; display:flex; flex-direction:column; gap:0.4rem; }
     .lm-toc li { font-size:0.78rem; color:var(--muted); display:flex; align-items:center; gap:0.5rem; }
     .lm-toc li::before { content:'→'; color:var(--gold); font-weight:700; }
-    .lm-content .section-label { color:var(--gold); }
+    .lm-content .section-label { color:var(--gold-dark); }
     .lm-content .section-title { color:var(--white); }
     .lm-content .section-sub { color:rgba(255,255,255,0.65); margin-bottom:1.5rem; }
     .lm-form { display:flex; gap:0.75rem; }
@@ -398,12 +398,12 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
     }
     .regle-card h4 { font-size:1rem; font-family:'Inter',sans-serif; font-weight:700; color:var(--navy); margin-bottom:0.75rem; }
     .regle-card p { font-size:0.85rem; color:var(--muted); line-height:1.7; }
-    .regle-card .tag { display:inline-block; background:var(--gold-pale); color:#7a6020; font-size:0.7rem; font-weight:600; padding:0.2rem 0.6rem; border-radius:4px; margin-bottom:0.75rem; }
+    .regle-card .tag { display:inline-block; background:var(--gold-pale); color:var(--gold-dark); font-size:0.7rem; font-weight:600; padding:0.2rem 0.6rem; border-radius:4px; margin-bottom:0.75rem; }
 
     /* ── TESTIMONIALS ── */
     .testi { background:var(--navy); }
     .testi .section-title { color:var(--white); }
-    .testi .section-label { color:var(--gold); }
+    .testi .section-label { color:var(--gold-dark); }
     .testi-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
     .testi-card {
       background:rgba(255,255,255,0.05); border:1px solid rgba(201,165,83,0.2);
@@ -483,9 +483,9 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
     .footer-inner { max-width:1100px; margin:0 auto; }
     .footer-top { display:grid; grid-template-columns:2fr 1fr 1fr 1fr 1fr; gap:2.5rem; margin-bottom:2.5rem; }
     .footer-brand .nav-logo { font-size:1.4rem; display:block; margin-bottom:0.75rem; }
-    .footer-brand p { font-size:0.82rem; color:rgba(255,255,255,0.4); max-width:240px; }
+    .footer-brand p { font-size:0.82rem; color:rgba(255,255,255,0.62); max-width:240px; }
     .footer-col h5 { color:var(--white); font-size:0.85rem; font-family:'Inter',sans-serif; font-weight:700; margin-bottom:1rem; letter-spacing:0.05em; }
-    .footer-col a { display:block; color:rgba(255,255,255,0.45); font-size:0.8rem; text-decoration:none; margin-bottom:0.5rem; transition:color .2s; }
+    .footer-col a { display:block; color:rgba(255,255,255,0.62); font-size:0.8rem; text-decoration:none; margin-bottom:0.5rem; transition:color .2s; }
     .footer-col a:hover { color:var(--gold); }
     .footer-bottom { border-top:1px solid rgba(255,255,255,0.06); padding-top:1.5rem; display:flex; justify-content:space-between; align-items:center; }
     .footer-bottom p { font-size:0.75rem; color:rgba(255,255,255,0.25); }
@@ -507,7 +507,7 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
     /* ── CALCULATOR ── */
     .calc { background:linear-gradient(135deg,#0B1828,#162236); padding:72px 5%; }
     .calc-inner { max-width:820px; margin:0 auto; }
-    .calc-inner .section-label { color:var(--gold); }
+    .calc-inner .section-label { color:var(--gold-dark); }
     .calc-inner .section-title { color:var(--white); margin-bottom:0.5rem; }
     .calc-inner .section-sub { color:rgba(255,255,255,0.6); margin-bottom:2rem; }
     .calc-widget { background:rgba(255,255,255,0.06); border:1px solid rgba(201,165,83,0.2); border-radius:16px; padding:2rem; }
@@ -577,8 +577,8 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
     .compare-table th { padding:1rem 1.25rem; font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; }
     .compare-table th:first-child { text-align:left; color:var(--muted); background:transparent; }
     .compare-table th.col-optimi { background:var(--navy); color:var(--gold); border-radius:12px 12px 0 0; }
-    .compare-table th.col-diy { background:var(--border); color:var(--muted); border-radius:12px 12px 0 0; }
-    .compare-table th.col-generic { background:var(--border); color:var(--muted); border-radius:12px 12px 0 0; }
+    .compare-table th.col-diy { background:var(--border); color:#4f4f5e; border-radius:12px 12px 0 0; }
+    .compare-table th.col-generic { background:var(--border); color:#4f4f5e; border-radius:12px 12px 0 0; }
     .compare-table td { padding:0.85rem 1.25rem; font-size:0.875rem; border-bottom:1px solid var(--border); background:var(--white); }
     .compare-table td:first-child { background:transparent; color:var(--text); font-weight:500; }
     .compare-table td.col-optimi { background:rgba(11,24,40,0.04); text-align:center; }
@@ -1178,7 +1178,7 @@ h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } h1 { font-w
     .cases { padding:var(--section-py) var(--section-px); background:var(--white); }
     .cases-inner { max-width:1100px; margin:0 auto; }
     .cases-head { text-align:center; margin-bottom:4rem; max-width:640px; margin-left:auto; margin-right:auto; }
-    .cases-head .section-label { color:var(--gold); margin-bottom:1rem; }
+    .cases-head .section-label { color:var(--gold-dark); margin-bottom:1rem; }
     .cases-head h2 { color:var(--navy); font-size:clamp(2rem, 4vw, 3rem); margin-bottom:1rem; line-height:1.1; letter-spacing:-0.02em; }
     .cases-head p { color:var(--text-muted); font-size:1.05rem; line-height:1.75; }
     .cases-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:1.5rem; }
