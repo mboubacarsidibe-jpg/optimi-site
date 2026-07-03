@@ -176,24 +176,48 @@ nav{
 
 /* ── ALERT BAR Rakidzich-style (compact) ── */
 .alert-bar{
-  background:var(--gold);padding:.42rem 5%;
-  display:flex;align-items:center;justify-content:center;gap:.75rem;
-  font-weight:600;color:var(--navy);font-size:.78rem;letter-spacing:.01em;
-  position:relative;
+  background:linear-gradient(90deg,#C9A553 0%,#E0C27A 50%,#C9A553 100%);
+  background-size:220% 100%;
+  animation:alertShimmer 7s linear infinite, alertSlideIn .5s ease both;
+  padding:.6rem 2.6rem .6rem 5%;
+  display:flex;align-items:center;justify-content:center;gap:.7rem;flex-wrap:wrap;
+  font-weight:600;color:var(--navy);font-size:.82rem;letter-spacing:.01em;
+  position:relative;border-bottom:1px solid rgba(11,24,40,.12);
 }
+@keyframes alertShimmer{0%{background-position:0 0}100%{background-position:220% 0}}
+@keyframes alertSlideIn{from{transform:translateY(-100%);opacity:0}to{transform:translateY(0);opacity:1}}
+@keyframes alertPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.09)}}
 .alert-bar .alert-new{
   background:var(--navy);color:var(--gold);
-  padding:.12rem .55rem;border-radius:3px;
+  padding:.16rem .6rem;border-radius:100px;
   font-size:.62rem;font-weight:800;letter-spacing:.08em;
   text-transform:uppercase;flex-shrink:0;
+  animation:alertPulse 2.4s ease-in-out infinite;
 }
-.alert-bar a{color:var(--navy);font-weight:700;text-decoration:underline;text-underline-offset:2px;}
+.alert-bar .alert-countdown{
+  background:rgba(11,24,40,.12);color:var(--navy);
+  padding:.14rem .6rem;border-radius:100px;
+  font-weight:800;font-size:.72rem;letter-spacing:.02em;flex-shrink:0;
+}
+.alert-bar .alert-cta{
+  background:var(--navy);color:var(--gold);
+  padding:.34rem .95rem;border-radius:100px;
+  text-decoration:none;font-weight:700;font-size:.76rem;
+  display:inline-flex;align-items:center;gap:.4rem;flex-shrink:0;
+  transition:transform .2s,box-shadow .2s;
+}
+.alert-bar .alert-cta:hover{transform:translateY(-1px);box-shadow:0 5px 14px rgba(11,24,40,.28);}
+.alert-bar .alert-cta .arw{transition:transform .2s;}
+.alert-bar .alert-cta:hover .arw{transform:translateX(3px);}
 .alert-bar .alert-close{
-  position:absolute;right:1.2rem;top:50%;transform:translateY(-50%);
+  position:absolute;right:1.1rem;top:50%;transform:translateY(-50%);
   background:none;border:none;color:var(--navy);
   cursor:pointer;font-size:.85rem;opacity:.5;line-height:1;
 }
 .alert-bar .alert-close:hover{opacity:1;}
+@media(prefers-reduced-motion:reduce){
+  .alert-bar,.alert-bar .alert-new{animation:none;}
+}
 
 /* ── HERO Rakidzich-style ── */
 .hero{
@@ -726,9 +750,21 @@ footer p{font-size:.78rem;color:rgba(255,255,255,.3);}
 <!-- ALERT BAR (Rakidzich-style promo bar) -->
 <div class="alert-bar" id="alertBar">
   <span class="alert-new">Gratuit</span>
-  <span>Masterclass Rentabilité 360 — en ligne, jeudi 28 août — <a href="masterclass-rentabilite">Réserver ma place</a></span>
+  <span>Masterclass Rentabilité 360 — en ligne, jeudi 28 août</span>
+  <span class="alert-countdown" id="mcCountdown"></span>
+  <a href="masterclass-rentabilite" class="alert-cta">Réserver ma place <span class="arw">→</span></a>
   <button class="alert-close" onclick="document.getElementById('alertBar').style.display='none'" aria-label="Fermer">✕</button>
 </div>
+<script>
+(function(){
+  var el=document.getElementById('mcCountdown'); if(!el) return;
+  var days=Math.ceil((new Date('2026-08-28T19:00:00+02:00')-new Date())/864e5);
+  if(days>1){ el.textContent='J-'+days; }
+  else if(days===1){ el.textContent='Demain'; }
+  else if(days===0){ el.textContent="Aujourd'hui"; }
+  else { el.style.display='none'; }
+})();
+</script>
 
 <!-- HERO (Rakidzich-style premium) -->
 <section class="hero">
