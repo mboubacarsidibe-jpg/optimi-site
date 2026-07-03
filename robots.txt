@@ -17,6 +17,21 @@ Disallow: /forms.html
 # Guide tournage témoignage (PDF print interne pour clients, non public)
 Disallow: /guide-tournage-temoignage.html
 
+# Crawlers IA / moteurs génératifs — explicitement autorisés (visibilité ChatGPT, Claude, Gemini, Perplexity)
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-Web
+User-agent: Claude-SearchBot
+User-agent: anthropic-ai
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /guide-tournage-temoignage.html
+
 # Bots agressifs / scrapers indésirables
 User-agent: AhrefsBot
 Crawl-delay: 10

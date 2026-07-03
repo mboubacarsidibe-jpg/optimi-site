@@ -27,7 +27,10 @@
     'guide-2026':      ['guide-2026-downloaded'], // déclenche W1 Welcome Guide DL
     'roi-calc':        ['roi-calc-completed'],
     'audit-loom':      ['audit-loom-requested'],
-    'discovery-call':  ['form-discovery-call']
+    'discovery-call':  ['form-discovery-call'],
+    'audit-rentabilite':      ['audit-rentabilite-requested'], // outbound coaching
+    'masterclass-rentabilite':['masterclass-aout-2026'],       // masterclass août
+    'estimation-revenus':     ['estimation-revenus-requested'] // outil estimation conciergerie
   };
 
   function buildPayload(opts) {
@@ -101,6 +104,9 @@
     'roi-calc':         'lead_roi_calc',
     'audit-loom':       'lead_audit_request',
     'discovery-call':   'lead_discovery_call',
+    'audit-rentabilite':       'lead_audit_rentabilite',
+    'masterclass-rentabilite': 'lead_masterclass_signup',
+    'estimation-revenus':      'lead_estimation_revenus',
     'Coaching Candidature': 'lead_coaching_apply',
     'Audit Loom Annonce':   'lead_audit_request'
   };
