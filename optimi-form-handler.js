@@ -33,6 +33,18 @@
     'estimation-revenus':     ['estimation-revenus-requested'] // outil estimation conciergerie
   };
 
+  // Apporteur d'affaires : lit ?ref=CODE dans l'URL (mémorisé entre pages) → tag apporteur-{code}
+  function getApporteurRef() {
+    try {
+      var p = new URLSearchParams(window.location.search).get('ref');
+      if (p) {
+        var clean = String(p).toLowerCase().replace(/[^a-z0-9\-]/g, '').slice(0, 40);
+        if (clean) { try { localStorage.setItem('optimi-ref', clean); } catch (e) {} return clean; }
+      }
+      return localStorage.getItem('optimi-ref') || '';
+    } catch (e) { return ''; }
+  }
+
   function buildPayload(opts) {
     var formName = opts.formName || opts.source || 'unknown';
     var callerTags = Array.isArray(opts.tags)
@@ -42,6 +54,12 @@
     var allTags = callerTags.concat(autoTags).filter(function (t, i, arr) {
       return t && arr.indexOf(t) === i;
     });
+
+    // Attribution apporteur d'affaires
+    var apporteurRef = getApporteurRef();
+    if (apporteurRef && allTags.indexOf('apporteur-' + apporteurRef) === -1) {
+      allTags.push('apporteur-' + apporteurRef);
+    }
 
     // Shape attendue par /optimi-lead-ingest edge fn (camelCase, tags array)
     return {
