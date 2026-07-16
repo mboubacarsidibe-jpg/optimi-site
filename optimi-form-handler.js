@@ -58,6 +58,7 @@
       leadScore: typeof opts.leadScore === 'number' ? opts.leadScore : 10,
       city: opts.city || '',
       nbBiens: opts.nbBiens || '',
+      mode: opts.mode || '',
       objectif: opts.objectif || '',
       budgetRange: opts.budgetRange || '',
       timeline: opts.timeline || '',
@@ -82,6 +83,7 @@
       lead_score: jsonPayload.leadScore,
       city: jsonPayload.city,
       nb_biens: jsonPayload.nbBiens,
+      mode: jsonPayload.mode,
       objectif: jsonPayload.objectif,
       budget_range: jsonPayload.budgetRange,
       timeline: jsonPayload.timeline

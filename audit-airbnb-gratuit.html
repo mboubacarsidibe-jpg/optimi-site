@@ -358,6 +358,11 @@ footer a:hover { color: var(--gold); }
           <input type="text" name="city" placeholder="Ville du bien *" required class="form-input">
           <input type="text" name="nb_biens" placeholder="Nb de biens" class="form-input">
         </div>
+        <select name="mode" required class="form-input full" style="margin-bottom:14px;">
+          <option value="" disabled selected>Vous préférez… *</option>
+          <option value="dfy">Qu'OPTIMI s'en occupe (fait pour moi)</option>
+          <option value="diy">Apprendre / m'équiper (je gère moi-même)</option>
+        </select>
         <input type="url" name="listing_url" placeholder="URL de votre annonce Airbnb *" required class="form-input full" style="margin-bottom:14px;">
         <textarea name="message" placeholder="Une question particulière ou un point à regarder en priorité ? (optionnel)" class="form-input form-textarea full"></textarea>
 
@@ -393,6 +398,7 @@ document.addEventListener('DOMContentLoaded', function(){
       phone:     data.get('phone'),
       city:      data.get('city'),
       nbBiens:   data.get('nb_biens') || '',
+      mode:      data.get('mode') || '',
       message:   (data.get('listing_url') || '') + ' | ' + (data.get('message') || ''),
       source:    'audit-airbnb-gratuit',
       formName:  'audit-loom',
