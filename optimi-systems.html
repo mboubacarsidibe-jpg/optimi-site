@@ -46,6 +46,7 @@
 
 <!-- Non-blocking Google Fonts (preload + swap) — réduit 1198ms render-blocking -->
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap"/>
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"/></noscript>
 
 <link rel="stylesheet" href="cookie-consent.css"/>
@@ -782,6 +783,14 @@ footer p{font-size:.78rem;color:rgba(255,255,255,.3);}
   .select-card{padding:1.75rem 1.5rem;}
   .select-num{font-size:1.85rem;}
 }
+
+/* Premium : chiffres en Fraunces (serif editorial) */
+.hero-stat strong,.city-stat-num,.seg-kpi strong,.seg-kpi-small strong,.process-num,.p-main,.p-old,.op-num,.stat-num,.r-num,.metric-num,.b-num,.big-num,.videoband strong,.plan-price{font-family:'Fraunces',Georgia,serif !important;font-weight:600;letter-spacing:-.015em;font-feature-settings:'tnum' 1;}
+
+.nav-left{display:flex;align-items:center;gap:.9rem;}
+.nav-back{font-size:.72rem;color:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.16);padding:.32rem .75rem;border-radius:100px;transition:all .2s;white-space:nowrap;text-decoration:none;}
+.nav-back:hover{color:var(--gold);border-color:rgba(201,165,83,.4);}
+@media(max-width:640px){.nav-back{display:none;}}
 </style>
 
 
@@ -790,7 +799,7 @@ footer p{font-size:.78rem;color:rgba(255,255,255,.3);}
 
 <!-- NAV -->
 <nav>
-  <a href="index" class="nav-logo">OPTI<span>MI</span></a>
+  <div class="nav-left"><a href="index" class="nav-logo">OPTI<span>MI</span></a><a href="index" class="nav-back">← Site principal</a></div>
   <div class="nav-pill">OPTIMI Systems</div>
   <a href="#audit" class="nav-btn">Audit gratuit</a>
 </nav>
@@ -1073,7 +1082,7 @@ footer p{font-size:.78rem;color:rgba(255,255,255,.3);}
       <div class="plan-card">
         <div class="plan-name">Starter</div>
         <div class="plan-for">Pour l'hôte qui veut lancer la réservation directe sur 1 bien.</div>
-        <div class="plan-price"><sup>1 490€</sup></div>
+        <div class="plan-price">1 490€</div>
         <div class="plan-setup">de mise en place, puis <strong>97€/mois</strong></div>
         <ul class="plan-list">
           <li>Site direct-booking (1 bien) + Stripe</li>
@@ -1089,7 +1098,7 @@ footer p{font-size:.78rem;color:rgba(255,255,255,.3);}
       <div class="plan-card featured">
         <div class="plan-name">Pro</div>
         <div class="plan-for">Pour le gestionnaire multi-biens (jusqu'à 5 logements).</div>
-        <div class="plan-price"><sup>3 490€</sup></div>
+        <div class="plan-price">3 490€</div>
         <div class="plan-setup">de mise en place, puis <strong>197€/mois</strong></div>
         <ul class="plan-list">
           <li>Site direct-booking (jusqu'à 5 biens)</li>
@@ -1105,7 +1114,7 @@ footer p{font-size:.78rem;color:rgba(255,255,255,.3);}
       <div class="plan-card">
         <div class="plan-name">Agency</div>
         <div class="plan-for">Marque blanche pour concierges : vous déployez et vous revendez.</div>
-        <div class="plan-price"><sup>6 990€</sup></div>
+        <div class="plan-price">6 990€</div>
         <div class="plan-setup">de mise en place, puis <strong>397€/mois</strong></div>
         <ul class="plan-list">
           <li>Système en marque blanche revendable</li>
