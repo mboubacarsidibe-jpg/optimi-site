@@ -25,12 +25,12 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"/></noscript>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-:root{--navy:#0B1828;--white:#FFFFFF;--cream:#FAFAF8;--gold:#C9A553;--gold-soft:rgba(201,165,83,0.08);--gold-border:rgba(201,165,83,0.4);--text:#1C1C2E;--text-muted:#6B6B80;--border:#E5E0D7;--radius:16px;--radius-sm:10px;--shadow-md:0 8px 32px rgba(0,0,0,0.08);}
+:root{--navy:#0B1828;--white:#FFFFFF;--cream:#FAFAF8;--gold:#C9A553;--gold-dark:#7A6020;--gold-soft:rgba(201,165,83,0.08);--gold-border:rgba(201,165,83,0.4);--text:#1C1C2E;--text-muted:#6B6B80;--border:#E5E0D7;--radius:16px;--radius-sm:10px;--shadow-md:0 8px 32px rgba(0,0,0,0.08);}
 html{scroll-behavior:smooth;}
 body{font-family:'Inter',sans-serif;color:var(--text);background:var(--cream);line-height:1.6;}
 h1,h2,h3 { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.15; letter-spacing: -0.02em; font-weight: 700; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: var(--navy); }
 h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; }
-a{color:var(--gold);text-decoration:none;}
+a{color:var(--gold-dark);text-decoration:none;}
 a:hover{text-decoration:underline;}
 nav{position:sticky;top:0;z-index:100;background:rgba(11,24,40,0.97);backdrop-filter:blur(14px);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:64px;border-bottom:1px solid rgba(201,165,83,0.18);}
 .nav-logo{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;font-size:1.25rem;color:var(--white);letter-spacing:0.04em;font-weight:700;}
@@ -48,7 +48,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(11,24,40,0.97);backdrop-fi
 .contact-info{}
 .contact-info h2{font-size:1.4rem;margin-bottom:1.5rem;}
 .contact-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem;margin-bottom:1rem;display:flex;gap:1rem;align-items:flex-start;}
-.contact-icon{width:42px;height:42px;border-radius:10px;background:var(--gold-soft);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:1.2rem;flex-shrink:0;}
+.contact-icon{width:42px;height:42px;border-radius:10px;background:var(--gold-soft);display:flex;align-items:center;justify-content:center;color:var(--gold-dark);font-size:1.2rem;flex-shrink:0;}
 .contact-card h4{font-family:'Inter',sans-serif;font-size:0.95rem;font-weight:700;color:var(--navy);margin-bottom:0.4rem;}
 .contact-card p{font-size:0.9rem;color:var(--text-muted);line-height:1.6;}
 .contact-card p a{font-weight:600;}
@@ -59,7 +59,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(11,24,40,0.97);backdrop-fi
 .contact-form{display:flex;flex-direction:column;gap:1.1rem;}
 .contact-field{display:flex;flex-direction:column;gap:0.4rem;}
 .contact-field label{font-size:0.82rem;font-weight:600;color:var(--navy);}
-.contact-field label span{color:var(--gold);}
+.contact-field label span{color:var(--gold-dark);}
 .contact-field input,.contact-field select,.contact-field textarea{padding:0.9rem 1.1rem;background:var(--cream);border:1.5px solid var(--border);border-radius:var(--radius-sm);font-size:0.95rem;font-family:'Inter',sans-serif;color:var(--text);outline:none;transition:border-color .2s,background .2s;}
 .contact-field input:focus,.contact-field select:focus,.contact-field textarea:focus{border-color:var(--gold);background:var(--white);}
 .contact-field textarea{resize:vertical;min-height:120px;}
@@ -71,7 +71,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(11,24,40,0.97);backdrop-fi
 .contact-success{display:none;text-align:center;padding:2rem 0;}
 .contact-success.show{display:block;animation:fadeIn .6s ease;}
 @keyframes fadeIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
-.contact-success h3{color:var(--gold);font-size:1.4rem;margin-bottom:1rem;}
+.contact-success h3{color:var(--gold-dark);font-size:1.4rem;margin-bottom:1rem;}
 .contact-success p{font-size:0.95rem;color:var(--text-muted);line-height:1.7;}
 
 footer{background:#060f1a;color:var(--white);padding:32px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}

@@ -36,7 +36,7 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{
   --navy:#0B1828;--white:#FFFFFF;--cream:#FAFAF8;--card:#F4F1EC;
-  --gold:#C9A553;--gold-soft:rgba(201,165,83,0.08);--gold-border:rgba(201,165,83,0.4);
+  --gold:#C9A553;--gold-dark:#7A6020;--gold-soft:rgba(201,165,83,0.08);--gold-border:rgba(201,165,83,0.4);
   --green:#16a34a;--green-soft:rgba(22,163,74,0.08);
   --text:#1C1C2E;--text-muted:#6B6B80;--text-subtle:#9A9AAB;
   --border:#E5E0D7;--border-soft:#EFEAE0;
@@ -47,7 +47,7 @@ html{scroll-behavior:smooth;}
 body{font-family:'Inter',sans-serif;color:var(--text);background:var(--cream);line-height:1.6;overflow-x:hidden;}
 h1,h2,h3,h4 { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.15; letter-spacing: -0.02em; font-weight: 700; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: var(--navy); }
 h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; }
-a{color:var(--gold);text-decoration:none;}
+a{color:var(--gold-dark);text-decoration:none;}
 a:hover{text-decoration:underline;}
 
 /* NAV */
@@ -156,7 +156,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(11,24,40,0.97);backdrop-fi
   font-size:0.82rem;font-weight:600;color:var(--navy);
   letter-spacing:-0.005em;
 }
-.audit-field label span{color:var(--gold);}
+.audit-field label span{color:var(--gold-dark);}
 .audit-field-help{
   font-size:0.78rem;color:var(--text-muted);
   margin-top:-0.15rem;line-height:1.5;

@@ -32,12 +32,12 @@
 
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-:root{--navy:#0B1828;--white:#FFFFFF;--cream:#FAFAF8;--card:#F4F1EC;--gold:#C9A553;--gold-soft:rgba(201,165,83,0.08);--gold-border:rgba(201,165,83,0.4);--text:#1C1C2E;--text-muted:#6B6B80;--border:#E5E0D7;--radius:16px;}
+:root{--navy:#0B1828;--white:#FFFFFF;--cream:#FAFAF8;--card:#F4F1EC;--gold:#C9A553;--gold-dark:#7A6020;--gold-soft:rgba(201,165,83,0.08);--gold-border:rgba(201,165,83,0.4);--text:#1C1C2E;--text-muted:#6B6B80;--border:#E5E0D7;--radius:16px;}
 html{scroll-behavior:smooth;}
 body{font-family:'Inter',sans-serif;color:var(--text);background:var(--white);line-height:1.7;}
 h1,h2,h3{font-family:'Inter',sans-serif;letter-spacing:-0.02em;font-weight:700;color:var(--navy);}
 h1{font-weight:800;letter-spacing:-0.03em;line-height:1.05;}
-a{color:var(--gold);text-decoration:none;}
+a{color:var(--gold-dark);text-decoration:none;}
 a:hover{text-decoration:underline;}
 nav{position:sticky;top:0;z-index:100;background:rgba(11,24,40,0.97);backdrop-filter:blur(14px);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:64px;border-bottom:1px solid rgba(201,165,83,0.18);}
 .nav-logo{font-size:1.25rem;color:var(--white);font-weight:700;letter-spacing:0.04em;}
@@ -61,7 +61,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(11,24,40,0.97);backdrop-fi
 .btn-outline:hover{background:var(--gold);color:var(--navy);text-decoration:none;}
 section{padding:72px 5%;}
 .container{max-width:920px;margin:0 auto;}
-.section-label{font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;display:block;}
+.section-label{font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:0.75rem;display:block;}
 section h2{font-size:clamp(1.6rem,3vw,2.4rem);margin-bottom:1.25rem;line-height:1.15;}
 section p{font-size:1.05rem;color:var(--text);margin-bottom:1.25rem;}
 section h3{font-size:1.2rem;margin:2rem 0 0.85rem;}
@@ -87,6 +87,7 @@ footer p{font-size:0.78rem;color:rgba(255,255,255,0.3);}
 footer a{color:rgba(255,255,255,0.4);font-size:0.78rem;}
 footer a:hover{color:var(--gold);text-decoration:none;}
 @media(max-width:600px){.hero{padding:50px 5% 40px;}.hero-stats{gap:1.5rem;padding:1rem 1.25rem;}section{padding:48px 5%;}.cta-box{padding:2rem 1.25rem;}}
+.cta-box .btn-outline{color:var(--gold-dark);border-color:var(--gold-dark);}
 </style>
 
 <script type="application/ld+json">

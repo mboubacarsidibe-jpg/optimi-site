@@ -25,12 +25,12 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"/></noscript>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-:root{--navy:#0B1828;--white:#FFFFFF;--cream:#FAFAF8;--gold:#C9A553;--gold-soft:rgba(201,165,83,0.08);--gold-border:rgba(201,165,83,0.4);--text:#1C1C2E;--text-muted:#6B6B80;--border:#E5E0D7;--radius:16px;--radius-sm:10px;--shadow-md:0 8px 32px rgba(0,0,0,0.08);}
+:root{--navy:#0B1828;--white:#FFFFFF;--cream:#FAFAF8;--gold:#C9A553;--gold-dark:#7A6020;--gold-soft:rgba(201,165,83,0.08);--gold-border:rgba(201,165,83,0.4);--text:#1C1C2E;--text-muted:#6B6B80;--border:#E5E0D7;--radius:16px;--radius-sm:10px;--shadow-md:0 8px 32px rgba(0,0,0,0.08);}
 html{scroll-behavior:smooth;}
 body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--text);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased;}
 h1,h2,h3,h4 { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.15; letter-spacing: -0.02em; font-weight: 700; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: var(--navy); }
 h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; }
-a{color:var(--gold);text-decoration:none;}
+a{color:var(--gold-dark);text-decoration:none;}
 a:hover{text-decoration:underline;}
 
 nav{position:sticky;top:0;z-index:100;background:rgba(11,24,40,0.97);backdrop-filter:blur(14px);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:64px;border-bottom:1px solid rgba(201,165,83,0.18);}
@@ -73,7 +73,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(11,24,40,0.97);backdrop-fi
 .benefit-block{padding:2.5rem;border-radius:var(--radius);}
 .benefit-you{background:linear-gradient(160deg,#0B1828 0%,#162535 100%);color:var(--white);}
 .benefit-them{background:var(--cream);border:1px solid var(--border);}
-.benefit-block .badge{display:inline-block;padding:0.3rem 0.8rem;background:rgba(201,165,83,0.18);border:1px solid var(--gold-border);color:var(--gold);font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;border-radius:100px;margin-bottom:1.25rem;}
+.benefit-block .badge{display:inline-block;padding:0.3rem 0.8rem;background:rgba(201,165,83,0.18);border:1px solid var(--gold-border);color:var(--gold-dark);font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;border-radius:100px;margin-bottom:1.25rem;}
 .benefit-them .badge{background:var(--gold-soft);}
 .benefit-block h3{font-size:1.5rem;font-weight:900;letter-spacing:-0.02em;margin-bottom:1.25rem;}
 .benefit-you h3{color:var(--white);}
@@ -82,14 +82,14 @@ nav{position:sticky;top:0;z-index:100;background:rgba(11,24,40,0.97);backdrop-fi
 .benefit-you li{color:rgba(255,255,255,0.85);border-color:rgba(255,255,255,0.08);}
 .benefit-them li{color:var(--text);border-color:var(--border);}
 .benefit-block li:last-child{border-bottom:none;}
-.benefit-block li::before{content:'✓';color:var(--gold);font-weight:900;font-size:1rem;flex-shrink:0;margin-top:1px;}
+.benefit-block li::before{content:'✓';color:var(--gold-dark);font-weight:900;font-size:1rem;flex-shrink:0;margin-top:1px;}
 
 .faq{padding:96px 5%;background:var(--cream);}
 .faq-inner{max-width:760px;margin:0 auto;}
 .faq-item{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:0.8rem;overflow:hidden;}
 .faq-item summary{padding:1.25rem 1.5rem;cursor:pointer;font-weight:600;font-size:1rem;color:var(--navy);list-style:none;display:flex;justify-content:space-between;align-items:center;}
 .faq-item summary::-webkit-details-marker{display:none;}
-.faq-item summary::after{content:'+';color:var(--gold);font-size:1.4rem;font-weight:300;transition:transform .25s;}
+.faq-item summary::after{content:'+';color:var(--gold-dark);font-size:1.4rem;font-weight:300;transition:transform .25s;}
 .faq-item[open] summary::after{content:'−';transform:rotate(0);}
 .faq-item p{padding:0 1.5rem 1.25rem;color:var(--text-muted);font-size:0.95rem;line-height:1.7;}
 

@@ -26,7 +26,7 @@
 <style>
 :root {
   --navy: #0B1828;
-  --gold: #C9A553;
+  --gold: #C9A553; --gold-dark: #7A6020;
   --white: #ffffff;
   --warm: #f8f4ed;
   --warm-bg: #FAFAF8;
@@ -82,7 +82,7 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(11,24,40,0.97); b
 .learn h2 { font-family: 'Inter', sans-serif; font-size: 1.8rem; margin-bottom: 32px; text-align: center; }
 .learn-list { display: grid; grid-template-columns: 1fr; gap: 22px; max-width: 600px; margin: 0 auto; }
 .learn-item { display: flex; gap: 18px; align-items: flex-start; }
-.learn-num { flex-shrink: 0; width: 36px; height: 36px; background: var(--gold); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.92rem; }
+.learn-num { flex-shrink: 0; width: 36px; height: 36px; background: var(--gold); color: var(--navy); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.92rem; }
 .learn-item h3 { font-size: 1.02rem; margin-bottom: 6px; }
 .learn-item p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
 
@@ -103,11 +103,11 @@ nav { position: sticky; top: 0; z-index: 100; background: rgba(11,24,40,0.97); b
 
 .success { display: none; text-align: center; }
 .success.show { display: block; }
-.success .check { width: 64px; height: 64px; border-radius: 50%; background: var(--gold); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 18px; }
+.success .check { width: 64px; height: 64px; border-radius: 50%; background: var(--gold); color: var(--navy); display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 18px; }
 .success h2 { font-family: 'Inter', sans-serif; font-size: 1.6rem; margin-bottom: 10px; }
 .success p { color: var(--muted); font-size: 0.96rem; margin-bottom: 20px; }
 .cal-links a { display: inline-block; margin: 4px 6px; font-size: 0.86rem; color: var(--navy); border: 1px solid var(--border); border-radius: 6px; padding: 9px 16px; text-decoration: none; }
-.cal-links a:hover { border-color: var(--gold); color: var(--gold); }
+.cal-links a:hover { border-color: var(--gold); color: var(--gold-dark); }
 
 footer { background: #070F1A; color: rgba(255,255,255,0.6); padding: 36px 24px; text-align: center; font-size: 0.85rem; font-family: 'Inter', sans-serif; }
 footer a { color: rgba(255,255,255,0.8); margin: 0 12px; text-decoration: none; }
