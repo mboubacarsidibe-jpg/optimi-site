@@ -194,6 +194,33 @@
   }
 
   function submitLead(opts) {
+    // Consentement RGPD (béton) : si une case .optimi-consent est présente dans la page,
+    // elle DOIT être cochée. Sans case (form legacy) → comportement inchangé.
+    var consentBoxes = document.querySelectorAll('input.optimi-consent[type="checkbox"]');
+    if (consentBoxes.length) {
+      var allChecked = Array.prototype.every.call(consentBoxes, function (b) { return b.checked; });
+      if (!allChecked) {
+        Array.prototype.forEach.call(consentBoxes, function (b) {
+          if (!b.checked) {
+            var row = b.closest('label') || b.parentNode;
+            if (row) row.style.color = '#b23b3b';
+            if (!b.dataset.consentBound) {
+              b.dataset.consentBound = '1';
+              b.addEventListener('change', function () {
+                var r = b.closest('label') || b.parentNode;
+                if (r && b.checked) r.style.color = '';
+              });
+            }
+          }
+        });
+        try { consentBoxes[0].focus(); } catch (e) { /* noop */ }
+        var consentErr = new Error('consent_required');
+        if (typeof opts.onError === 'function') opts.onError(consentErr, null);
+        return Promise.reject(consentErr);
+      }
+      opts.consentRgpd = true;
+    }
+
     var payload = buildPayload(opts);
 
     return fetch(INGEST_URL, {
