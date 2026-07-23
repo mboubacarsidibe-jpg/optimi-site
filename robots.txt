@@ -1,5 +1,5 @@
 # OPTIMI Group - robots.txt
-# https://www.optimi-group.com
+# https://optimi-groupe.com
 
 User-agent: *
 Allow: /
@@ -46,4 +46,4 @@ User-agent: DotBot
 Disallow: /
 
 # Sitemap
-Sitemap: https://www.optimi-group.com/sitemap.xml
+Sitemap: https://optimi-groupe.com/sitemap.xml
