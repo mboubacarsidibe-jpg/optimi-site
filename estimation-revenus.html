@@ -20,7 +20,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap"/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap"/></noscript>
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"/></noscript>
 <link rel="stylesheet" href="cookie-consent.css" />
 
@@ -143,25 +144,25 @@ footer a:hover { color:var(--gold); }
   <div class="container">
     <div class="form-card" id="formCard">
       <div class="field-row">
-        <div class="field"><label>Prénom *</label><input type="text" id="f-prenom" class="form-input" required></div>
-        <div class="field"><label>Téléphone</label><input type="tel" id="f-phone" class="form-input"></div>
+        <div class="field"><label for="f-prenom">Prénom *</label><input type="text" id="f-prenom" class="form-input" required></div>
+        <div class="field"><label for="f-phone">Téléphone</label><input type="tel" id="f-phone" class="form-input"></div>
       </div>
-      <div class="field"><label>Email *</label><input type="email" id="f-email" class="form-input" required placeholder="Pour recevoir votre estimation détaillée"></div>
+      <div class="field"><label for="f-email">Email *</label><input type="email" id="f-email" class="form-input" required placeholder="Pour recevoir votre estimation détaillée"></div>
       <div class="field">
-        <label>Adresse du bien *</label>
+        <label for="f-address">Adresse du bien *</label>
         <input type="text" id="f-address" class="form-input" required autocomplete="off" placeholder="Ex : 21 avenue de Suffren, Paris">
         <div id="acList" class="ac-list" style="display:none;"></div>
       </div>
       <div class="field-row">
-        <div class="field"><label>Surface (m²) *</label><input type="number" id="f-surface" class="form-input" required min="9" placeholder="Ex : 45"></div>
-        <div class="field"><label>Chambres *</label>
+        <div class="field"><label for="f-surface">Surface (m²) *</label><input type="number" id="f-surface" class="form-input" required min="9" placeholder="Ex : 45"></div>
+        <div class="field"><label for="f-chambres">Chambres *</label>
           <select id="f-chambres" class="form-input" required>
             <option value="" disabled selected>—</option>
             <option value="0">Studio</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4+</option>
           </select>
         </div>
       </div>
-      <div class="field"><label>Standing *</label>
+      <div class="field"><label for="f-standing">Standing *</label>
         <select id="f-standing" class="form-input" required>
           <option value="" disabled selected>—</option>
           <option value="standard">Standard</option><option value="bon">Bon standing</option><option value="premium">Premium / haut de gamme</option>

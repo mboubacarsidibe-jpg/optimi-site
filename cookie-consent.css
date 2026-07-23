@@ -36,3 +36,20 @@
   .ocb-inner{flex-direction:column;align-items:flex-start;gap:1rem;}
   .ocb-actions{width:100%;justify-content:flex-end;}
 }
+
+/* ── Accessibility: visible keyboard focus ring (WCAG 2.4.7 / EAA) ── */
+:focus-visible{
+  outline:3px solid #0B1828;
+  outline-offset:2px;
+  border-radius:2px;
+}
+
+/* ── Accessibility: respect reduced-motion preference (WCAG 2.3.3) ── */
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+    scroll-behavior:auto !important;
+  }
+}
