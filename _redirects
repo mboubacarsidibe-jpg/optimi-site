@@ -1,8 +1,8 @@
 # Cloudflare Pages redirects - OPTIMI Group
 
 # Legacy routes (anti-404) — pointing to clean URLs (no .html)
-/conciergerie    /#services           301
-/services        /#services           301
+/conciergerie    /#segments           301
+/services        /#segments           301
 /about           /a-propos            301
 /legal           /mentions-legales    301
 /privacy         /politique-de-confidentialite  301
