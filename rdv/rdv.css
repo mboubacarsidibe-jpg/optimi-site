@@ -198,7 +198,7 @@ h1 em{font-style:italic;font-weight:600;color:var(--gold-l)}
 @media(max-width:700px){.compare thead{display:none}.compare,.compare tbody,.compare tr,.compare td{display:block;width:auto!important}
   .compare tr{border-bottom:1px solid var(--ligne);padding:14px 16px}.compare tr:last-child{border-bottom:0}
   .compare td{border:0;padding:2px 0;background:none!important}
-  .compare td:nth-child(2)::before{content:"Aujourd'hui · ";color:var(--gris);font-weight:700}
+  .compare td:nth-child(2)::before{content:"Seul · ";color:var(--gris);font-weight:700}
   .compare td:last-child::before{content:"Avec OPTIMI · ";color:var(--gold);font-weight:700}}
 
 /* groupes de résultats + cartes preuve */
@@ -290,3 +290,37 @@ h1 em{font-style:italic;font-weight:600;color:var(--gold-l)}
 @media(max-width:560px){.carte{display:grid;grid-template-columns:104px 1fr;align-items:stretch}
   .carte .ecran{aspect-ratio:auto;min-height:104px}.carte .pic{width:56px}
   .carte .lire{display:none}.carte figcaption{align-self:center}}
+
+/* v7 : mobile — plus de calendrier en ligne, bouton + fenêtre Calendly ; catalogue complet ; avant/pendant/après */
+.resa-btn{display:none}
+@media(max-width:980px){
+  .v4 .heros{display:flex;flex-direction:column;gap:0;padding:14px 0 44px}
+  .v4 .heros>section:first-child{display:contents}
+  .v4 .heros .sur{order:1}.v4 .heros h1{order:2}.v4 .heros .chapo{order:3;margin-bottom:20px}
+  .v4 .resa{order:4;margin:0 0 30px;padding:16px;border-radius:18px}
+  .v4 .heros .gains{order:5}.v4 .heros .alt{order:6}.v4 .heros .preuve{order:7}
+  .v4 .resa .calendly-inline-widget,.v4 .resa .secours{display:none}
+  .v4 .resa-tete{padding:0 0 12px}
+  .v4 .resa-tete b{font-size:18px}
+  .resa-btn{display:flex;justify-content:center;margin:0;width:100%;font-size:17px}
+  .colle{transition:transform .25s}.colle.cache{transform:translateY(110%)}
+}
+.pret{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+@media(max-width:760px){.pret{grid-template-columns:1fr}}
+.pret a{display:block;text-decoration:none;color:inherit;padding:22px;border:1px solid var(--ligne);border-radius:16px;background:var(--navy-2);transition:border-color .2s}
+.pret a:hover{border-color:var(--gold)}
+.pret b{display:block;font:600 20px/1.25 'Fraunces',Georgia,serif;color:var(--gold-l);margin-bottom:6px}
+.pret span{display:block;color:var(--brume);font-size:15px}
+.pret u{display:inline-block;margin-top:12px;text-decoration:none;font-weight:700;color:var(--gold-l)}
+.trois.t3{margin-top:26px}
+.cat{padding:0 20px 8px}
+.cat h4{font:700 18px 'Fraunces',Georgia,serif;margin:22px 0 2px;color:var(--cream)}
+.cat h4 i{font:700 12px 'Inter',sans-serif;font-style:normal;color:var(--navy);background:var(--gold);border-radius:99px;padding:2px 8px;margin-left:8px;vertical-align:3px}
+.cat .fd{margin:0 0 10px;padding:0;color:var(--gris);font-size:14.5px}
+.cat ul{list-style:none;margin:0 0 6px;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:0 28px}
+@media(max-width:760px){.cat ul{grid-template-columns:1fr}}
+.cat li{cursor:zoom-in;padding:11px 0;border-top:1px solid var(--ligne);display:grid;grid-template-columns:18px 1fr;gap:8px}
+.cat li::before{content:"▶";color:var(--gold);font-size:10px;margin-top:6px}
+.cat li b{display:block;color:var(--cream);font-size:15.5px}
+.cat li span{display:block;color:var(--gris);font-size:14px}
+.cat li:hover b,.cat li:focus-visible b{color:var(--gold-l)}
