@@ -72,3 +72,6 @@
 
 /guide-airbnb-paris-2026.pdf
   Cache-Control: public, max-age=31536000, immutable
+
+/rdv/*
+  X-Robots-Tag: noindex, nofollow
